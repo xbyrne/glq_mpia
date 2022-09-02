@@ -15,3 +15,5 @@ The result is a ~33MB .csv file, containing data on 218241 objects; this file is
 ### Cross-match to the WISE Survey
 Visit https://datalab.noirlab.edu/xmatch.php. Under the `Table Management` tab, upload the above .csv file. After a few minutes, it will be uploaded and will then appear in the first drop-down menu on the `Xmatch` tab. Select this file, then select the ra and dec columns in the next dropdowns. In the `select output columns`, select All.
 From the 2nd table dropdowns, select `unwise_dr1`, `unwise_dr1.object`, `ra` and `dec`. In the `select output columns` dropdown, select 
+[coadd_id, dec, dfluxlbs_w1, dfluxlbs_w2, flux_w1, flux_w2, fluxlbs_w1, fluxlbs_w2, mag_w1_vg, mag_w2_vg, ra]. The rest of the columns will not be needed and make the file unnecessarily large.
+Choose a radius of 1 arcsecond, and select `Nearest neighbor`, `Exclude non-matching rows` and `Download results to your computer only`. The result will be a ~54MB .txt file (best converted to .csv for easy access) with now only 190049 objects; this file is selecting_data/objs_2e5_x_WISE.csv.
