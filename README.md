@@ -18,3 +18,7 @@ From the 2nd table dropdowns, select "unwise_dr1", "unwise_dr1.object" "ra" and 
 Choose a radius of 1 arcsecond, and select "Nearest neighbor", "Exclude non-matching rows" and "Download results to your computer only". The result will be a ~54MB .txt file (best converted to .csv for easy access) with now only 190049 objects; this file is `selecting_data/objs_2e5_x_WISE.csv`.
 ### Perform cuts in WISE data
 Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the WISE data, removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_2910.csv`) containing 2910 objects, a reduction on the original 218241 by a factor of 75!
+
+## Downloading Data
+Visit https://datalab.noirlab.edu/ (account required) and launch a jupyter notebook.
+Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipynb` to the working directory. Run through the latter notebook, which in about 5mins generates a .txt file containing 13735 URLs of, which contain images of 2747 objects (not 2910 as some images were on the edge of the tile; perhaps other problems too). This file is `downloading_data/img_url_list.txt`
