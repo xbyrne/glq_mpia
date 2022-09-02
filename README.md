@@ -27,3 +27,7 @@ Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipyn
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into the `img_files` folder. This takes several hours, so if you can take advantage of a cluster that's even better.
 ### Compile Images
 Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with [2737?] images and the corresponding IDs; this file is `images.npz`
+
+## Clustering Images using Contrastive Learning
+The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters. Due to the intensive tensorflow calculations required, it is only tractable to run this on a GPU. I only have access to one via Google Colab, so the notebook is written for that. If you are using a local GPU, you'll have to tweak things a bit.
+The result of this notebook is a UMAP embedding - a list of points in 2D space that are representative of the separations of the images in the 1024-dimensional output of the encoder of the neural network. This embedding is stored in `embedding.npz`, along with the respective IDs. The notebook also gives a list of [117?] IDs of objects on a particular island, which is suspected to contain the gravitationally-lensed high-redshift quasars.
