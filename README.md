@@ -25,3 +25,5 @@ Visit https://datalab.noirlab.edu/ (account required) and launch a jupyter noteb
 Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipynb` to the working directory. Run through the latter notebook, which in about 5mins generates a .txt file containing 13735 URLs of, which contain images of 2747 objects (not 2910 as some images were on the edge of the tile; perhaps other problems too). This file is `downloading_data/img_url_list.txt`
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into the `img_files` folder. This takes several hours, so if you can take advantage of a cluster that's even better.
+### Compile Images
+Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with [2737?] images and the corresponding IDs; this file is `images.npz`
