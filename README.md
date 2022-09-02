@@ -20,5 +20,8 @@ Choose a radius of 1 arcsecond, and select "Nearest neighbor", "Exclude non-matc
 Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the WISE data, removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_2910.csv`) containing 2910 objects, a reduction on the original 218241 by a factor of 75!
 
 ## Downloading Data
+### Grab URLs
 Visit https://datalab.noirlab.edu/ (account required) and launch a jupyter notebook.
 Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipynb` to the working directory. Run through the latter notebook, which in about 5mins generates a .txt file containing 13735 URLs of, which contain images of 2747 objects (not 2910 as some images were on the edge of the tile; perhaps other problems too). This file is `downloading_data/img_url_list.txt`
+### Download Images
+Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into the `img_files` folder. This takes several hours, so if you can take advantage of a cluster that's even better.
