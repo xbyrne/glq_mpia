@@ -1,7 +1,7 @@
 # glq_mpia
 ## Searching for Gravitationally-Lensed High-Redshift Quasars using Unsupervised Machine Learning
 
-This is code for a Summer Internship I did at MPIA with Romain Meyer, in search of gravitationally lensed quasars.
+This is code and files for a Summer Internship I did at MPIA with Romain Meyer, in search of gravitationally lensed quasars.
 
 This repo is for reproducibility's sake (mostly by myself!)
 
@@ -26,7 +26,7 @@ Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipyn
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into an `img_files` folder. This takes ~12 hours, so if you can take advantage of a cluster that's better. The resulting images are stored in `downloading_data/img_files.tar.gz`, so you can just extract them from there.
 ### Compile Images
-Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with 2747 images and the corresponding IDs; this file is `images.npz`, which also contains the COADD IDs in the same order.
+Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with 2747 images and the corresponding IDs; this file is `images.npz`, and also contains the COADD IDs in the same order.
 
 ## Clustering Images using Contrastive Learning
 The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters. Due to the intensive tensorflow calculations required, it is only tractable to run this on a GPU. I only have access to one via Google Colab, so the notebook is written for that. If you are using a local GPU, you'll have to tweak things a bit.
