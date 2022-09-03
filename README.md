@@ -1,7 +1,7 @@
 # glq_mpia
 ## Searching for Gravitationally-Lensed High-Redshift Quasars using Unsupervised Machine Learning
 
-This is code for a Summer Internship I did at MPIA with Romain Meyer, in search of gravitationally lensed quasars.
+This is code and files for a Summer Internship I did at MPIA with Romain Meyer, in search of gravitationally lensed quasars.
 
 This repo is for reproducibility's sake (mostly by myself!)
 
@@ -24,9 +24,9 @@ Run through the notebook `selecting_data/wise_processing.ipynb`, which progressi
 Visit https://datalab.noirlab.edu/ (account required) and launch a jupyter notebook.
 Upload both `selecting_data/objs_2910.csv` and `downloading_data/fetch_urls.ipynb` to the working directory. Run through the latter notebook, which in about 5mins generates a .txt file containing 13735 URLs of, which contain images of 2747 objects (not 2910 as some images were on the edge of the tile; perhaps other problems too). This file is `downloading_data/img_url_list.txt`
 ### Download Images
-Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into the `img_files` folder. This takes several hours, so if you can take advantage of a cluster that's even better.
+Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into an `img_files` folder. This takes ~12 hours, so if you can take advantage of a cluster that's better. The resulting images are stored in `downloading_data/img_files.tar.gz`, so you can just extract them from there.
 ### Compile Images
-Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with [2737?] images and the corresponding IDs; this file is `images.npz`
+Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with 2747 images and the corresponding IDs; this file is `images.npz`, and also contains the COADD IDs in the same order.
 
 ## Clustering Images using Contrastive Learning
 The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters. Due to the intensive tensorflow calculations required, it is only tractable to run this on a GPU. I only have access to one via Google Colab, so the notebook is written for that. If you are using a local GPU, you'll have to tweak things a bit.
