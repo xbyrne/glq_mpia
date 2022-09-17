@@ -10,14 +10,15 @@ The project proceeds in the following order:
 ## Selecting Data
 ### Select Quasi-Quasar Objects from the Dark Energy Survey
 Run the SQL query in selecting_data/loose_cuts.txt at https://des.ncsa.illinois.edu/desaccess/db-access (login required). These selection criteria are similar to those often used to select high-redshift quasars, but are somewhat looser in order not to exclude lensed quasars.
-The result is a ~33MB .csv file, containing data on 218241 objects; this file is `selecting_data/cut_des.csv`
+The result is a ~32MB .csv file, containing data on 218241 objects; this file is `selecting_data/cut_des.csv`
 ### Cross-match to the WISE and VHS Surveys
 Visit https://datalab.noirlab.edu/xmatch.php. Under the "Table Management" tab, upload the above .csv file. After a few minutes, it will be uploaded and will then appear in the first drop-down menu on the "Xmatch" tab. Select this file, then select the ra and dec columns in the next dropdowns. In the "select output columns", select All.
 From the 2nd table dropdowns, select "unwise_dr1", "unwise_dr1.object" "ra" and "dec". In the "select output columns" dropdown, select 
-[coadd_id, dec, dfluxlbs_w1, dfluxlbs_w2, flux_w1, flux_w2, fluxlbs_w1, fluxlbs_w2, mag_w1_vg, mag_w2_vg, ra]. The rest of the columns will not be needed and make the file unnecessarily large.
+[dec, dfluxlbs_w1, dfluxlbs_w2, flux_w1, flux_w2, fluxlbs_w1, fluxlbs_w2, mag_w1_vg, mag_w2_vg, ra]. The rest of the columns will not be needed and make the file unnecessarily large.
 Choose a name for this cross-matched table, a radius of 1 arcsecond, and select "Nearest neighbor" and "Exclude non-matching rows". After ~1min, the resulting table will be saved to your MyDB under the name you chose.
-To crossmatch to VHS, select this table in the first dropdown; select "t1_ra", "t1_dec", and all output columns. For the second table, select "vhs_dr5", "vhs_dr5.vhs_cat_v3", "ra2000", "dec2000", and the columns [dec2000, japermag4, japermag4err, ksapermag4, ksapermag4err, ra2000]. Choose a table name, a radius of 1", and select "Nearest neighbor, "Exclude non-matching rows" and "Download results to your computer only".
-The resulting table will be a ~55MB .txt file (best converted to .csv for easy access) with now only 152028 objects; this file is `selecting_data/cut_desxwisexvhs.csv`.
+To crossmatch to VHS, select this table in the first dropdown; select "t1_ra", "t1_dec", and all output columns. For the second table, select "vhs_dr5", "vhs_dr5.vhs_cat_v3", "ra2000", "dec2000", and the columns 
+[dec2000, japermag4, japermag4err, ksapermag4, ksapermag4err, ra2000]. Choose a table name, a radius of 1", and select "Nearest neighbor, "Exclude non-matching rows" and "Download results to your computer only".
+The resulting table will be a ~45MB .txt file (best converted to .csv for easy access) with now only 151629 objects; this file is `selecting_data/cut_desxwisexvhs.csv`.
 ### Perform cuts in WISE data
 Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the WISE data, removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_2910.csv`) containing 2910 objects, a reduction on the original 218241 by a factor of 75!
 
