@@ -3,7 +3,7 @@
 -- Under `Output file name` write the name of a .csv file.
 -- Selection takes ~1min; generates a ~33MB .csv file (or a ~14MB .csv.gz file if `Compress files` was ticked)
 -- Selects 218241 objects
--- Results can be found in objs_2e5.csv
+-- Results can be found in cut_des.csv
 
 SELECT COADD_OBJECT_ID,RA,DEC,
 	FLAGS_G, FLAGS_R, FLAGS_I, FLAGS_Z, FLAGS_Y,
