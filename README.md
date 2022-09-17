@@ -19,6 +19,7 @@ Choose a name for this cross-matched table, a radius of 1 arcsecond, and select 
 To crossmatch to VHS, select this table in the first dropdown; select "t1_ra", "t1_dec", and all output columns. For the second table, select "vhs_dr5", "vhs_dr5.vhs_cat_v3", "ra2000", "dec2000", and the columns 
 [dec2000, japermag4, japermag4err, ksapermag4, ksapermag4err, ra2000]. Choose a table name, a radius of 1", and select "Nearest neighbor, "Exclude non-matching rows" and "Download results to your computer only".
 The resulting table will be a ~45MB .txt file (best converted to .csv for easy access) with now only 151629 objects; this file is `selecting_data/cut_desxwisexvhs.csv`.
+
 ### Perform cuts in WISE data
 Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the WISE data, removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_2910.csv`) containing 2910 objects, a reduction on the original 218241 by a factor of 75!
 
