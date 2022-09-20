@@ -60,9 +60,11 @@ e.g. on the edge of the tile). This file is `downloading_data/img_url_list.txt`
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which
 downloads all the image files into an `img_files` folder. This takes ~12 hours,
-so if you can take advantage of a cluster that's better. The resulting images
+so if you can take advantage of a cluster that's better. The resulting files
 are stored in `downloading_data/img_files.tar.gz`, so you can just extract them
 from there.
+--- Currently downloading img files on cluster, will need to tar and send back
+over to PC.
 ### Compile Images
 Run through `compile_imgs.ipynb`, which generates a .npz file containing a 
 numpy array with 2747 images and the corresponding IDs; this file is 
