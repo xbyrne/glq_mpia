@@ -21,7 +21,7 @@ To crossmatch to VHS, select this table in the first dropdown; select "t1_ra", "
 The resulting table will be a ~45MB .txt file (best converted to .csv for easy access) with now only 151629 objects; this file is `selecting_data/cut_desxwisexvhs.csv`.
 
 ### Perform cuts in WISE data
-Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the WISE data, removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_2910.csv`) containing 2910 objects, a reduction on the original 218241 by a factor of 75!
+Run through the notebook `selecting_data/wise_processing.ipynb`, which progressively performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`selecting_data/objs_7263.csv`) containing 7263 objects.
 
 ## Downloading Data
 ### Grab URLs
