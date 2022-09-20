@@ -3,6 +3,6 @@
 # -nc: no clobber, doesn't overwrite any files that are already downloaded
 # -b: background. Switch off for more info about how it's going
 # -i: draw URLs from the following text file
-# -P: send URLs to the following folder
+# -P: send image files to the following folder
 
 wget -nv -nc -b -i img_url_list.txt -P ./img_files
