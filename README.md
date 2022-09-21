@@ -46,16 +46,16 @@ Run through the notebook `selecting_data/wise_processing.ipynb`, which
 calculates important data fields (e.g. flux, flux errors) and
 performs cuts to the data (particularly in WISE), removing 
 non-detections and many contaminating dwarf stars. This will generate a 
-.csv file (`selecting_data/objs_7263.csv`) containing 7263 objects.
+.csv file (`selecting_data/objs_7102.csv`) containing 7102 objects.
 
 ## Downloading Data
 ### Grab URLs
 Visit [https://datalab.noirlab.edu/] (account required) and launch a 
 jupyter notebook.
-Upload both `selecting_data/objs_7263.csv` and 
+Upload both `selecting_data/objs_7102.csv` and 
 `downloading_data/fetch_urls.ipynb` to the working directory. Run through
 the latter notebook, which in about 10mins generates a .txt file containing 
-34220 URLs which lead to images of 6844 objects (not 7263 as some images were 
+34220 URLs which lead to images of [[[6844]]] objects (not 7102 as some images were 
 e.g. on the edge of the tile). This file is `downloading_data/img_url_list.txt`
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which
