@@ -89,15 +89,15 @@ LIB_ASCII       NO		     # Writes output in ASCII
 #
 #
 #-------    Input Catalog Informations   
-CAT_IN       $GLQMPIADIR/sed_fitting/lephare_input.in  # Input catalog  (full path) 
+CAT_IN       $GLQMPIADIR/sed_fitting/lephare/lephare_input.in  # Input catalog  (full path) 
 INP_TYPE     M		          # Input type      (F:Flux or M:MAG)
 CAT_MAG      AB                   # Input Magnitude (AB or VEGA)
 CAT_FMT      MEME  		  # MEME: (Mag,Err)i  
   		                  # MMEE: (Mag)i,(Err)i  
 CAT_LINES    1,100000             #  MIN and MAX RANGE of ROWS used in input cat [def:-99,-99]
 CAT_TYPE     SHORT	          # Input Format    (LONG,SHORT-def)
-CAT_OUT	     $GLQMPIADIR/sed_fitting/lephare_output.out	# Output catalog (full path) 
-PARA_OUT     $GLQMPIADIR/sed_fitting/lephare_para_output.para  # Output parameter (full path)
+CAT_OUT	     $GLQMPIADIR/sed_fitting/lephare/lephare_output.out	# Output catalog (full path) 
+PARA_OUT     $GLQMPIADIR/sed_fitting/lephare/lephare_para_output.para  # Output parameter (full path)
 #
 BD_SCALE     0		          # Bands used for scaling 
 			          # (Sum 2^n; n=0->nbd-1, 0[-def]:all bands)
