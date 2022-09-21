@@ -4,3 +4,4 @@ downloading_data/img_files
 downloading_data/img_files/*
 downloading_data/throw_plotgrizY.ipynb
 sed_fitting/lephare/.ipynb_checkpoints/*
+sed_fitting/lephare/CWW_HDF.dat
