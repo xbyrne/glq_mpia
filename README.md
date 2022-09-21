@@ -55,7 +55,7 @@ jupyter notebook.
 Upload both `selecting_data/objs_7102.csv` and 
 `downloading_data/fetch_urls.ipynb` to the working directory. Run through
 the latter notebook, which in about 10mins generates a .txt file containing 
-34220 URLs which lead to images of [[[6844]]] objects (not 7102 as some images were 
+[[[34220]]] URLs which lead to images of [[[6844]]] objects (not 7102 as some images were 
 e.g. on the edge of the tile). This file is `downloading_data/img_url_list.txt`
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which
