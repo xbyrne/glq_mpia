@@ -1,6 +1,5 @@
 # glq_mpia
-## Searching for Gravitationally-Lensed High-Redshift Quasars using 
-Unsupervised Machine Learning
+## Searching for Gravitationally-Lensed High-Redshift Quasars using Unsupervised Machine Learning
 
 This is code and files for a Summer Internship I did at MPIA with Romain 
 Meyer, in search of gravitationally lensed quasars.
@@ -63,11 +62,10 @@ downloads all the image files into an `img_files` folder. This takes a day or tw
 so if you can take advantage of a cluster that's better. The resulting files
 are stored in `downloading_data/img_files.tar.gz`, so you can just extract them
 from there.
---- Currently downloading img files on cluster, will need to tar and send back
-over to PC.
 ### Compile Images
 Run through `compile_imgs.ipynb`, which generates a .npz file containing a 
-numpy array with 2747 images and the corresponding IDs; this file is 
+numpy array with 6690 images (not 6693 as 3 objects had bands whose image file
+threw a server error) in 5 bands and the corresponding IDs; this file is 
 `images.npz`, and also contains the COADD IDs in the same order.
 
 ## Clustering Images using Contrastive Learning
