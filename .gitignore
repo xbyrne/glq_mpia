@@ -3,6 +3,7 @@ selecting_data/.ipynb_checkpoints/*
 downloading_data/img_files
 downloading_data/img_files/*
 downloading_data/throw_plotgrizY.ipynb
+downloading_data/images.npz
 sed_fitting/lephare/.ipynb_checkpoints/*
 sed_fitting/lephare/CWW_HDF.dat
 sed_fitting/lephare/output_spectra/*
