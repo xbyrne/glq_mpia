@@ -47,34 +47,35 @@ performs cuts to the data (particularly in WISE), removing
 non-detections and many contaminating dwarf stars. This will generate a 
 .csv file (`selecting_data/objs_7102.csv`) containing 7102 objects.
 
+The table `known_hzq.csv` contains data on 11 objects in this table
+which are known to be high-redshift quasars.
+
 ## Downloading Data
 ### Grab URLs
 Visit [https://datalab.noirlab.edu/] (account required) and launch a 
 jupyter notebook.
 Upload both `selecting_data/objs_7102.csv` and 
 `downloading_data/fetch_urls.ipynb` to the working directory. Run through
-the latter notebook, which in about 10mins generates a .txt file containing 
+the latter notebook, which in ~10mins generates a .txt file containing 
 33465 URLs which lead to images of 6693 objects (not 7102 as some images were 
 e.g. on the edge of the tile). This file is `downloading_data/img_url_list.txt`
 ### Download Images
 Run the shell script `downloading_data/download_imgs.sh`, a wget command which
 downloads all the image files into an `img_files` folder. This takes a day or two,,
-so if you can take advantage of a cluster that's better. The resulting files
-are stored in `downloading_data/img_files.tar.gz`, so you can just extract them
-from there.
+so if you can take advantage of a cluster that's better.
 ### Compile Images
 Run through `compile_imgs.ipynb`, which generates a .npz file containing a 
-numpy array with 6690 images (not 6693 as 3 objects had bands whose image file
+numpy array with 6690 images (not 6693 as 3 objects had a band whose image file
 threw a server error) in 5 bands and the corresponding IDs; this file is 
-`images.npz`, and also contains the COADD IDs in the same order.
+`images.npz`, and also contains the COADD IDs in the same (numerical) order.
 
 ## Clustering Images using Contrastive Learning
 The notebook `contrastive_learning/trainer.ipynb` trains separates out the 
 remaining objects into clusters. Due to the intensive tensorflow calculations
 required, it is only tractable to run this on a GPU. I only have access to 
 one via Google Colab, so the notebook is written for that (if you are using 
-a local GPU, you'll have to tweak things a bit). On Colab, click on files 
-tab on the left and drag the `images.npz` file into the current directory.
+a local GPU, you'll have to tweak things a bit). On Google Drive, upload both
+the images.npz file (which is quite large so may take time) and objs_7102.csv.
 The result of this notebook is a UMAP embedding - a list of points in 2D 
 space that are representative of the separations of the images in the 
 1024-dimensional output of the encoder of the neural network. This embedding
