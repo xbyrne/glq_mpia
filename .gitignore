@@ -7,3 +7,4 @@ downloading_data/images.npz
 sed_fitting/lephare/.ipynb_checkpoints/*
 sed_fitting/lephare/CWW_HDF.dat
 sed_fitting/lephare/output_spectra/*
+contrastive_learning/.ipynb_checkpoints/*
