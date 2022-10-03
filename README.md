@@ -80,8 +80,8 @@ The result of this notebook is a UMAP embedding - a list of points in 2D
 space that are representative of the separations of the images in the 
 1024-dimensional output of the encoder of the neural network. This embedding
  is stored in `embedding.npz`, along with the respective IDs. The notebook
-also gives a list of [117?] IDs of objects on a particular island, which is
-suspected to contain the gravitationally-lensed high-redshift quasars.
+also gives a list of 12 IDs of objects on a particular island, which contains
+8 known high-redshift quasars!
 
 ## SED Fitting
 We now have a set of interesting objects and their photometry. We now attempt
