@@ -16,4 +16,3 @@ $LEPHAREDIR/source/mag_gal -t G -c zphot.para -MOD_EXTINC 4,8 -LIB_ASCII YES -EM
 $LEPHAREDIR/source/zphota -c zphot.para
 # Moving output spectra to the output_spectra folder, and then tarring
 mv *.spec output_spectra
-tar -czf output_spectra.tar.gz output_spectra
