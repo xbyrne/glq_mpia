@@ -41,7 +41,7 @@ easy access) with now only 151629 objects; this file is
 `selecting_data/cut_desxwisexvhs.csv`.
 
 ### Perform cuts in WISE data
-Run through the notebook `selecting_data/wise_processing.ipynb`, which 
+Run through the notebook `selecting_data/magnitude_processing.ipynb`, which 
 calculates important data fields (e.g. flux, flux errors) and
 performs cuts to the data (particularly in WISE), removing 
 non-detections and many contaminating dwarf stars. This will generate a 
