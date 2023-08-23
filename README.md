@@ -1,8 +1,7 @@
 # glq_mpia
 ## Searching for Gravitationally-Lensed High-Redshift Quasars using Unsupervised Machine Learning
 
-This is code and files for a Summer Internship I did at MPIA with Romain 
-Meyer, in search of gravitationally lensed quasars.
+This is code and files for a Summer Internship I did at MPIA with Romain Meyer, in search of gravitationally lensed quasars.
 
 This repo is for reproducibility's sake (mostly by myself!)
 
@@ -10,35 +9,27 @@ The project proceeds in the following order:
 
 ## Selecting Data
 ### Select Quasi-Quasar Objects from the Dark Energy Survey
-Run the SQL query in selecting_data/loose_cuts.txt at 
-[https://des.ncsa.illinois.edu/desaccess/db-access] (login required). These 
-selection criteria are similar to those often used to select high-redshift 
-quasars, but are somewhat looser in order not to exclude lensed quasars.
-The result is a ~32MB .csv file, containing data on 218241 objects; this 
-file is `selecting_data/cut_des.csv`
+Run the SQL query in `data/loose_cuts.txt` at [https://des.ncsa.illinois.edu/desaccess/db-access] (login required).
+These selection criteria are similar to those often used to select high-redshift quasars, but are somewhat looser in order not to exclude lensed quasars.
+The result is a ~32MB .csv file, containing data on 218 241 objects; this file is `data/external/cut_des.csv`
 ### Cross-match to the WISE and VHS Surveys
-Visit [https://datalab.noirlab.edu/xmatch.php]. Under the "Table Management" 
-tab, upload the above .csv file. After a few minutes, it will be uploaded and 
-will then appear in the first drop-down menu on the "Xmatch" tab. Select this 
-file, then select the ra and dec columns in the next dropdowns. In the "select 
-output columns", select All.
-From the 2nd table dropdowns, select "unwise_dr1", "unwise_dr1.object" "ra" 
-and "dec". In the "select output columns" dropdown, select 
-{dec, dfluxlbs_w1, dfluxlbs_w2, flux_w1, flux_w2, fluxlbs_w1, fluxlbs_w2, 
-mag_w1_vg, mag_w2_vg, ra}. The rest of the columns will not be needed and 
-make the file unnecessarily large.
-Choose a name for this cross-matched table, a radius of 1 arcsecond, and 
-select "Nearest neighbor" and "Exclude non-matching rows". After ~1min, the 
-resulting table will be saved to your MyDB under the name you chose.
-To crossmatch to VHS, select this table in the first dropdown; select 
-"t1_ra", "t1_dec", and all output columns. For the second table, select 
-"vhs_dr5", "vhs_dr5.vhs_cat_v3", "ra2000", "dec2000", and the columns 
-[dec2000, japermag4, japermag4err, ksapermag4, ksapermag4err, ra2000]. 
-Choose a table name, a radius of 1", and select "Nearest neighbor, "Exclude 
-non-matching rows" and "Download results to your computer only".
-The resulting table will be a ~45MB .txt file (best converted to .csv for 
-easy access) with now only 151629 objects; this file is 
-`selecting_data/cut_desxwisexvhs.csv`.
+Install and open [TOPCAT](https://www.star.bris.ac.uk/~mbt/topcat/), and upload the above .csv file.
+
+The CDS X-match service is accessed by pressing an X-shaped button on the main taskbar.
+For the Remote Table, in the "VizieR Table ID/Alias" dropdown, select UnWISE.
+For the Local Table, select the csv file just uploaded.
+The RA and DEC columns should be automatically identified.
+Under Match Parameters, choose Radius: 1.0 arcsec; Find mode: Best; Rename columns: Duplicates, Suffix: _x; Block size: 50000.
+Hit Go.
+A new table, for me called "1xUnWISE", is created after about a minute, with 190 049 entries.
+
+We then crossmatch *this* table to VHS.
+Again, open the CDS X-match service; select VHS DR5 as the Remote Table.
+Select the result of the UnWISE crossmatch as the Local Table, and choose RA and DEC as the RA and Dec columns; the default choice may be different now.
+Use the same Match Parameters as for the first X-match.
+Hit Go.
+A third table, for me called "3xVHS DR5", is created after another minute, containing 151 629 entries.
+This table is `/data/interim/des_wise_vhs_objects.csv`
 
 ### Perform cuts in WISE data
 Run through the notebook `selecting_data/magnitude_processing.ipynb`, which 

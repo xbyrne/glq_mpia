@@ -1,0 +1,17 @@
+-- An SQL query to preferentially select quasars from DES
+-- To be run at https://des.ncsa.illinois.edu/desaccess/db-access (login required)
+-- Under `Output file name` write the name of a .csv file.
+-- Selection takes ~1min; generates a ~33MB .csv file (or a ~14MB .csv.gz file if `Compress files` was ticked)
+-- Selects 218241 objects
+-- Results can be found in cut_des.csv
+
+SELECT COADD_OBJECT_ID,RA,DEC,
+	MAG_APER_4_G, MAG_APER_4_R, MAG_APER_4_I, MAG_APER_4_Z, MAG_APER_4_Y,
+	MAGERR_APER_4_G, MAGERR_APER_4_R, MAGERR_APER_4_I, MAGERR_APER_4_Z, MAGERR_APER_4_Y
+FROM DR2_MAGNITUDE
+WHERE
+	MAG_APER_4_Z < 21.0 AND MAGERR_APER_4_Z < 0.1 AND
+	MAG_APER_4_Y < 22.45 AND MAGERR_APER_4_Y < 0.1 AND
+	MAG_APER_4_I - MAG_APER_4_Z > 1.0 AND
+	FLAGS_G < 4 AND FLAGS_R < 4 AND FLAGS_I < 4 AND FLAGS_Z < 4 AND FLAGS_Y < 4 AND
+	IMAFLAGS_ISO_G = 0 AND IMAFLAGS_ISO_R = 0 AND IMAFLAGS_ISO_I = 0 AND IMAFLAGS_ISO_Z = 0 AND IMAFLAGS_ISO_Y = 0
