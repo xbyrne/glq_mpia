@@ -35,8 +35,7 @@ Said file is 109MB which is too large for Git and I can't be bothered to figure 
 
 ### Perform cuts in WISE data
 
-Run through the notebook `selecting_data/magnitude_processing.ipynb`, which 
-calculates important data fields (e.g. flux, flux errors) and
+Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and
 performs cuts to the data (particularly in WISE), removing 
 non-detections and many contaminating dwarf stars. This will generate a 
 .csv file (`selecting_data/objs_7102.csv`) containing 7102 objects.
