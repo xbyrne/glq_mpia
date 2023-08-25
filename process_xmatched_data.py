@@ -95,12 +95,13 @@ for band in ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]:
 
 # Slicing again to select useful columns
 interim_df = interim_df[
+    ['ra_des', 'dec_des'] +\
     np.array(
         [
             [f"{band}_{param}" for param in ["mag", "magerr", "flux", "fluxerr"]]
             for band in bands
         ]
-    ).ravel()
+    ).ravel().tolist()
 ]  # ['g_mag','g_magerr','g_flux','g_fluxerr','r_mag'...]
 
 ## Flooring objects below 3sigma detection
