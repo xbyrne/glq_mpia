@@ -35,20 +35,14 @@ Said file is 109MB which is too large for Git and I can't be bothered to figure 
 
 ### Perform cuts in WISE data
 
-Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and
-performs cuts to the data (particularly in WISE), removing 
-non-detections and many contaminating dwarf stars. This will generate a 
-.csv file (`selecting_data/objs_7102.csv`) containing 7102 objects.
+Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 6566 objects.
 
-The table `known_hzq.csv` contains data on 11 objects in this table
-which are known to be high-redshift quasars.
+The table `data/external/known_hzqs.csv` contains data on 11 objects in this table which are known to be high-redshift quasars.
 
 ## Downloading Data
 ### Grab URLs
-Visit [https://datalab.noirlab.edu/] (account required) and launch a 
-jupyter notebook.
-Upload both `selecting_data/objs_7102.csv` and 
-`downloading_data/fetch_urls.ipynb` to the working directory. Run through
+Visit [https://datalab.noirlab.edu/] (account required) and launch a jupyter notebook.
+Upload both `selecting_data/objs_7102.csv` and `downloading_data/fetch_urls.ipynb` to the working directory. Run through
 the latter notebook, which in ~10mins generates a .txt file containing 
 33465 URLs which lead to images of 6693 objects (not 7102 as some images were 
 e.g. on the edge of the tile). This file is `downloading_data/img_url_list.txt`
