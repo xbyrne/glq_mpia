@@ -12,6 +12,7 @@ The project proceeds in the following order:
 Run the SQL query in `data/loose_cuts.txt` at [https://des.ncsa.illinois.edu/desaccess/db-access] (login required).
 These selection criteria are similar to those often used to select high-redshift quasars, but are somewhat looser in order not to exclude lensed quasars.
 The result is a ~32MB .csv file, containing data on 218 241 objects; this file is `data/external/cut_des.csv`
+
 ### Cross-match to the WISE and VHS Surveys
 Install and open [TOPCAT](https://www.star.bris.ac.uk/~mbt/topcat/), and upload the above .csv file.
 
@@ -28,10 +29,12 @@ Again, open the CDS X-match service; select VHS DR5 as the Remote Table.
 Select the result of the UnWISE crossmatch as the Local Table, and choose RA and DEC as the RA and Dec columns; the default choice may be different now.
 Use the same Match Parameters as for the first X-match.
 Hit Go.
-A third table, for me called "3xVHS DR5", is created after another minute, containing 151 629 entries.
-This table is `/data/interim/des_wise_vhs_objects.csv`
+A third table, for me called "2xVHS DR5", is created after another minute, containing 151 629 entries.
+This table is `/data/interim/des_wise_vhs_objects.csv`.
+Said file is 109MB which is too large for Git and I can't be bothered to figure out LFS so it's stored compressed as a `.csv.gz` file.
 
 ### Perform cuts in WISE data
+
 Run through the notebook `selecting_data/magnitude_processing.ipynb`, which 
 calculates important data fields (e.g. flux, flux errors) and
 performs cuts to the data (particularly in WISE), removing 
