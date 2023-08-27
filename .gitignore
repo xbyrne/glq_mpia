@@ -1,5 +1,6 @@
 __pycache__/*
 .pylintrc
+data/external/img_files/*
 selecting_data/.ipynb_checkpoints/*
 downloading_data/.ipynb_checkpoints/*
 downloading_data/img_files
