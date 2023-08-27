@@ -41,6 +41,14 @@ The table `data/external/known_hzqs.csv` contains data on 11 objects in this tab
 
 ## Downloading Data
 ### Grab URLs
+Run the program `fetch_urls.py`, which uses the coordinates in `/data/processed/cut_crossmatched_objects.csv` to find download URLs from the SIA service at [https://datalab.noirlab.edu/sia/des_dr2].
+If all 5 bands are all there and there are no other problems with an object (e.g. on the boundary between tiles), the URLs are saved in `./data/external/img_url_list.txt`.
+
+### Download Images
+the images are cropped to a 28x28x5 cube and compiled into a big Nx28x28x5 array, where N is the number of successful downloads.
+These images are stored in `./data/external/images.npz`, along with the coadd ids of the successfully downloaded objects.
+
+### Grab URLs
 Visit [https://datalab.noirlab.edu/] (account required) and launch a jupyter notebook.
 Upload both `selecting_data/objs_7102.csv` and `downloading_data/fetch_urls.ipynb` to the working directory.
 Run through the latter notebook, which in ~10mins generates a .txt file containing 33465 URLs which lead to images of 6693 objects (not 7102 as some images were e.g. on the edge of the tile).
