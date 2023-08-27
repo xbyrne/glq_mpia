@@ -1,0 +1,594 @@
+# 931684428
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2138-4249_r4575p01_Y.fits.fz&extn=1&POS=324.85072599999995,-42.589015&SIZE=0.0028297437687020643,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2138-4249_r4575p01_g.fits.fz&extn=1&POS=324.85072599999995,-42.589015&SIZE=0.0028297437687020643,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2138-4249_r4575p01_i.fits.fz&extn=1&POS=324.85072599999995,-42.589015&SIZE=0.0028297437687020643,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2138-4249_r4575p01_r.fits.fz&extn=1&POS=324.85072599999995,-42.589015&SIZE=0.0028297437687020643,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2138-4249_r4575p01_z.fits.fz&extn=1&POS=324.85072599999995,-42.589015&SIZE=0.0028297437687020643,0.0020833333333333333
+# 1556041733
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4123_r4939p01_Y.fits.fz&extn=1&POS=81.563282,-41.218403&SIZE=0.0027696412966213575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4123_r4939p01_g.fits.fz&extn=1&POS=81.563282,-41.218403&SIZE=0.0027696412966213575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4123_r4939p01_i.fits.fz&extn=1&POS=81.563282,-41.218403&SIZE=0.0027696412966213575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4123_r4939p01_r.fits.fz&extn=1&POS=81.563282,-41.218403&SIZE=0.0027696412966213575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4123_r4939p01_z.fits.fz&extn=1&POS=81.563282,-41.218403&SIZE=0.0027696412966213575,0.0020833333333333333
+# 979002481
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-5123_r4575p01_Y.fits.fz&extn=1&POS=342.17154700000003,-51.16481&SIZE=0.0033222643564449037,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-5123_r4575p01_g.fits.fz&extn=1&POS=342.17154700000003,-51.16481&SIZE=0.0033222643564449037,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-5123_r4575p01_i.fits.fz&extn=1&POS=342.17154700000003,-51.16481&SIZE=0.0033222643564449037,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-5123_r4575p01_r.fits.fz&extn=1&POS=342.17154700000003,-51.16481&SIZE=0.0033222643564449037,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-5123_r4575p01_z.fits.fz&extn=1&POS=342.17154700000003,-51.16481&SIZE=0.0033222643564449037,0.0020833333333333333
+# 995403105
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2308-5331_r4575p02_Y.fits.fz&extn=1&POS=347.111985,-53.411194&SIZE=0.0034951268638590055,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2308-5331_r4575p02_g.fits.fz&extn=1&POS=347.111985,-53.411194&SIZE=0.0034951268638590055,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2308-5331_r4575p02_i.fits.fz&extn=1&POS=347.111985,-53.411194&SIZE=0.0034951268638590055,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2308-5331_r4575p02_r.fits.fz&extn=1&POS=347.111985,-53.411194&SIZE=0.0034951268638590055,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2308-5331_r4575p02_z.fits.fz&extn=1&POS=347.111985,-53.411194&SIZE=0.0034951268638590055,0.0020833333333333333
+# 979097465
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-4540_r4575p01_Y.fits.fz&extn=1&POS=342.171892,-45.439281&SIZE=0.0029691293131304196,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-4540_r4575p01_g.fits.fz&extn=1&POS=342.171892,-45.439281&SIZE=0.0029691293131304196,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-4540_r4575p01_i.fits.fz&extn=1&POS=342.171892,-45.439281&SIZE=0.0029691293131304196,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-4540_r4575p01_r.fits.fz&extn=1&POS=342.171892,-45.439281&SIZE=0.0029691293131304196,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2249-4540_r4575p01_z.fits.fz&extn=1&POS=342.171892,-45.439281&SIZE=0.0029691293131304196,0.0020833333333333333
+# 901157280
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2036-5705_r4575p02_Y.fits.fz&extn=1&POS=308.945956,-57.39155&SIZE=0.003865935366629376,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2036-5705_r4575p02_g.fits.fz&extn=1&POS=308.945956,-57.39155&SIZE=0.003865935366629376,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2036-5705_r4575p02_i.fits.fz&extn=1&POS=308.945956,-57.39155&SIZE=0.003865935366629376,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2036-5705_r4575p02_r.fits.fz&extn=1&POS=308.945956,-57.39155&SIZE=0.003865935366629376,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2036-5705_r4575p02_z.fits.fz&extn=1&POS=308.945956,-57.39155&SIZE=0.003865935366629376,0.0020833333333333333
+# 1182803195
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0131-4457_r4920p01_Y.fits.fz&extn=1&POS=22.649272,-44.761582&SIZE=0.0029340944003833744,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0131-4457_r4920p01_g.fits.fz&extn=1&POS=22.649272,-44.761582&SIZE=0.0029340944003833744,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0131-4457_r4920p01_i.fits.fz&extn=1&POS=22.649272,-44.761582&SIZE=0.0029340944003833744,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0131-4457_r4920p01_r.fits.fz&extn=1&POS=22.649272,-44.761582&SIZE=0.0029340944003833744,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0131-4457_r4920p01_z.fits.fz&extn=1&POS=22.649272,-44.761582&SIZE=0.0029340944003833744,0.0020833333333333333
+# 1599128797
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0606-3249_r4939p01_Y.fits.fz&extn=1&POS=91.606265,-32.838604&SIZE=0.002479564143468215,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0606-3249_r4939p01_g.fits.fz&extn=1&POS=91.606265,-32.838604&SIZE=0.002479564143468215,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0606-3249_r4939p01_i.fits.fz&extn=1&POS=91.606265,-32.838604&SIZE=0.002479564143468215,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0606-3249_r4939p01_r.fits.fz&extn=1&POS=91.606265,-32.838604&SIZE=0.002479564143468215,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0606-3249_r4939p01_z.fits.fz&extn=1&POS=91.606265,-32.838604&SIZE=0.002479564143468215,0.0020833333333333333
+# 1368752792
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0306-5123_r4931p01_Y.fits.fz&extn=1&POS=46.462425,-51.580236&SIZE=0.0033525470436769713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0306-5123_r4931p01_g.fits.fz&extn=1&POS=46.462425,-51.580236&SIZE=0.0033525470436769713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0306-5123_r4931p01_i.fits.fz&extn=1&POS=46.462425,-51.580236&SIZE=0.0033525470436769713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0306-5123_r4931p01_r.fits.fz&extn=1&POS=46.462425,-51.580236&SIZE=0.0033525470436769713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0306-5123_r4931p01_z.fits.fz&extn=1&POS=46.462425,-51.580236&SIZE=0.0033525470436769713,0.0020833333333333333
+# 1082465518
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0036-4914_r4907p01_Y.fits.fz&extn=1&POS=8.727438000000001,-49.026294&SIZE=0.0031772049195337403,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0036-4914_r4907p01_g.fits.fz&extn=1&POS=8.727438000000001,-49.026294&SIZE=0.0031772049195337403,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0036-4914_r4907p01_i.fits.fz&extn=1&POS=8.727438000000001,-49.026294&SIZE=0.0031772049195337403,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0036-4914_r4907p01_r.fits.fz&extn=1&POS=8.727438000000001,-49.026294&SIZE=0.0031772049195337403,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0036-4914_r4907p01_z.fits.fz&extn=1&POS=8.727438000000001,-49.026294&SIZE=0.0031772049195337403,0.0020833333333333333
+# 1048638437
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_Y.fits.fz&extn=1&POS=2.457463,-54.368942&SIZE=0.0035761472207178836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_g.fits.fz&extn=1&POS=2.457463,-54.368942&SIZE=0.0035761472207178836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_i.fits.fz&extn=1&POS=2.457463,-54.368942&SIZE=0.0035761472207178836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_r.fits.fz&extn=1&POS=2.457463,-54.368942&SIZE=0.0035761472207178836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_z.fits.fz&extn=1&POS=2.457463,-54.368942&SIZE=0.0035761472207178836,0.0020833333333333333
+# 1365235479
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0259-1207_r4931p01_Y.fits.fz&extn=1&POS=44.648299,-12.338425&SIZE=0.0021325908779218244,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0259-1207_r4931p01_g.fits.fz&extn=1&POS=44.648299,-12.338425&SIZE=0.0021325908779218244,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0259-1207_r4931p01_i.fits.fz&extn=1&POS=44.648299,-12.338425&SIZE=0.0021325908779218244,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0259-1207_r4931p01_r.fits.fz&extn=1&POS=44.648299,-12.338425&SIZE=0.0021325908779218244,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0259-1207_r4931p01_z.fits.fz&extn=1&POS=44.648299,-12.338425&SIZE=0.0021325908779218244,0.0020833333333333333
+# 1161695107
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0120-4249_r4907p01_Y.fits.fz&extn=1&POS=20.301472,-42.594268&SIZE=0.0028299822734448358,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0120-4249_r4907p01_g.fits.fz&extn=1&POS=20.301472,-42.594268&SIZE=0.0028299822734448358,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0120-4249_r4907p01_i.fits.fz&extn=1&POS=20.301472,-42.594268&SIZE=0.0028299822734448358,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0120-4249_r4907p01_r.fits.fz&extn=1&POS=20.301472,-42.594268&SIZE=0.0028299822734448358,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0120-4249_r4907p01_z.fits.fz&extn=1&POS=20.301472,-42.594268&SIZE=0.0028299822734448358,0.0020833333333333333
+# 1181123335
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0132-0958_r4920p01_Y.fits.fz&extn=1&POS=23.150272,-9.738821000000002&SIZE=0.002113795060318478,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0132-0958_r4920p01_g.fits.fz&extn=1&POS=23.150272,-9.738821000000002&SIZE=0.002113795060318478,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0132-0958_r4920p01_i.fits.fz&extn=1&POS=23.150272,-9.738821000000002&SIZE=0.002113795060318478,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0132-0958_r4920p01_r.fits.fz&extn=1&POS=23.150272,-9.738821000000002&SIZE=0.002113795060318478,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0132-0958_r4920p01_z.fits.fz&extn=1&POS=23.150272,-9.738821000000002&SIZE=0.002113795060318478,0.0020833333333333333
+# 1297907736
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0236-4623_r4920p01_Y.fits.fz&extn=1&POS=39.571017,-46.523558&SIZE=0.0030278531372677363,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0236-4623_r4920p01_g.fits.fz&extn=1&POS=39.571017,-46.523558&SIZE=0.0030278531372677363,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0236-4623_r4920p01_i.fits.fz&extn=1&POS=39.571017,-46.523558&SIZE=0.0030278531372677363,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0236-4623_r4920p01_r.fits.fz&extn=1&POS=39.571017,-46.523558&SIZE=0.0030278531372677363,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0236-4623_r4920p01_z.fits.fz&extn=1&POS=39.571017,-46.523558&SIZE=0.0030278531372677363,0.0020833333333333333
+# 1119486854
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0055-4957_r4907p02_Y.fits.fz&extn=1&POS=13.326652,-49.884887&SIZE=0.003233356040578438,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0055-4957_r4907p02_g.fits.fz&extn=1&POS=13.326652,-49.884887&SIZE=0.003233356040578438,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0055-4957_r4907p02_i.fits.fz&extn=1&POS=13.326652,-49.884887&SIZE=0.003233356040578438,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0055-4957_r4907p02_r.fits.fz&extn=1&POS=13.326652,-49.884887&SIZE=0.003233356040578438,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0055-4957_r4907p02_z.fits.fz&extn=1&POS=13.326652,-49.884887&SIZE=0.003233356040578438,0.0020833333333333333
+# 1462659641
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0412-1624_r4939p01_Y.fits.fz&extn=1&POS=63.409385,-16.454297&SIZE=0.002172297655593592,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0412-1624_r4939p01_g.fits.fz&extn=1&POS=63.409385,-16.454297&SIZE=0.002172297655593592,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0412-1624_r4939p01_i.fits.fz&extn=1&POS=63.409385,-16.454297&SIZE=0.002172297655593592,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0412-1624_r4939p01_r.fits.fz&extn=1&POS=63.409385,-16.454297&SIZE=0.002172297655593592,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0412-1624_r4939p01_z.fits.fz&extn=1&POS=63.409385,-16.454297&SIZE=0.002172297655593592,0.0020833333333333333
+# 1215216982
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-0333_r4920p01_Y.fits.fz&extn=1&POS=28.921551,-3.526575&SIZE=0.0020872858691008533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-0333_r4920p01_g.fits.fz&extn=1&POS=28.921551,-3.526575&SIZE=0.0020872858691008533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-0333_r4920p01_i.fits.fz&extn=1&POS=28.921551,-3.526575&SIZE=0.0020872858691008533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-0333_r4920p01_r.fits.fz&extn=1&POS=28.921551,-3.526575&SIZE=0.0020872858691008533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-0333_r4920p01_z.fits.fz&extn=1&POS=28.921551,-3.526575&SIZE=0.0020872858691008533,0.0020833333333333333
+# 970053914
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6039_r4575p01_Y.fits.fz&extn=1&POS=338.47975,-60.637531&SIZE=0.004248813491321967,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6039_r4575p01_g.fits.fz&extn=1&POS=338.47975,-60.637531&SIZE=0.004248813491321967,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6039_r4575p01_i.fits.fz&extn=1&POS=338.47975,-60.637531&SIZE=0.004248813491321967,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6039_r4575p01_r.fits.fz&extn=1&POS=338.47975,-60.637531&SIZE=0.004248813491321967,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6039_r4575p01_z.fits.fz&extn=1&POS=338.47975,-60.637531&SIZE=0.004248813491321967,0.0020833333333333333
+# 913929420
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2116-5957_r4575p01_Y.fits.fz&extn=1&POS=318.901995,-59.707655&SIZE=0.004130219418287192,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2116-5957_r4575p01_g.fits.fz&extn=1&POS=318.901995,-59.707655&SIZE=0.004130219418287192,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2116-5957_r4575p01_i.fits.fz&extn=1&POS=318.901995,-59.707655&SIZE=0.004130219418287192,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2116-5957_r4575p01_r.fits.fz&extn=1&POS=318.901995,-59.707655&SIZE=0.004130219418287192,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2116-5957_r4575p01_z.fits.fz&extn=1&POS=318.901995,-59.707655&SIZE=0.004130219418287192,0.0020833333333333333
+# 1056009417
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0017-4040_r4907p01_Y.fits.fz&extn=1&POS=4.311568,-40.913089&SIZE=0.0027568117596192777,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0017-4040_r4907p01_g.fits.fz&extn=1&POS=4.311568,-40.913089&SIZE=0.0027568117596192777,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0017-4040_r4907p01_i.fits.fz&extn=1&POS=4.311568,-40.913089&SIZE=0.0027568117596192777,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0017-4040_r4907p01_r.fits.fz&extn=1&POS=4.311568,-40.913089&SIZE=0.0027568117596192777,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0017-4040_r4907p01_z.fits.fz&extn=1&POS=4.311568,-40.913089&SIZE=0.0027568117596192777,0.0020833333333333333
+# 1269986898
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0222-1624_r4920p01_Y.fits.fz&extn=1&POS=35.503013,-16.254595000000002&SIZE=0.002170076929564153,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0222-1624_r4920p01_g.fits.fz&extn=1&POS=35.503013,-16.254595000000002&SIZE=0.002170076929564153,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0222-1624_r4920p01_i.fits.fz&extn=1&POS=35.503013,-16.254595000000002&SIZE=0.002170076929564153,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0222-1624_r4920p01_r.fits.fz&extn=1&POS=35.503013,-16.254595000000002&SIZE=0.002170076929564153,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0222-1624_r4920p01_z.fits.fz&extn=1&POS=35.503013,-16.254595000000002&SIZE=0.002170076929564153,0.0020833333333333333
+# 1532934101
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0506-2832_r4939p01_Y.fits.fz&extn=1&POS=76.632896,-28.269773&SIZE=0.002365469125031797,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0506-2832_r4939p01_g.fits.fz&extn=1&POS=76.632896,-28.269773&SIZE=0.002365469125031797,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0506-2832_r4939p01_i.fits.fz&extn=1&POS=76.632896,-28.269773&SIZE=0.002365469125031797,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0506-2832_r4939p01_r.fits.fz&extn=1&POS=76.632896,-28.269773&SIZE=0.002365469125031797,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0506-2832_r4939p01_z.fits.fz&extn=1&POS=76.632896,-28.269773&SIZE=0.002365469125031797,0.0020833333333333333
+# 876064226
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2022-4540_r4575p01_Y.fits.fz&extn=1&POS=305.27997,-45.648343&SIZE=0.0029801913442010575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2022-4540_r4575p01_g.fits.fz&extn=1&POS=305.27997,-45.648343&SIZE=0.0029801913442010575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2022-4540_r4575p01_i.fits.fz&extn=1&POS=305.27997,-45.648343&SIZE=0.0029801913442010575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2022-4540_r4575p01_r.fits.fz&extn=1&POS=305.27997,-45.648343&SIZE=0.0029801913442010575,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2022-4540_r4575p01_z.fits.fz&extn=1&POS=305.27997,-45.648343&SIZE=0.0029801913442010575,0.0020833333333333333
+# 890577212
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2039-5748_r4575p02_Y.fits.fz&extn=1&POS=309.7006,-58.085486&SIZE=0.0039408304661582945,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2039-5748_r4575p02_g.fits.fz&extn=1&POS=309.7006,-58.085486&SIZE=0.0039408304661582945,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2039-5748_r4575p02_i.fits.fz&extn=1&POS=309.7006,-58.085486&SIZE=0.0039408304661582945,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2039-5748_r4575p02_r.fits.fz&extn=1&POS=309.7006,-58.085486&SIZE=0.0039408304661582945,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2039-5748_r4575p02_z.fits.fz&extn=1&POS=309.7006,-58.085486&SIZE=0.0039408304661582945,0.0020833333333333333
+# 1238476031
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0205-6456_r4920p01_Y.fits.fz&extn=1&POS=30.879397,-64.856473&SIZE=0.004903261575242373,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0205-6456_r4920p01_g.fits.fz&extn=1&POS=30.879397,-64.856473&SIZE=0.004903261575242373,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0205-6456_r4920p01_i.fits.fz&extn=1&POS=30.879397,-64.856473&SIZE=0.004903261575242373,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0205-6456_r4920p01_r.fits.fz&extn=1&POS=30.879397,-64.856473&SIZE=0.004903261575242373,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0205-6456_r4920p01_z.fits.fz&extn=1&POS=30.879397,-64.856473&SIZE=0.004903261575242373,0.0020833333333333333
+# 1473179616
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0418-6622_r4939p01_Y.fits.fz&extn=1&POS=63.897417,-66.099953&SIZE=0.005142225692982662,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0418-6622_r4939p01_g.fits.fz&extn=1&POS=63.897417,-66.099953&SIZE=0.005142225692982662,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0418-6622_r4939p01_i.fits.fz&extn=1&POS=63.897417,-66.099953&SIZE=0.005142225692982662,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0418-6622_r4939p01_r.fits.fz&extn=1&POS=63.897417,-66.099953&SIZE=0.005142225692982662,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0418-6622_r4939p01_z.fits.fz&extn=1&POS=63.897417,-66.099953&SIZE=0.005142225692982662,0.0020833333333333333
+# 958355441
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2219-0041_r4575p01_Y.fits.fz&extn=1&POS=334.703928,-0.960909&SIZE=0.002083626354453414,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2219-0041_r4575p01_g.fits.fz&extn=1&POS=334.703928,-0.960909&SIZE=0.002083626354453414,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2219-0041_r4575p01_i.fits.fz&extn=1&POS=334.703928,-0.960909&SIZE=0.002083626354453414,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2219-0041_r4575p01_r.fits.fz&extn=1&POS=334.703928,-0.960909&SIZE=0.002083626354453414,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2219-0041_r4575p01_z.fits.fz&extn=1&POS=334.703928,-0.960909&SIZE=0.002083626354453414,0.0020833333333333333
+# 951168040
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2210-4457_r4575p01_Y.fits.fz&extn=1&POS=332.800291,-44.801261&SIZE=0.00293611159511195,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2210-4457_r4575p01_g.fits.fz&extn=1&POS=332.800291,-44.801261&SIZE=0.00293611159511195,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2210-4457_r4575p01_i.fits.fz&extn=1&POS=332.800291,-44.801261&SIZE=0.00293611159511195,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2210-4457_r4575p01_r.fits.fz&extn=1&POS=332.800291,-44.801261&SIZE=0.00293611159511195,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2210-4457_r4575p01_z.fits.fz&extn=1&POS=332.800291,-44.801261&SIZE=0.00293611159511195,0.0020833333333333333
+# 1185153369
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0133-0915_r4920p01_Y.fits.fz&extn=1&POS=23.648603,-9.517477&SIZE=0.0021124102142437533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0133-0915_r4920p01_g.fits.fz&extn=1&POS=23.648603,-9.517477&SIZE=0.0021124102142437533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0133-0915_r4920p01_i.fits.fz&extn=1&POS=23.648603,-9.517477&SIZE=0.0021124102142437533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0133-0915_r4920p01_r.fits.fz&extn=1&POS=23.648603,-9.517477&SIZE=0.0021124102142437533,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0133-0915_r4920p01_z.fits.fz&extn=1&POS=23.648603,-9.517477&SIZE=0.0021124102142437533,0.0020833333333333333
+# 1159979725
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0119-4206_r4907p01_Y.fits.fz&extn=1&POS=19.764255,-42.089739&SIZE=0.0028073640462159886,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0119-4206_r4907p01_g.fits.fz&extn=1&POS=19.764255,-42.089739&SIZE=0.0028073640462159886,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0119-4206_r4907p01_i.fits.fz&extn=1&POS=19.764255,-42.089739&SIZE=0.0028073640462159886,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0119-4206_r4907p01_r.fits.fz&extn=1&POS=19.764255,-42.089739&SIZE=0.0028073640462159886,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0119-4206_r4907p01_z.fits.fz&extn=1&POS=19.764255,-42.089739&SIZE=0.0028073640462159886,0.0020833333333333333
+# 1562519737
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0531-1832_r4939p01_Y.fits.fz&extn=1&POS=82.93638299999999,-18.383301&SIZE=0.0021953673922284235,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0531-1832_r4939p01_g.fits.fz&extn=1&POS=82.93638299999999,-18.383301&SIZE=0.0021953673922284235,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0531-1832_r4939p01_i.fits.fz&extn=1&POS=82.93638299999999,-18.383301&SIZE=0.0021953673922284235,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0531-1832_r4939p01_r.fits.fz&extn=1&POS=82.93638299999999,-18.383301&SIZE=0.0021953673922284235,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0531-1832_r4939p01_z.fits.fz&extn=1&POS=82.93638299999999,-18.383301&SIZE=0.0021953673922284235,0.0020833333333333333
+# 1100357110
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0046-5622_r4907p01_Y.fits.fz&extn=1&POS=12.037611,-56.417974&SIZE=0.0037664427292399463,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0046-5622_r4907p01_g.fits.fz&extn=1&POS=12.037611,-56.417974&SIZE=0.0037664427292399463,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0046-5622_r4907p01_i.fits.fz&extn=1&POS=12.037611,-56.417974&SIZE=0.0037664427292399463,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0046-5622_r4907p01_r.fits.fz&extn=1&POS=12.037611,-56.417974&SIZE=0.0037664427292399463,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0046-5622_r4907p01_z.fits.fz&extn=1&POS=12.037611,-56.417974&SIZE=0.0037664427292399463,0.0020833333333333333
+# 872311405
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2020-4623_r4575p01_Y.fits.fz&extn=1&POS=305.30014700000004,-46.224768&SIZE=0.0030113322746052225,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2020-4623_r4575p01_g.fits.fz&extn=1&POS=305.30014700000004,-46.224768&SIZE=0.0030113322746052225,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2020-4623_r4575p01_i.fits.fz&extn=1&POS=305.30014700000004,-46.224768&SIZE=0.0030113322746052225,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2020-4623_r4575p01_r.fits.fz&extn=1&POS=305.30014700000004,-46.224768&SIZE=0.0030113322746052225,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2020-4623_r4575p01_z.fits.fz&extn=1&POS=305.30014700000004,-46.224768&SIZE=0.0030113322746052225,0.0020833333333333333
+# 941832300
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2156-4540_r4575p01_Y.fits.fz&extn=1&POS=329.354043,-45.674669&SIZE=0.0029815929880204674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2156-4540_r4575p01_g.fits.fz&extn=1&POS=329.354043,-45.674669&SIZE=0.0029815929880204674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2156-4540_r4575p01_i.fits.fz&extn=1&POS=329.354043,-45.674669&SIZE=0.0029815929880204674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2156-4540_r4575p01_r.fits.fz&extn=1&POS=329.354043,-45.674669&SIZE=0.0029815929880204674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2156-4540_r4575p01_z.fits.fz&extn=1&POS=329.354043,-45.674669&SIZE=0.0029815929880204674,0.0020833333333333333
+# 1207256075
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0151-0041_r4920p01_Y.fits.fz&extn=1&POS=27.920813,-0.8657360000000001&SIZE=0.002083571179289823,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0151-0041_r4920p01_g.fits.fz&extn=1&POS=27.920813,-0.8657360000000001&SIZE=0.002083571179289823,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0151-0041_r4920p01_i.fits.fz&extn=1&POS=27.920813,-0.8657360000000001&SIZE=0.002083571179289823,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0151-0041_r4920p01_r.fits.fz&extn=1&POS=27.920813,-0.8657360000000001&SIZE=0.002083571179289823,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0151-0041_r4920p01_z.fits.fz&extn=1&POS=27.920813,-0.8657360000000001&SIZE=0.002083571179289823,0.0020833333333333333
+# 1548815709
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0520-4914_r4939p01_Y.fits.fz&extn=1&POS=80.369803,-48.946582&SIZE=0.003172126501108,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0520-4914_r4939p01_g.fits.fz&extn=1&POS=80.369803,-48.946582&SIZE=0.003172126501108,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0520-4914_r4939p01_i.fits.fz&extn=1&POS=80.369803,-48.946582&SIZE=0.003172126501108,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0520-4914_r4939p01_r.fits.fz&extn=1&POS=80.369803,-48.946582&SIZE=0.003172126501108,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0520-4914_r4939p01_z.fits.fz&extn=1&POS=80.369803,-48.946582&SIZE=0.003172126501108,0.0020833333333333333
+# 1558968033
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0528-5123_r4939p01_Y.fits.fz&extn=1&POS=82.180213,-51.407769&SIZE=0.003339886880770408,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0528-5123_r4939p01_g.fits.fz&extn=1&POS=82.180213,-51.407769&SIZE=0.003339886880770408,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0528-5123_r4939p01_i.fits.fz&extn=1&POS=82.180213,-51.407769&SIZE=0.003339886880770408,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0528-5123_r4939p01_r.fits.fz&extn=1&POS=82.180213,-51.407769&SIZE=0.003339886880770408,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0528-5123_r4939p01_z.fits.fz&extn=1&POS=82.180213,-51.407769&SIZE=0.003339886880770408,0.0020833333333333333
+# 1193604751
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0144-0458_r4920p01_Y.fits.fz&extn=1&POS=26.106924,-5.117869000000001&SIZE=0.002091672217078556,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0144-0458_r4920p01_g.fits.fz&extn=1&POS=26.106924,-5.117869000000001&SIZE=0.002091672217078556,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0144-0458_r4920p01_i.fits.fz&extn=1&POS=26.106924,-5.117869000000001&SIZE=0.002091672217078556,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0144-0458_r4920p01_r.fits.fz&extn=1&POS=26.106924,-5.117869000000001&SIZE=0.002091672217078556,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0144-0458_r4920p01_z.fits.fz&extn=1&POS=26.106924,-5.117869000000001&SIZE=0.002091672217078556,0.0020833333333333333
+# 1105176403
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0050-6039_r4907p01_Y.fits.fz&extn=1&POS=12.129841,-60.343119&SIZE=0.004210414358490621,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0050-6039_r4907p01_g.fits.fz&extn=1&POS=12.129841,-60.343119&SIZE=0.004210414358490621,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0050-6039_r4907p01_i.fits.fz&extn=1&POS=12.129841,-60.343119&SIZE=0.004210414358490621,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0050-6039_r4907p01_r.fits.fz&extn=1&POS=12.129841,-60.343119&SIZE=0.004210414358490621,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0050-6039_r4907p01_z.fits.fz&extn=1&POS=12.129841,-60.343119&SIZE=0.004210414358490621,0.0020833333333333333
+# 903699384
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2102-6248_r4575p01_Y.fits.fz&extn=1&POS=315.240897,-62.765434&SIZE=0.004552396500171328,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2102-6248_r4575p01_g.fits.fz&extn=1&POS=315.240897,-62.765434&SIZE=0.004552396500171328,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2102-6248_r4575p01_i.fits.fz&extn=1&POS=315.240897,-62.765434&SIZE=0.004552396500171328,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2102-6248_r4575p01_r.fits.fz&extn=1&POS=315.240897,-62.765434&SIZE=0.004552396500171328,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2102-6248_r4575p01_z.fits.fz&extn=1&POS=315.240897,-62.765434&SIZE=0.004552396500171328,0.0020833333333333333
+# 878607892
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2046-4040_r4575p01_Y.fits.fz&extn=1&POS=311.6619,-40.418391&SIZE=0.002736438465677857,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2046-4040_r4575p01_g.fits.fz&extn=1&POS=311.6619,-40.418391&SIZE=0.002736438465677857,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2046-4040_r4575p01_i.fits.fz&extn=1&POS=311.6619,-40.418391&SIZE=0.002736438465677857,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2046-4040_r4575p01_r.fits.fz&extn=1&POS=311.6619,-40.418391&SIZE=0.002736438465677857,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2046-4040_r4575p01_z.fits.fz&extn=1&POS=311.6619,-40.418391&SIZE=0.002736438465677857,0.0020833333333333333
+# 1548167334
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0518-6039_r4939p01_Y.fits.fz&extn=1&POS=79.24696,-60.325659&SIZE=0.0042081623795312845,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0518-6039_r4939p01_g.fits.fz&extn=1&POS=79.24696,-60.325659&SIZE=0.0042081623795312845,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0518-6039_r4939p01_i.fits.fz&extn=1&POS=79.24696,-60.325659&SIZE=0.0042081623795312845,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0518-6039_r4939p01_r.fits.fz&extn=1&POS=79.24696,-60.325659&SIZE=0.0042081623795312845,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0518-6039_r4939p01_z.fits.fz&extn=1&POS=79.24696,-60.325659&SIZE=0.0042081623795312845,0.0020833333333333333
+# 1599078182
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0603-5540_r4939p01_Y.fits.fz&extn=1&POS=90.379611,-55.863599&SIZE=0.003712514987170853,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0603-5540_r4939p01_g.fits.fz&extn=1&POS=90.379611,-55.863599&SIZE=0.003712514987170853,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0603-5540_r4939p01_i.fits.fz&extn=1&POS=90.379611,-55.863599&SIZE=0.003712514987170853,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0603-5540_r4939p01_r.fits.fz&extn=1&POS=90.379611,-55.863599&SIZE=0.003712514987170853,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0603-5540_r4939p01_z.fits.fz&extn=1&POS=90.379611,-55.863599&SIZE=0.003712514987170853,0.0020833333333333333
+# 1602026175
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0608-3706_r4939p01_Y.fits.fz&extn=1&POS=92.427705,-36.934567&SIZE=0.0026063746743322674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0608-3706_r4939p01_g.fits.fz&extn=1&POS=92.427705,-36.934567&SIZE=0.0026063746743322674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0608-3706_r4939p01_i.fits.fz&extn=1&POS=92.427705,-36.934567&SIZE=0.0026063746743322674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0608-3706_r4939p01_r.fits.fz&extn=1&POS=92.427705,-36.934567&SIZE=0.0026063746743322674,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0608-3706_r4939p01_z.fits.fz&extn=1&POS=92.427705,-36.934567&SIZE=0.0026063746743322674,0.0020833333333333333
+# 1280793770
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0227-0541_r4920p01_Y.fits.fz&extn=1&POS=37.215256,-5.998835&SIZE=0.002094804439397549,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0227-0541_r4920p01_g.fits.fz&extn=1&POS=37.215256,-5.998835&SIZE=0.002094804439397549,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0227-0541_r4920p01_i.fits.fz&extn=1&POS=37.215256,-5.998835&SIZE=0.002094804439397549,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0227-0541_r4920p01_r.fits.fz&extn=1&POS=37.215256,-5.998835&SIZE=0.002094804439397549,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0227-0541_r4920p01_z.fits.fz&extn=1&POS=37.215256,-5.998835&SIZE=0.002094804439397549,0.0020833333333333333
+# 1375884604
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0310-5123_r4931p01_Y.fits.fz&extn=1&POS=47.771104,-51.459992&SIZE=0.0033437070766529913,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0310-5123_r4931p01_g.fits.fz&extn=1&POS=47.771104,-51.459992&SIZE=0.0033437070766529913,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0310-5123_r4931p01_i.fits.fz&extn=1&POS=47.771104,-51.459992&SIZE=0.0033437070766529913,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0310-5123_r4931p01_r.fits.fz&extn=1&POS=47.771104,-51.459992&SIZE=0.0033437070766529913,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0310-5123_r4931p01_z.fits.fz&extn=1&POS=47.771104,-51.459992&SIZE=0.0033437070766529913,0.0020833333333333333
+# 885456761
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2055-4706_r4575p01_Y.fits.fz&extn=1&POS=314.30254,-47.18768&SIZE=0.0030655329893189576,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2055-4706_r4575p01_g.fits.fz&extn=1&POS=314.30254,-47.18768&SIZE=0.0030655329893189576,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2055-4706_r4575p01_i.fits.fz&extn=1&POS=314.30254,-47.18768&SIZE=0.0030655329893189576,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2055-4706_r4575p01_r.fits.fz&extn=1&POS=314.30254,-47.18768&SIZE=0.0030655329893189576,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2055-4706_r4575p01_z.fits.fz&extn=1&POS=314.30254,-47.18768&SIZE=0.0030655329893189576,0.0020833333333333333
+# 1475578575
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0424-3249_r4939p01_Y.fits.fz&extn=1&POS=66.407989,-32.933957&SIZE=0.0024822337637077077,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0424-3249_r4939p01_g.fits.fz&extn=1&POS=66.407989,-32.933957&SIZE=0.0024822337637077077,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0424-3249_r4939p01_i.fits.fz&extn=1&POS=66.407989,-32.933957&SIZE=0.0024822337637077077,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0424-3249_r4939p01_r.fits.fz&extn=1&POS=66.407989,-32.933957&SIZE=0.0024822337637077077,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0424-3249_r4939p01_z.fits.fz&extn=1&POS=66.407989,-32.933957&SIZE=0.0024822337637077077,0.0020833333333333333
+# 1575386847
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0542-5331_r4939p01_Y.fits.fz&extn=1&POS=85.221357,-53.750145&SIZE=0.003523264891257562,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0542-5331_r4939p01_g.fits.fz&extn=1&POS=85.221357,-53.750145&SIZE=0.003523264891257562,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0542-5331_r4939p01_i.fits.fz&extn=1&POS=85.221357,-53.750145&SIZE=0.003523264891257562,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0542-5331_r4939p01_r.fits.fz&extn=1&POS=85.221357,-53.750145&SIZE=0.003523264891257562,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0542-5331_r4939p01_z.fits.fz&extn=1&POS=85.221357,-53.750145&SIZE=0.003523264891257562,0.0020833333333333333
+# 929336649
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2137-4706_r4575p01_Y.fits.fz&extn=1&POS=324.120427,-46.774971&SIZE=0.0030419598996865626,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2137-4706_r4575p01_g.fits.fz&extn=1&POS=324.120427,-46.774971&SIZE=0.0030419598996865626,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2137-4706_r4575p01_i.fits.fz&extn=1&POS=324.120427,-46.774971&SIZE=0.0030419598996865626,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2137-4706_r4575p01_r.fits.fz&extn=1&POS=324.120427,-46.774971&SIZE=0.0030419598996865626,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2137-4706_r4575p01_z.fits.fz&extn=1&POS=324.120427,-46.774971&SIZE=0.0030419598996865626,0.0020833333333333333
+# 1500545372
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0442-1958_r4939p01_Y.fits.fz&extn=1&POS=70.412236,-20.014331&SIZE=0.002217238946962239,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0442-1958_r4939p01_g.fits.fz&extn=1&POS=70.412236,-20.014331&SIZE=0.002217238946962239,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0442-1958_r4939p01_i.fits.fz&extn=1&POS=70.412236,-20.014331&SIZE=0.002217238946962239,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0442-1958_r4939p01_r.fits.fz&extn=1&POS=70.412236,-20.014331&SIZE=0.002217238946962239,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0442-1958_r4939p01_z.fits.fz&extn=1&POS=70.412236,-20.014331&SIZE=0.002217238946962239,0.0020833333333333333
+# 1240497313
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0206-0750_r4920p01_Y.fits.fz&extn=1&POS=31.964782,-7.860228&SIZE=0.0021030926627367916,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0206-0750_r4920p01_g.fits.fz&extn=1&POS=31.964782,-7.860228&SIZE=0.0021030926627367916,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0206-0750_r4920p01_i.fits.fz&extn=1&POS=31.964782,-7.860228&SIZE=0.0021030926627367916,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0206-0750_r4920p01_r.fits.fz&extn=1&POS=31.964782,-7.860228&SIZE=0.0021030926627367916,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0206-0750_r4920p01_z.fits.fz&extn=1&POS=31.964782,-7.860228&SIZE=0.0021030926627367916,0.0020833333333333333
+# 1375097239
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0311-5622_r4931p01_Y.fits.fz&extn=1&POS=47.914344,-56.351623&SIZE=0.003759887322981895,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0311-5622_r4931p01_g.fits.fz&extn=1&POS=47.914344,-56.351623&SIZE=0.003759887322981895,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0311-5622_r4931p01_i.fits.fz&extn=1&POS=47.914344,-56.351623&SIZE=0.003759887322981895,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0311-5622_r4931p01_r.fits.fz&extn=1&POS=47.914344,-56.351623&SIZE=0.003759887322981895,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0311-5622_r4931p01_z.fits.fz&extn=1&POS=47.914344,-56.351623&SIZE=0.003759887322981895,0.0020833333333333333
+# 1178572749
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0129-4748_r4920p01_Y.fits.fz&extn=1&POS=22.70703,-47.724565000000005&SIZE=0.003096993843800204,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0129-4748_r4920p01_g.fits.fz&extn=1&POS=22.70703,-47.724565000000005&SIZE=0.003096993843800204,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0129-4748_r4920p01_i.fits.fz&extn=1&POS=22.70703,-47.724565000000005&SIZE=0.003096993843800204,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0129-4748_r4920p01_r.fits.fz&extn=1&POS=22.70703,-47.724565000000005&SIZE=0.003096993843800204,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0129-4748_r4920p01_z.fits.fz&extn=1&POS=22.70703,-47.724565000000005&SIZE=0.003096993843800204,0.0020833333333333333
+# 1487367455
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0434-1915_r4939p01_Y.fits.fz&extn=1&POS=68.345873,-19.482097&SIZE=0.0022098570444083546,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0434-1915_r4939p01_g.fits.fz&extn=1&POS=68.345873,-19.482097&SIZE=0.0022098570444083546,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0434-1915_r4939p01_i.fits.fz&extn=1&POS=68.345873,-19.482097&SIZE=0.0022098570444083546,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0434-1915_r4939p01_r.fits.fz&extn=1&POS=68.345873,-19.482097&SIZE=0.0022098570444083546,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0434-1915_r4939p01_z.fits.fz&extn=1&POS=68.345873,-19.482097&SIZE=0.0022098570444083546,0.0020833333333333333
+# 1217389347
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-4457_r4920p01_Y.fits.fz&extn=1&POS=28.564206,-45.170399&SIZE=0.0029550797875526227,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-4457_r4920p01_g.fits.fz&extn=1&POS=28.564206,-45.170399&SIZE=0.0029550797875526227,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-4457_r4920p01_i.fits.fz&extn=1&POS=28.564206,-45.170399&SIZE=0.0029550797875526227,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-4457_r4920p01_r.fits.fz&extn=1&POS=28.564206,-45.170399&SIZE=0.0029550797875526227,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-4457_r4920p01_z.fits.fz&extn=1&POS=28.564206,-45.170399&SIZE=0.0029550797875526227,0.0020833333333333333
+# 1272493342
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-2206_r4920p01_Y.fits.fz&extn=1&POS=36.299298,-22.380324&SIZE=0.0022530393720262896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-2206_r4920p01_g.fits.fz&extn=1&POS=36.299298,-22.380324&SIZE=0.0022530393720262896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-2206_r4920p01_i.fits.fz&extn=1&POS=36.299298,-22.380324&SIZE=0.0022530393720262896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-2206_r4920p01_r.fits.fz&extn=1&POS=36.299298,-22.380324&SIZE=0.0022530393720262896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-2206_r4920p01_z.fits.fz&extn=1&POS=36.299298,-22.380324&SIZE=0.0022530393720262896,0.0020833333333333333
+# 1285172073
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0229-5622_r4920p01_Y.fits.fz&extn=1&POS=37.899974,-56.103391&SIZE=0.0037356075556990156,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0229-5622_r4920p01_g.fits.fz&extn=1&POS=37.899974,-56.103391&SIZE=0.0037356075556990156,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0229-5622_r4920p01_i.fits.fz&extn=1&POS=37.899974,-56.103391&SIZE=0.0037356075556990156,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0229-5622_r4920p01_r.fits.fz&extn=1&POS=37.899974,-56.103391&SIZE=0.0037356075556990156,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0229-5622_r4920p01_z.fits.fz&extn=1&POS=37.899974,-56.103391&SIZE=0.0037356075556990156,0.0020833333333333333
+# 1594567413
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0558-3332_r4939p01_Y.fits.fz&extn=1&POS=89.836497,-33.843047&SIZE=0.0025083288056430694,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0558-3332_r4939p01_g.fits.fz&extn=1&POS=89.836497,-33.843047&SIZE=0.0025083288056430694,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0558-3332_r4939p01_i.fits.fz&extn=1&POS=89.836497,-33.843047&SIZE=0.0025083288056430694,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0558-3332_r4939p01_r.fits.fz&extn=1&POS=89.836497,-33.843047&SIZE=0.0025083288056430694,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0558-3332_r4939p01_z.fits.fz&extn=1&POS=89.836497,-33.843047&SIZE=0.0025083288056430694,0.0020833333333333333
+# 936236876
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2148-0207_r4575p01_Y.fits.fz&extn=1&POS=327.455786,-1.91436&SIZE=0.0020844967433010495,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2148-0207_r4575p01_g.fits.fz&extn=1&POS=327.455786,-1.91436&SIZE=0.0020844967433010495,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2148-0207_r4575p01_i.fits.fz&extn=1&POS=327.455786,-1.91436&SIZE=0.0020844967433010495,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2148-0207_r4575p01_r.fits.fz&extn=1&POS=327.455786,-1.91436&SIZE=0.0020844967433010495,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2148-0207_r4575p01_z.fits.fz&extn=1&POS=327.455786,-1.91436&SIZE=0.0020844967433010495,0.0020833333333333333
+# 1272253209
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-0707_r4920p01_Y.fits.fz&extn=1&POS=35.792704,-6.850542999999999&SIZE=0.002098313882954095,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-0707_r4920p01_g.fits.fz&extn=1&POS=35.792704,-6.850542999999999&SIZE=0.002098313882954095,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-0707_r4920p01_i.fits.fz&extn=1&POS=35.792704,-6.850542999999999&SIZE=0.002098313882954095,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-0707_r4920p01_r.fits.fz&extn=1&POS=35.792704,-6.850542999999999&SIZE=0.002098313882954095,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0223-0707_r4920p01_z.fits.fz&extn=1&POS=35.792704,-6.850542999999999&SIZE=0.002098313882954095,0.0020833333333333333
+# 911029873
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2111-0041_r4575p01_Y.fits.fz&extn=1&POS=317.579526,-0.8493569999999999&SIZE=0.0020835622639142582,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2111-0041_r4575p01_g.fits.fz&extn=1&POS=317.579526,-0.8493569999999999&SIZE=0.0020835622639142582,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2111-0041_r4575p01_i.fits.fz&extn=1&POS=317.579526,-0.8493569999999999&SIZE=0.0020835622639142582,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2111-0041_r4575p01_r.fits.fz&extn=1&POS=317.579526,-0.8493569999999999&SIZE=0.0020835622639142582,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2111-0041_r4575p01_z.fits.fz&extn=1&POS=317.579526,-0.8493569999999999&SIZE=0.0020835622639142582,0.0020833333333333333
+# 982760821
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2254-4123_r4575p01_Y.fits.fz&extn=1&POS=343.44363500000003,-41.459084&SIZE=0.0027798952451542616,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2254-4123_r4575p01_g.fits.fz&extn=1&POS=343.44363500000003,-41.459084&SIZE=0.0027798952451542616,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2254-4123_r4575p01_i.fits.fz&extn=1&POS=343.44363500000003,-41.459084&SIZE=0.0027798952451542616,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2254-4123_r4575p01_r.fits.fz&extn=1&POS=343.44363500000003,-41.459084&SIZE=0.0027798952451542616,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2254-4123_r4575p01_z.fits.fz&extn=1&POS=343.44363500000003,-41.459084&SIZE=0.0027798952451542616,0.0020833333333333333
+# 981945930
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2253-5540_r4575p01_Y.fits.fz&extn=1&POS=343.494294,-55.547803&SIZE=0.0036826327910573324,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2253-5540_r4575p01_g.fits.fz&extn=1&POS=343.494294,-55.547803&SIZE=0.0036826327910573324,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2253-5540_r4575p01_i.fits.fz&extn=1&POS=343.494294,-55.547803&SIZE=0.0036826327910573324,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2253-5540_r4575p01_r.fits.fz&extn=1&POS=343.494294,-55.547803&SIZE=0.0036826327910573324,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2253-5540_r4575p01_z.fits.fz&extn=1&POS=343.494294,-55.547803&SIZE=0.0036826327910573324,0.0020833333333333333
+# 1048653056
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_Y.fits.fz&extn=1&POS=2.629772,-54.51536&SIZE=0.003588954865434406,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_g.fits.fz&extn=1&POS=2.629772,-54.51536&SIZE=0.003588954865434406,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_i.fits.fz&extn=1&POS=2.629772,-54.51536&SIZE=0.003588954865434406,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_r.fits.fz&extn=1&POS=2.629772,-54.51536&SIZE=0.003588954865434406,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0011-5414_r4907p01_z.fits.fz&extn=1&POS=2.629772,-54.51536&SIZE=0.003588954865434406,0.0020833333333333333
+# 1411972336
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0343-5914_r4931p01_Y.fits.fz&extn=1&POS=56.062751,-59.049027&SIZE=0.004050778563916836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0343-5914_r4931p01_g.fits.fz&extn=1&POS=56.062751,-59.049027&SIZE=0.004050778563916836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0343-5914_r4931p01_i.fits.fz&extn=1&POS=56.062751,-59.049027&SIZE=0.004050778563916836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0343-5914_r4931p01_r.fits.fz&extn=1&POS=56.062751,-59.049027&SIZE=0.004050778563916836,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0343-5914_r4931p01_z.fits.fz&extn=1&POS=56.062751,-59.049027&SIZE=0.004050778563916836,0.0020833333333333333
+# 1215841315
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_Y.fits.fz&extn=1&POS=28.177375,-39.927426&SIZE=0.0027167132410386265,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_g.fits.fz&extn=1&POS=28.177375,-39.927426&SIZE=0.0027167132410386265,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_i.fits.fz&extn=1&POS=28.177375,-39.927426&SIZE=0.0027167132410386265,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_r.fits.fz&extn=1&POS=28.177375,-39.927426&SIZE=0.0027167132410386265,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_z.fits.fz&extn=1&POS=28.177375,-39.927426&SIZE=0.0027167132410386265,0.0020833333333333333
+# 987544688
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2302-4457_r4575p01_Y.fits.fz&extn=1&POS=345.139827,-44.700852000000005&SIZE=0.0029310150998375717,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2302-4457_r4575p01_g.fits.fz&extn=1&POS=345.139827,-44.700852000000005&SIZE=0.0029310150998375717,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2302-4457_r4575p01_i.fits.fz&extn=1&POS=345.139827,-44.700852000000005&SIZE=0.0029310150998375717,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2302-4457_r4575p01_r.fits.fz&extn=1&POS=345.139827,-44.700852000000005&SIZE=0.0029310150998375717,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2302-4457_r4575p01_z.fits.fz&extn=1&POS=345.139827,-44.700852000000005&SIZE=0.0029310150998375717,0.0020833333333333333
+# 944910821
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2159-0041_r4575p01_Y.fits.fz&extn=1&POS=330.196852,-0.646708&SIZE=0.0020834660492537417,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2159-0041_r4575p01_g.fits.fz&extn=1&POS=330.196852,-0.646708&SIZE=0.0020834660492537417,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2159-0041_r4575p01_i.fits.fz&extn=1&POS=330.196852,-0.646708&SIZE=0.0020834660492537417,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2159-0041_r4575p01_r.fits.fz&extn=1&POS=330.196852,-0.646708&SIZE=0.0020834660492537417,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2159-0041_r4575p01_z.fits.fz&extn=1&POS=330.196852,-0.646708&SIZE=0.0020834660492537417,0.0020833333333333333
+# 1333086643
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0246-4748_r4931p01_Y.fits.fz&extn=1&POS=41.238831,-47.99296&SIZE=0.003113068019391511,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0246-4748_r4931p01_g.fits.fz&extn=1&POS=41.238831,-47.99296&SIZE=0.003113068019391511,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0246-4748_r4931p01_i.fits.fz&extn=1&POS=41.238831,-47.99296&SIZE=0.003113068019391511,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0246-4748_r4931p01_r.fits.fz&extn=1&POS=41.238831,-47.99296&SIZE=0.003113068019391511,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0246-4748_r4931p01_z.fits.fz&extn=1&POS=41.238831,-47.99296&SIZE=0.003113068019391511,0.0020833333333333333
+# 1556468203
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4623_r4939p01_Y.fits.fz&extn=1&POS=81.286327,-46.447213&SIZE=0.003023606781796532,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4623_r4939p01_g.fits.fz&extn=1&POS=81.286327,-46.447213&SIZE=0.003023606781796532,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4623_r4939p01_i.fits.fz&extn=1&POS=81.286327,-46.447213&SIZE=0.003023606781796532,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4623_r4939p01_r.fits.fz&extn=1&POS=81.286327,-46.447213&SIZE=0.003023606781796532,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0526-4623_r4939p01_z.fits.fz&extn=1&POS=81.286327,-46.447213&SIZE=0.003023606781796532,0.0020833333333333333
+# 1582602558
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0547-4706_r4939p01_Y.fits.fz&extn=1&POS=86.86536,-47.388737&SIZE=0.0030772079330854477,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0547-4706_r4939p01_g.fits.fz&extn=1&POS=86.86536,-47.388737&SIZE=0.0030772079330854477,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0547-4706_r4939p01_i.fits.fz&extn=1&POS=86.86536,-47.388737&SIZE=0.0030772079330854477,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0547-4706_r4939p01_r.fits.fz&extn=1&POS=86.86536,-47.388737&SIZE=0.0030772079330854477,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0547-4706_r4939p01_z.fits.fz&extn=1&POS=86.86536,-47.388737&SIZE=0.0030772079330854477,0.0020833333333333333
+# 1226224011
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0200-0915_r4920p01_Y.fits.fz&extn=1&POS=29.710755,-9.360785&SIZE=0.002111450001521357,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0200-0915_r4920p01_g.fits.fz&extn=1&POS=29.710755,-9.360785&SIZE=0.002111450001521357,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0200-0915_r4920p01_i.fits.fz&extn=1&POS=29.710755,-9.360785&SIZE=0.002111450001521357,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0200-0915_r4920p01_r.fits.fz&extn=1&POS=29.710755,-9.360785&SIZE=0.002111450001521357,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0200-0915_r4920p01_z.fits.fz&extn=1&POS=29.710755,-9.360785&SIZE=0.002111450001521357,0.0020833333333333333
+# 1348893696
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0255-0915_r4931p01_Y.fits.fz&extn=1&POS=43.492196,-9.188506&SIZE=0.0021104134866513566,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0255-0915_r4931p01_g.fits.fz&extn=1&POS=43.492196,-9.188506&SIZE=0.0021104134866513566,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0255-0915_r4931p01_i.fits.fz&extn=1&POS=43.492196,-9.188506&SIZE=0.0021104134866513566,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0255-0915_r4931p01_r.fits.fz&extn=1&POS=43.492196,-9.188506&SIZE=0.0021104134866513566,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0255-0915_r4931p01_z.fits.fz&extn=1&POS=43.492196,-9.188506&SIZE=0.0021104134866513566,0.0020833333333333333
+# 1217658399
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-5957_r4920p01_Y.fits.fz&extn=1&POS=29.030548,-60.140198&SIZE=0.0041844134903769896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-5957_r4920p01_g.fits.fz&extn=1&POS=29.030548,-60.140198&SIZE=0.0041844134903769896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-5957_r4920p01_i.fits.fz&extn=1&POS=29.030548,-60.140198&SIZE=0.0041844134903769896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-5957_r4920p01_r.fits.fz&extn=1&POS=29.030548,-60.140198&SIZE=0.0041844134903769896,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0156-5957_r4920p01_z.fits.fz&extn=1&POS=29.030548,-60.140198&SIZE=0.0041844134903769896,0.0020833333333333333
+# 1044255202
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0008+0001_r4907p01_Y.fits.fz&extn=1&POS=2.024464,-0.279816&SIZE=0.002083358177984656,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0008+0001_r4907p01_g.fits.fz&extn=1&POS=2.024464,-0.279816&SIZE=0.002083358177984656,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0008+0001_r4907p01_i.fits.fz&extn=1&POS=2.024464,-0.279816&SIZE=0.002083358177984656,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0008+0001_r4907p01_r.fits.fz&extn=1&POS=2.024464,-0.279816&SIZE=0.002083358177984656,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0008+0001_r4907p01_z.fits.fz&extn=1&POS=2.024464,-0.279816&SIZE=0.002083358177984656,0.0020833333333333333
+# 913826584
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2117+0126_r4575p01_Y.fits.fz&extn=1&POS=319.61053300000003,1.379585&SIZE=0.002083937400670659,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2117+0126_r4575p01_g.fits.fz&extn=1&POS=319.61053300000003,1.379585&SIZE=0.002083937400670659,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2117+0126_r4575p01_i.fits.fz&extn=1&POS=319.61053300000003,1.379585&SIZE=0.002083937400670659,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2117+0126_r4575p01_r.fits.fz&extn=1&POS=319.61053300000003,1.379585&SIZE=0.002083937400670659,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2117+0126_r4575p01_z.fits.fz&extn=1&POS=319.61053300000003,1.379585&SIZE=0.002083937400670659,0.0020833333333333333
+# 902690024
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2100-5123_r4575p01_Y.fits.fz&extn=1&POS=314.643584,-51.583238&SIZE=0.0033527685286217066,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2100-5123_r4575p01_g.fits.fz&extn=1&POS=314.643584,-51.583238&SIZE=0.0033527685286217066,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2100-5123_r4575p01_i.fits.fz&extn=1&POS=314.643584,-51.583238&SIZE=0.0033527685286217066,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2100-5123_r4575p01_r.fits.fz&extn=1&POS=314.643584,-51.583238&SIZE=0.0033527685286217066,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2100-5123_r4575p01_z.fits.fz&extn=1&POS=314.643584,-51.583238&SIZE=0.0033527685286217066,0.0020833333333333333
+# 1289674526
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0232-4457_r4920p01_Y.fits.fz&extn=1&POS=38.339119,-44.881803000000005&SIZE=0.0029402190587992524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0232-4457_r4920p01_g.fits.fz&extn=1&POS=38.339119,-44.881803000000005&SIZE=0.0029402190587992524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0232-4457_r4920p01_i.fits.fz&extn=1&POS=38.339119,-44.881803000000005&SIZE=0.0029402190587992524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0232-4457_r4920p01_r.fits.fz&extn=1&POS=38.339119,-44.881803000000005&SIZE=0.0029402190587992524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0232-4457_r4920p01_z.fits.fz&extn=1&POS=38.339119,-44.881803000000005&SIZE=0.0029402190587992524,0.0020833333333333333
+# 1259672799
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0217-1250_r4920p01_Y.fits.fz&extn=1&POS=34.295342,-13.011266&SIZE=0.002138230664932313,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0217-1250_r4920p01_g.fits.fz&extn=1&POS=34.295342,-13.011266&SIZE=0.002138230664932313,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0217-1250_r4920p01_i.fits.fz&extn=1&POS=34.295342,-13.011266&SIZE=0.002138230664932313,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0217-1250_r4920p01_r.fits.fz&extn=1&POS=34.295342,-13.011266&SIZE=0.002138230664932313,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0217-1250_r4920p01_z.fits.fz&extn=1&POS=34.295342,-13.011266&SIZE=0.002138230664932313,0.0020833333333333333
+# 1510807059
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0451-2623_r4939p01_Y.fits.fz&extn=1&POS=72.72610300000001,-26.245538&SIZE=0.0023227970222616232,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0451-2623_r4939p01_g.fits.fz&extn=1&POS=72.72610300000001,-26.245538&SIZE=0.0023227970222616232,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0451-2623_r4939p01_i.fits.fz&extn=1&POS=72.72610300000001,-26.245538&SIZE=0.0023227970222616232,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0451-2623_r4939p01_r.fits.fz&extn=1&POS=72.72610300000001,-26.245538&SIZE=0.0023227970222616232,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0451-2623_r4939p01_z.fits.fz&extn=1&POS=72.72610300000001,-26.245538&SIZE=0.0023227970222616232,0.0020833333333333333
+# 1432926496
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-2206_r4931p01_Y.fits.fz&extn=1&POS=59.782592,-22.228269&SIZE=0.002250587911239524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-2206_r4931p01_g.fits.fz&extn=1&POS=59.782592,-22.228269&SIZE=0.002250587911239524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-2206_r4931p01_i.fits.fz&extn=1&POS=59.782592,-22.228269&SIZE=0.002250587911239524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-2206_r4931p01_r.fits.fz&extn=1&POS=59.782592,-22.228269&SIZE=0.002250587911239524,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-2206_r4931p01_z.fits.fz&extn=1&POS=59.782592,-22.228269&SIZE=0.002250587911239524,0.0020833333333333333
+# 1553779124
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0524-3206_r4939p01_Y.fits.fz&extn=1&POS=81.224835,-32.216778000000005&SIZE=0.0024624610024889908,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0524-3206_r4939p01_g.fits.fz&extn=1&POS=81.224835,-32.216778000000005&SIZE=0.0024624610024889908,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0524-3206_r4939p01_i.fits.fz&extn=1&POS=81.224835,-32.216778000000005&SIZE=0.0024624610024889908,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0524-3206_r4939p01_r.fits.fz&extn=1&POS=81.224835,-32.216778000000005&SIZE=0.0024624610024889908,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0524-3206_r4939p01_z.fits.fz&extn=1&POS=81.224835,-32.216778000000005&SIZE=0.0024624610024889908,0.0020833333333333333
+# 1073058556
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0031-0707_r4907p01_Y.fits.fz&extn=1&POS=7.55275,-7.191801&SIZE=0.002099853666877143,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0031-0707_r4907p01_g.fits.fz&extn=1&POS=7.55275,-7.191801&SIZE=0.002099853666877143,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0031-0707_r4907p01_i.fits.fz&extn=1&POS=7.55275,-7.191801&SIZE=0.002099853666877143,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0031-0707_r4907p01_r.fits.fz&extn=1&POS=7.55275,-7.191801&SIZE=0.002099853666877143,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0031-0707_r4907p01_z.fits.fz&extn=1&POS=7.55275,-7.191801&SIZE=0.002099853666877143,0.0020833333333333333
+# 1614909035
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0415-5331_r4939p02_Y.fits.fz&extn=1&POS=64.036589,-53.393812&SIZE=0.0034936992928431706,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0415-5331_r4939p02_g.fits.fz&extn=1&POS=64.036589,-53.393812&SIZE=0.0034936992928431706,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0415-5331_r4939p02_i.fits.fz&extn=1&POS=64.036589,-53.393812&SIZE=0.0034936992928431706,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0415-5331_r4939p02_r.fits.fz&extn=1&POS=64.036589,-53.393812&SIZE=0.0034936992928431706,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0415-5331_r4939p02_z.fits.fz&extn=1&POS=64.036589,-53.393812&SIZE=0.0034936992928431706,0.0020833333333333333
+# 1215824518
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_Y.fits.fz&extn=1&POS=28.40623,-39.764955&SIZE=0.0027102918597000335,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_g.fits.fz&extn=1&POS=28.40623,-39.764955&SIZE=0.0027102918597000335,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_i.fits.fz&extn=1&POS=28.40623,-39.764955&SIZE=0.0027102918597000335,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_r.fits.fz&extn=1&POS=28.40623,-39.764955&SIZE=0.0027102918597000335,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0154-3957_r4920p01_z.fits.fz&extn=1&POS=28.40623,-39.764955&SIZE=0.0027102918597000335,0.0020833333333333333
+# 1494596966
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0439-2706_r4939p01_Y.fits.fz&extn=1&POS=69.437069,-26.982384000000003&SIZE=0.0023378135367576355,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0439-2706_r4939p01_g.fits.fz&extn=1&POS=69.437069,-26.982384000000003&SIZE=0.0023378135367576355,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0439-2706_r4939p01_i.fits.fz&extn=1&POS=69.437069,-26.982384000000003&SIZE=0.0023378135367576355,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0439-2706_r4939p01_r.fits.fz&extn=1&POS=69.437069,-26.982384000000003&SIZE=0.0023378135367576355,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0439-2706_r4939p01_z.fits.fz&extn=1&POS=69.437069,-26.982384000000003&SIZE=0.0023378135367576355,0.0020833333333333333
+# 1568732757
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0537-5331_r4939p01_Y.fits.fz&extn=1&POS=84.397725,-53.316144&SIZE=0.0034873386135231784,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0537-5331_r4939p01_g.fits.fz&extn=1&POS=84.397725,-53.316144&SIZE=0.0034873386135231784,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0537-5331_r4939p01_i.fits.fz&extn=1&POS=84.397725,-53.316144&SIZE=0.0034873386135231784,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0537-5331_r4939p01_r.fits.fz&extn=1&POS=84.397725,-53.316144&SIZE=0.0034873386135231784,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0537-5331_r4939p01_z.fits.fz&extn=1&POS=84.397725,-53.316144&SIZE=0.0034873386135231784,0.0020833333333333333
+# 969592632
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6248_r4575p01_Y.fits.fz&extn=1&POS=338.70436,-62.975811&SIZE=0.00458513726770713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6248_r4575p01_g.fits.fz&extn=1&POS=338.70436,-62.975811&SIZE=0.00458513726770713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6248_r4575p01_i.fits.fz&extn=1&POS=338.70436,-62.975811&SIZE=0.00458513726770713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6248_r4575p01_r.fits.fz&extn=1&POS=338.70436,-62.975811&SIZE=0.00458513726770713,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2236-6248_r4575p01_z.fits.fz&extn=1&POS=338.70436,-62.975811&SIZE=0.00458513726770713,0.0020833333333333333
+# 1429637520
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0356-5040_r4931p01_Y.fits.fz&extn=1&POS=58.816307,-50.979565&SIZE=0.0033089922467673134,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0356-5040_r4931p01_g.fits.fz&extn=1&POS=58.816307,-50.979565&SIZE=0.0033089922467673134,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0356-5040_r4931p01_i.fits.fz&extn=1&POS=58.816307,-50.979565&SIZE=0.0033089922467673134,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0356-5040_r4931p01_r.fits.fz&extn=1&POS=58.816307,-50.979565&SIZE=0.0033089922467673134,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0356-5040_r4931p01_z.fits.fz&extn=1&POS=58.816307,-50.979565&SIZE=0.0033089922467673134,0.0020833333333333333
+# 1528521240
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0505-4457_r4939p01_Y.fits.fz&extn=1&POS=76.871622,-44.915432&SIZE=0.0029419391881504503,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0505-4457_r4939p01_g.fits.fz&extn=1&POS=76.871622,-44.915432&SIZE=0.0029419391881504503,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0505-4457_r4939p01_i.fits.fz&extn=1&POS=76.871622,-44.915432&SIZE=0.0029419391881504503,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0505-4457_r4939p01_r.fits.fz&extn=1&POS=76.871622,-44.915432&SIZE=0.0029419391881504503,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0505-4457_r4939p01_z.fits.fz&extn=1&POS=76.871622,-44.915432&SIZE=0.0029419391881504503,0.0020833333333333333
+# 1209551820
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0152-2249_r4920p01_Y.fits.fz&extn=1&POS=28.26025,-22.862445&SIZE=0.0022609532258751367,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0152-2249_r4920p01_g.fits.fz&extn=1&POS=28.26025,-22.862445&SIZE=0.0022609532258751367,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0152-2249_r4920p01_i.fits.fz&extn=1&POS=28.26025,-22.862445&SIZE=0.0022609532258751367,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0152-2249_r4920p01_r.fits.fz&extn=1&POS=28.26025,-22.862445&SIZE=0.0022609532258751367,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0152-2249_r4920p01_z.fits.fz&extn=1&POS=28.26025,-22.862445&SIZE=0.0022609532258751367,0.0020833333333333333
+# 1434787929
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-6205_r4931p01_Y.fits.fz&extn=1&POS=59.750084,-62.136892&SIZE=0.004457656489260416,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-6205_r4931p01_g.fits.fz&extn=1&POS=59.750084,-62.136892&SIZE=0.004457656489260416,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-6205_r4931p01_i.fits.fz&extn=1&POS=59.750084,-62.136892&SIZE=0.004457656489260416,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-6205_r4931p01_r.fits.fz&extn=1&POS=59.750084,-62.136892&SIZE=0.004457656489260416,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0359-6205_r4931p01_z.fits.fz&extn=1&POS=59.750084,-62.136892&SIZE=0.004457656489260416,0.0020833333333333333
+# 1427559008
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0355-4623_r4931p01_Y.fits.fz&extn=1&POS=58.678673,-46.609798&SIZE=0.003032670714000249,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0355-4623_r4931p01_g.fits.fz&extn=1&POS=58.678673,-46.609798&SIZE=0.003032670714000249,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0355-4623_r4931p01_i.fits.fz&extn=1&POS=58.678673,-46.609798&SIZE=0.003032670714000249,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0355-4623_r4931p01_r.fits.fz&extn=1&POS=58.678673,-46.609798&SIZE=0.003032670714000249,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0355-4623_r4931p01_z.fits.fz&extn=1&POS=58.678673,-46.609798&SIZE=0.003032670714000249,0.0020833333333333333
+# 1000339557
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2314+0043_r4575p01_Y.fits.fz&extn=1&POS=348.309204,0.614603&SIZE=0.002083453198688338,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2314+0043_r4575p01_g.fits.fz&extn=1&POS=348.309204,0.614603&SIZE=0.002083453198688338,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2314+0043_r4575p01_i.fits.fz&extn=1&POS=348.309204,0.614603&SIZE=0.002083453198688338,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2314+0043_r4575p01_r.fits.fz&extn=1&POS=348.309204,0.614603&SIZE=0.002083453198688338,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2314+0043_r4575p01_z.fits.fz&extn=1&POS=348.309204,0.614603&SIZE=0.002083453198688338,0.0020833333333333333
+# 1424852383
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0352-5705_r4931p01_Y.fits.fz&extn=1&POS=58.303024,-57.275533&SIZE=0.003853745454490875,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0352-5705_r4931p01_g.fits.fz&extn=1&POS=58.303024,-57.275533&SIZE=0.003853745454490875,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0352-5705_r4931p01_i.fits.fz&extn=1&POS=58.303024,-57.275533&SIZE=0.003853745454490875,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0352-5705_r4931p01_r.fits.fz&extn=1&POS=58.303024,-57.275533&SIZE=0.003853745454490875,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0352-5705_r4931p01_z.fits.fz&extn=1&POS=58.303024,-57.275533&SIZE=0.003853745454490875,0.0020833333333333333
+# 887408822
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2027-5414_r4575p02_Y.fits.fz&extn=1&POS=307.053275,-54.182168&SIZE=0.003559975185099072,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2027-5414_r4575p02_g.fits.fz&extn=1&POS=307.053275,-54.182168&SIZE=0.003559975185099072,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2027-5414_r4575p02_i.fits.fz&extn=1&POS=307.053275,-54.182168&SIZE=0.003559975185099072,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2027-5414_r4575p02_r.fits.fz&extn=1&POS=307.053275,-54.182168&SIZE=0.003559975185099072,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES2027-5414_r4575p02_z.fits.fz&extn=1&POS=307.053275,-54.182168&SIZE=0.003559975185099072,0.0020833333333333333
+# 1205689655
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0149-6248_r4920p01_Y.fits.fz&extn=1&POS=26.718965,-62.495091&SIZE=0.004511092073784054,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0149-6248_r4920p01_g.fits.fz&extn=1&POS=26.718965,-62.495091&SIZE=0.004511092073784054,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0149-6248_r4920p01_i.fits.fz&extn=1&POS=26.718965,-62.495091&SIZE=0.004511092073784054,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0149-6248_r4920p01_r.fits.fz&extn=1&POS=26.718965,-62.495091&SIZE=0.004511092073784054,0.0020833333333333333
+https://datalab.noirlab.edu/svc/cutout?col=des_dr2&siaRef=DES0149-6248_r4920p01_z.fits.fz&extn=1&POS=26.718965,-62.495091&SIZE=0.004511092073784054,0.0020833333333333333

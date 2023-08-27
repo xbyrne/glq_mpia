@@ -62,7 +62,7 @@ def fetch_image(url):
     # TODO: What to do if image opening fails? In what ways does it fail?
     with open(os.devnull, "w") as devnull:
         with contextlib.redirect_stdout(devnull):
-            img = fits.open(url, cache=False)[0].data
+            img = fits.open(url, cache=False, timeout=1000)[0].data
     return img
 
 
