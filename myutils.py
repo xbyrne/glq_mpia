@@ -1,8 +1,11 @@
 """
 Some utilities for the project
 """
+import os
+import contextlib
 import re
 import numpy as np
+from astropy.io import fits
 from pyvo.dal import sia
 
 ## Converting Magnitudes and Fluxes
@@ -54,6 +57,15 @@ def fetch_object_urls(ra, dec, sia_service=SIA_SERVICE):
     return url_list
 
 
+def fetch_image(url):
+    """Fetches image from URL without printing to stdout"""
+    # TODO: What to do if image opening fails? In what ways does it fail?
+    with open(os.devnull, "w") as devnull:
+        with contextlib.redirect_stdout(devnull):
+            img = fits.open(url, cache=False)[0].data
+    return img
+
+
 def crop_image(raw_img, px=28):
     """
     Crops an input numpy array to a `px`x`px` square
@@ -62,7 +74,7 @@ def crop_image(raw_img, px=28):
         dim < px for dim in raw_img.shape[:2]
     ):  # Ensures array bigger than target size (shouldn't be problems here)
         return None
-    
+
     centre_x, centre_y = (dim // 2 for dim in raw_img.shape[:2])
     cropped_img = raw_img[
         centre_x - px // 2 : centre_x + px // 2, centre_y - px // 2 : centre_y + px // 2
