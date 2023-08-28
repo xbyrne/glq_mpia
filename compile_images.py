@@ -13,7 +13,7 @@ with open("./data/external/img_url_list.txt", "r") as f:
 
 urls_list_by_object = url_filetext.split("#")[1:]
 num_objs = len(urls_list_by_object)
-coadd_ids = np.zeros(num_objs)
+coadd_ids = np.zeros(num_objs).astype(str)
 failed_mask = np.zeros(num_objs).astype(bool)
 imgs = np.zeros((num_objs, 28, 28, 5))
 
