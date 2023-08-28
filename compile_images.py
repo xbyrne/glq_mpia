@@ -19,7 +19,7 @@ imgs = np.zeros((num_objs, 28, 28, 5))
 
 DOWNLOADED_FILENAME = "./data/external/wget_file"
 
-for i, object_url_string in enumerate(urls_list_by_object):
+for i, object_url_string in tqdm(enumerate(urls_list_by_object)):
     FAILED_OBJECT_FLAG = False  # Innocent until proven guilty
 
     lines = object_url_string.split()  # ID & list of URLs for a particular object
@@ -30,7 +30,7 @@ for i, object_url_string in enumerate(urls_list_by_object):
         band = myutils.band_from_url(url)  # g/r/i/z/Y
 
         os.system(
-            f"wget -nv -O {DOWNLOADED_FILENAME} '{url}'"
+            f"wget -nv -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
         )  # Downloads file TODO: Could go wrong?
         raw_img = myutils.fetch_image(
             DOWNLOADED_FILENAME
