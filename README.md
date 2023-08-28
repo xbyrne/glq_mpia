@@ -46,7 +46,7 @@ If all 5 bands are all there and there are no other problems with an object (e.g
 URLs for 6171 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `download_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data
+Run the script `download_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big Nx28x28x5 array, where N is the number of successful object downloads.
 
 Run the shell script `download_img_files.sh`, which contains a wget command which will download all the image files into a folder `./data/external/img_files/`, which is gitignored.
 
