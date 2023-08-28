@@ -41,9 +41,7 @@ for i, object_url_string in enumerate(urls_list_by_object):
             failed_mask[i] = True
             break
 
-        imgs[i, :, :, BAND_ORDER[band]] = myutils.crop_image(
-            myutils.fetch_image(DOWNLOADED_FILENAME)
-        )
+        imgs[i, :, :, BAND_ORDER[band]] = processed_img
 
 success_coadd_ids = coadd_ids[~failed_mask]
 success_imgs_array = imgs[~failed_mask]
