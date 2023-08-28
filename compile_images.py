@@ -9,7 +9,7 @@ import myutils
 
 BAND_ORDER = {"g": 0, "r": 1, "i": 2, "z": 3, "Y": 4}
 
-with open("./data/external/img_url_list.txt", "r") as f:
+with open("./data/external/img_url_list.txt", "r", encoding="utf-8") as f:
     url_filetext = f.read()
 
 urls_list_by_object = url_filetext.split("#")[1:]
@@ -20,7 +20,9 @@ imgs = np.zeros((num_objs, 28, 28, 5))
 
 DOWNLOADED_FILENAME = "./data/external/wget_file"
 
-for i, object_url_string in tqdm(enumerate(urls_list_by_object), total=len(urls_list_by_object)):
+for i, object_url_string in tqdm(
+    enumerate(urls_list_by_object), total=len(urls_list_by_object)
+):
     FAILED_OBJECT_FLAG = False  # Innocent until proven guilty
 
     lines = object_url_string.split()  # ID & list of URLs for a particular object
