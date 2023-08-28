@@ -45,6 +45,10 @@ Run the program `fetch_urls.py`, which uses the coordinates in `/data/processed/
 If all 5 bands are all there and there are no other problems with an object (e.g. on the boundary between tiles), the URLs are saved in `./data/external/img_url_list.txt`.
 
 ### Download Images
+Run the script `download_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data
+
+Run the shell script `download_img_files.sh`, which contains a wget command which will download all the image files into a folder `./data/external/img_files/`, which is gitignored.
+
 the images are cropped to a 28x28x5 cube and compiled into a big Nx28x28x5 array, where N is the number of successful downloads.
 These images are stored in `./data/external/images.npz`, along with the coadd ids of the successfully downloaded objects.
 

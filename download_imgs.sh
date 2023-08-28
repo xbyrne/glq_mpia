@@ -5,4 +5,4 @@
 # -i: draw URLs from the following text file
 # -P: send image files to the following folder
 
-wget -nv -nc -i img_url_list.txt -P ./img_files
+wget -nv -nc -i ./data/external/img_url_list.txt -P ./data/external/img_files
