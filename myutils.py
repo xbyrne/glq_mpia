@@ -57,12 +57,10 @@ def fetch_object_urls(ra, dec, sia_service=SIA_SERVICE):
     return url_list
 
 
-def fetch_image(url):
+def fetch_image(filename):
     """Fetches image from URL without printing to stdout"""
     # TODO: What to do if image opening fails? In what ways does it fail?
-    with open(os.devnull, "w") as devnull:
-        with contextlib.redirect_stdout(devnull):
-            img = fits.open(url, cache=False)[0].data
+    img = fits.open(filename, cache=False)[0].data
     return img
 
 
