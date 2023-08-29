@@ -35,16 +35,21 @@ for i, object_url_string in tqdm(
         os.system(
             f"wget -q -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
         )  # Downloads file TODO: Could go wrong?
-        raw_img = myutils.fetch_image(
-            DOWNLOADED_FILENAME
-        )  # Extracts image from fits file TODO: Could go wrong?
-        processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
-        if processed_img is None:
+        try:
+            raw_img = myutils.fetch_image(
+                DOWNLOADED_FILENAME
+            )  # Extracts image from fits file TODO: Could go wrong?
+            processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
+            if processed_img is None:
+                FAILED_OBJECT_FLAG = True
+                failed_mask[i] = True
+                break
+
+            imgs[i, :, :, BAND_ORDER[band]] = processed_img
+        except:
             FAILED_OBJECT_FLAG = True
             failed_mask[i] = True
             break
-
-        imgs[i, :, :, BAND_ORDER[band]] = processed_img
 
 success_coadd_ids = coadd_ids[~failed_mask]
 success_imgs_array = imgs[~failed_mask]
