@@ -38,7 +38,7 @@ for i, object_url_string in tqdm(
         try:
             raw_img = myutils.fetch_image(
                 DOWNLOADED_FILENAME
-            )  # Extracts image from fits file
+            )  # Extracts image from fits file TODO: Could go wrong?
             processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
             if processed_img is None:
                 FAILED_OBJECT_FLAG = True
