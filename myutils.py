@@ -1,8 +1,6 @@
 """
 Some utilities for the project
 """
-import os
-import contextlib
 import re
 import numpy as np
 from astropy.io import fits

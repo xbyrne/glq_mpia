@@ -48,7 +48,7 @@ URLs for 6171 objects are here; looks like about 6% had some problem.
 ### Download Images
 Run the script `download_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big Nx28x28x5 array, where N is the number of successful object downloads.
 
-Run the shell script `download_img_files.sh`, which contains a wget command which will download all the image files into a folder `./data/external/img_files/`, which is gitignored.
+<!-- Run the shell script `download_img_files.sh`, which contains a wget command which will download all the image files into a folder `./data/external/img_files/`, which is gitignored.
 
 the images are cropped to a 28x28x5 cube and compiled into a big Nx28x28x5 array, where N is the number of successful downloads.
 These images are stored in `./data/external/images.npz`, along with the coadd ids of the successfully downloaded objects.
@@ -65,16 +65,22 @@ This takes a day or two, so if you can take advantage of a cluster that's better
 
 ### Compile Images
 Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with 6690 images (not 6693 as 3 objects had a band whose image file threw a server error) in 5 bands and the corresponding IDs;
-this file is `images.npz`, and also contains the COADD IDs in the same (numerical) order.
+this file is `images.npz`, and also contains the COADD IDs in the same (numerical) order. -->
 
 ## Clustering Images using Contrastive Learning
-The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters.##
+
+Run the program `contrastive_learning.py`, which, using the functions defined in `contrastive_utils.py`, trains a neural network using contrastive learning, to separate the images into similar-looking groups.
+The UMAP procedure is then used to aid separation in 2D.
+The UMAP embedding is saved in `/data/processed/umap_embedding.npz`
+
+
+<!-- The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters.##
 Due to the intensive tensorflow calculations required, it is only tractable to run this on a GPU.
 I only have access to one via Google Colab, so the notebook is written for that (if you are using a local GPU, you'll have to tweak things a bit).
 On Google Drive, upload both the images.npz file (which is quite large so may take time) and objs_7102.csv.
 The result of this notebook is a UMAP embedding - a list of points in 2D space that are representative of the separations of the images in the 1024-dimensional output of the encoder of the neural network.
 This embedding is stored in `embedding.npz`, along with the respective IDs.
-The notebook also gives a list of 12 IDs of objects on a particular island, which contains 8 known high-redshift quasars!
+The notebook also gives a list of 12 IDs of objects on a particular island, which contains 8 known high-redshift quasars! -->
 
 ## SED Fitting
 We now have a set of interesting objects and their photometry.

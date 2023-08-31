@@ -1,6 +1,8 @@
 __pycache__/*
 .pylintrc
+wget-log
 data/external/img_files/*
+data/processed/ids_images.npz
 selecting_data/.ipynb_checkpoints/*
 downloading_data/.ipynb_checkpoints/*
 downloading_data/img_files

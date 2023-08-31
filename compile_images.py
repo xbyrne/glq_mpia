@@ -1,14 +1,15 @@
 """
-download_images.py
+compile_images.py
 Downloads and compiles the images from data/external/img_url_list.txt
 """
 import os
 import numpy as np
+from tqdm import tqdm
 import myutils
 
 BAND_ORDER = {"g": 0, "r": 1, "i": 2, "z": 3, "Y": 4}
 
-with open("./data/external/img_url_list.txt", "r") as f:
+with open("./data/external/img_url_list.txt", "r", encoding="utf-8") as f:
     url_filetext = f.read()
 
 urls_list_by_object = url_filetext.split("#")[1:]
@@ -19,7 +20,9 @@ imgs = np.zeros((num_objs, 28, 28, 5))
 
 DOWNLOADED_FILENAME = "./data/external/wget_file"
 
-for i, object_url_string in tqdm(enumerate(urls_list_by_object)):
+for i, object_url_string in tqdm(
+    enumerate(urls_list_by_object), total=len(urls_list_by_object)
+):
     FAILED_OBJECT_FLAG = False  # Innocent until proven guilty
 
     lines = object_url_string.split()  # ID & list of URLs for a particular object
@@ -30,18 +33,23 @@ for i, object_url_string in tqdm(enumerate(urls_list_by_object)):
         band = myutils.band_from_url(url)  # g/r/i/z/Y
 
         os.system(
-            f"wget -nv -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
+            f"wget -q -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
         )  # Downloads file TODO: Could go wrong?
-        raw_img = myutils.fetch_image(
-            DOWNLOADED_FILENAME
-        )  # Extracts image from fits file TODO: Could go wrong?
-        processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
-        if processed_img is None:
+        try:
+            raw_img = myutils.fetch_image(
+                DOWNLOADED_FILENAME
+            )  # Extracts image from fits file
+            processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
+            if processed_img is None:
+                FAILED_OBJECT_FLAG = True
+                failed_mask[i] = True
+                break
+
+            imgs[i, :, :, BAND_ORDER[band]] = processed_img
+        except:  # Catches fits file reading failures; I know a bare except is illegal
             FAILED_OBJECT_FLAG = True
             failed_mask[i] = True
             break
-
-        imgs[i, :, :, BAND_ORDER[band]] = processed_img
 
 success_coadd_ids = coadd_ids[~failed_mask]
 success_imgs_array = imgs[~failed_mask]
