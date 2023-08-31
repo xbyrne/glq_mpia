@@ -33,10 +33,11 @@ history = contrastor.fit(
 
 # Forward passing the original images
 encoded_imgs = contrastor.encoder(
-    contrastive_utils.normalise_imgs(imgs[:, 2:-2, 2:-2, :]).numpy()
-)
+    contrastive_utils.normalise_imgs(imgs[:, 2:-2, 2:-2, :])
+).numpy()
 # Normalising them; can't remember why. This is probably not a good way to do it either.
 encoded_imgs = np.array([enc_img / np.linalg.norm(enc_img) for enc_img in encoded_imgs])
+
 embedding = umap.UMAP().fit(encoded_imgs)
 points = embedding.embedding_
 
