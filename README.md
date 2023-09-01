@@ -46,7 +46,7 @@ If all 5 bands are all there and there are no other problems with an object (e.g
 URLs for 6171 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6168x28x28x5 array, (3 objects failed to completely download).
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6168x28x28x5 array, (3 objects failed to completely download so it's 6168 not 6171).
 The cache may get quite large for this, and this program takes about a day to run.
 The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
 [Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
@@ -54,20 +54,16 @@ These are best compiled into one npz file, using the short program `combine_img_
 
 ## Clustering Images using Contrastive Learning
 
-Run the program `contrastive_learning.py`, which, using the functions defined in `contrastive_utils.py`, trains a neural network using contrastive learning, to separate the images into similar-looking groups.
-The UMAP procedure is then used to aid separation in 2D.
-The UMAP embedding is saved in `/data/processed/umap_embedding.npz`
+The notebook `contrastive_learning.ipynb` uses an unsupervised machine learning technique called contrastive learning to separate the objects into groups based on their imaging.
+Machine learning is easiest with GPUs, and as I don't have one, I leveraged the cloud-based GPUs available for free on Google Colab.
+This notebook should therefore be uploaded to Google Drive in a folder called `glq_mpia`, along with the following files:
+- `glq_mpia/contrastive_utils.py` (ML nuts and bolts)
+- `glq_mpia/data/processed/ids_images.npz` (Image files)
+Running the notebook then trains a neural network to separate out the images in a 1024D space.
+Each of the 6168 objects is assigned a point in this space, saved as a 6128x1024 array in `data/processed/encoded_imgs.npz`
 
-
-<!-- The notebook `contrastive_learning/trainer.ipynb` trains separates out the remaining objects into clusters.##
-Due to the intensive tensorflow calculations required, it is only tractable to run this on a GPU.
-I only have access to one via Google Colab, so the notebook is written for that (if you are using a local GPU, you'll have to tweak things a bit).
-On Google Drive, upload both the images.npz file (which is quite large so may take time) and objs_7102.csv.
-The result of this notebook is a UMAP embedding - a list of points in 2D space that are representative of the separations of the images in the 1024-dimensional output of the encoder of the neural network.
-This embedding is stored in `embedding.npz`, along with the respective IDs.
-The notebook also gives a list of 12 IDs of objects on a particular island, which contains 8 known high-redshift quasars! -->
-
-## SED Fitting
-We now have a set of interesting objects and their photometry.
-We now attempt to fit their photometry to SED models for stars, galaxies, quasars, and of course lensed quasars (i.e. a galaxy + a quasar). 
-This is done using two different pieces of software: LePHARE (downloaded from [https://www.cfht.hawaii.edu/~arnouts/LEPHARE/lephare.html]) and BAGPIPES (a Python package that can be pip'd).
+Clustering and visualisation are both much easier in 2D than in 1024D.
+We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 1024D points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
+The short program `embed_objects.py` implements this embedding using `sklearn.manifold.TSNE`, saving the embedding to the file `data/processed/embedding.npz`.
+There is a small but distinct cluster of 12 objects, which contains 10 known high-redshift quasars.
+The final two objects turned out to be J0603--3923 and J0109--5424.
