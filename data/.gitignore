@@ -1,2 +1,4 @@
 external/wget_file
+external/img_files/*
 interim/des_wise_vhs_objects.csv
+processed/ids_images.npz
