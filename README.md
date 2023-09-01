@@ -46,26 +46,11 @@ If all 5 bands are all there and there are no other problems with an object (e.g
 URLs for 6171 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `download_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big Nx28x28x5 array, where N is the number of successful object downloads.
-
-<!-- Run the shell script `download_img_files.sh`, which contains a wget command which will download all the image files into a folder `./data/external/img_files/`, which is gitignored.
-
-the images are cropped to a 28x28x5 cube and compiled into a big Nx28x28x5 array, where N is the number of successful downloads.
-These images are stored in `./data/external/images.npz`, along with the coadd ids of the successfully downloaded objects.
-
-### Grab URLs
-Visit [https://datalab.noirlab.edu/] (account required) and launch a jupyter notebook.
-Upload both `selecting_data/objs_7102.csv` and `downloading_data/fetch_urls.ipynb` to the working directory.
-Run through the latter notebook, which in ~10mins generates a .txt file containing 33465 URLs which lead to images of 6693 objects (not 7102 as some images were e.g. on the edge of the tile).
-This file is `downloading_data/img_url_list.txt`
-
-### Download Images
-Run the shell script `downloading_data/download_imgs.sh`, a wget command which downloads all the image files into an `img_files` folder.
-This takes a day or two, so if you can take advantage of a cluster that's better.
-
-### Compile Images
-Run through `compile_imgs.ipynb`, which generates a .npz file containing a numpy array with 6690 images (not 6693 as 3 objects had a band whose image file threw a server error) in 5 bands and the corresponding IDs;
-this file is `images.npz`, and also contains the COADD IDs in the same (numerical) order. -->
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6168x28x28x5 array, (3 objects failed to completely download).
+The cache may get quite large for this, and this program takes about a day to run.
+The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
+[Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
+These are best compiled into one npz file, using the short program `combine_img_files.py`.
 
 ## Clustering Images using Contrastive Learning
 
