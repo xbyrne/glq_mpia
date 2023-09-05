@@ -1,0 +1,17 @@
+axes.titlesize: 26
+
+errorbar.capsize: 5
+
+font.size: 24
+
+legend.fontsize: 20
+
+xtick.labelsize: 22
+xtick.top: True
+xtick.direction: in
+xtick.major.size: 7
+
+ytick.labelsize: 22
+ytick.right:True
+ytick.direction: in
+ytick.major.size: 7
