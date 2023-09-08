@@ -65,5 +65,5 @@ Each of the 6168 objects is assigned a point in this space, saved as a 6128x1024
 Clustering and visualisation are both much easier in 2D than in 1024D.
 We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 1024D points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
 The short program `embed_objects.py` implements this embedding using `sklearn.manifold.TSNE`, saving the embedding to the file `data/processed/embedding.npz`.
-There is a small but distinct cluster of 12 objects, which contains 10 known high-redshift quasars.
+There is a small but distinct cluster of 12 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 10 known high-redshift quasars.
 The final two objects turned out to be J0603--3923 and J0109--5424.

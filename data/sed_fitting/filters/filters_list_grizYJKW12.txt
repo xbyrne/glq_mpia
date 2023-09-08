@@ -1,0 +1,9 @@
+../filters/CTIO_DECam.g.dat
+../filters/CTIO_DECam.r.dat
+../filters/CTIO_DECam.i.dat
+../filters/CTIO_DECam.z.dat
+../filters/CTIO_DECam.Y.dat
+../filters/Paranal_VISTA.J.dat
+../filters/Paranal_VISTA.Ks.dat
+../filters/WISE_WISE.W1.dat
+../filters/WISE_WISE.W2.dat
