@@ -43,13 +43,7 @@ fluxerr_df = df[[f"{band}_fluxerr" for band in band_names]]
 def load_grizYJKW12(ID):
     "Loads the photometry for a particular coadd id"
     ID = int(ID)
-    photometry = np.vstack(
-        (
-            flux_df.loc[ID],
-            fluxerr_df.loc[ID]
-            / 3,  # Table has the 3sigma error; bagpipes probably wants the 1sigma
-        )
-    ).T
+    photometry = np.vstack((flux_df.loc[ID], fluxerr_df.loc[ID])).T
     return photometry
 
 
