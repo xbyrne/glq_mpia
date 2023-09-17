@@ -75,7 +75,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
 
     wavs = wavs * u.AA * (1 + zgal)  # Redshifting
     flxs = (
-        flxs * (u.erg / u.s / (u.cm ** 2) / u.AA) * (wavs ** 2) / const.c
+        flxs * (u.erg / u.s / (u.cm**2) / u.AA) * (wavs**2) / const.c
     )  # Converting F_lambda to F_nu
     flxs = flxs.to(u.Jy).value  # Jy
     wavs = wavs.value  # AA
@@ -202,7 +202,7 @@ def log_likelihood(theta, y, yerr, obj_type):
         fluxes_model_quasar = myutils.spectrum_to_photometry(wavs, flxs)
         fluxes_model += fluxes_model_quasar
 
-    sigma2 = yerr ** 2
+    sigma2 = yerr**2
     return -0.5 * np.sum((y - fluxes_model) ** 2 / sigma2 + np.log(sigma2))
 
 
@@ -293,11 +293,14 @@ all_samples = [
 ]
 all_log_probs = [np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in range(3)]
 
-for i, idd in enumerate(quasar_ids):
-    photometry = load_grizYJKW12(idd)
+
+def fit_sed_id(quasar_id):
+    obj_samples = []
+    obj_logprobs = []
+    photometry = load_grizYJKW12(quasar_id)
     flxs = photometry[:, 0]
     flxerrs = photometry[:, 1]
-    for j, ot in enumerate(["G", "Q", "GQ"]):
+    for ot in ["G", "Q", "GQ"]:
         samples, log_prob = fit_sed(
             flux=flxs,
             err_flux=flxerrs,
@@ -307,17 +310,16 @@ for i, idd in enumerate(quasar_ids):
             thin=t,
             nwalkers=nwalkers,
             a=2.0,
-        )  # samples will be shape (3000,nwalkers,{6/2/8}), log_prob will be (3000,nwalkers)
-        all_samples[j][i, :, :, :] = samples
-        all_log_probs[j][i, :, :] = log_prob
+        )  # samples.shape=(3000,nwalkers,{6/2/8}); log_prob.shape=(3000,nwalkers)
+        obj_samples.append(samples)
+        obj_logprobs.append(log_prob)
 
-np.savez_compressed(
-    "./data/processed/mcmc_results.npz",
-    ids=quasar_ids,
-    samples_G=all_samples[0],
-    samples_Q=all_samples[1],
-    samples_GQ=all_samples[2],
-    log_probs_G=all_log_probs[0],
-    log_probs_Q=all_log_probs[1],
-    log_probs_GQ=all_log_probs[2],
-)
+    np.savez_compressed(
+        f"./data/sed_fitting/mcmc_results/{quasar_id}.npz",
+        samples_G=obj_samples[0],
+        samples_Q=obj_samples[1],
+        samples_GQ=obj_samples[2],
+        logprobs_G=obj_logprobs[0],
+        logprobs_Q=obj_logprobs[1],
+        logprobs_GQ=obj_logprobs[2],
+    )

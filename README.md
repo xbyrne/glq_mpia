@@ -67,3 +67,8 @@ We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 1024D po
 The short program `embed_objects.py` implements this embedding using `sklearn.manifold.TSNE`, saving the embedding to the file `data/processed/embedding.npz`.
 There is a small but distinct cluster of 12 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 10 known high-redshift quasars.
 The final two objects turned out to be J0603--3923 and J0109--5424.
+
+
+## SED fitting
+
+The program `quasar_galaxy_fit.py` fits models of quasars, galaxies, and lensed quasars to the spectra of the 
