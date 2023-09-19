@@ -2,3 +2,4 @@ __pycache__/*
 .pylintrc
 wget-log
 trash/*
+notebooks/__pycache__/*

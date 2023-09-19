@@ -295,8 +295,6 @@ all_log_probs = [np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in ran
 
 
 def fit_sed_id(quasar_id):
-    obj_samples = []
-    obj_logprobs = []
     photometry = load_grizYJKW12(quasar_id)
     flxs = photometry[:, 0]
     flxerrs = photometry[:, 1]
@@ -311,15 +309,8 @@ def fit_sed_id(quasar_id):
             nwalkers=nwalkers,
             a=2.0,
         )  # samples.shape=(3000,nwalkers,{6/2/8}); log_prob.shape=(3000,nwalkers)
-        obj_samples.append(samples)
-        obj_logprobs.append(log_prob)
-
-    np.savez_compressed(
-        f"./data/sed_fitting/mcmc_results/{quasar_id}.npz",
-        samples_G=obj_samples[0],
-        samples_Q=obj_samples[1],
-        samples_GQ=obj_samples[2],
-        logprobs_G=obj_logprobs[0],
-        logprobs_Q=obj_logprobs[1],
-        logprobs_GQ=obj_logprobs[2],
-    )
+        np.savez_compressed(
+            f"./data/sed_fitting/mcmc_results/{ot}/{quasar_id}.npz",
+            samples=samples,
+            logprobs=log_prob,
+        )
