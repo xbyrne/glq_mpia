@@ -10,4 +10,4 @@ source/mag_gal -t G -c ./config/zphot.para -MOD_EXTINC 4,8  -LIB_ASCII NO
 
 source/zphota -c ./config/zphot.para
 
-mv ./*.chi ./*.spec output_spectra_chi
+mv ./*.spec output_spectra

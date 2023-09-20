@@ -168,7 +168,7 @@ MABS_ZBIN       0,0.5,1,1.5,2,3,3.5,4 # Redshift bins (even number)
 #########   OUTPUT SPECTRA                     ###########
 #
 SPEC_OUT	YES	 	 # spectrum for each object?  [YES,NO-def]
-CHI2_OUT        YES               # output file with all values : z,mod,chi2,E(B-V),... 
+CHI2_OUT        NO               # output file with all values : z,mod,chi2,E(B-V),... 
                                  # BE CAREFUL can take a lot of space !!              
 #########  OUTPUT PDZ ANALYSIS  
 PDZ_OUT         NONE             # pdz output file name [def-NONE]
