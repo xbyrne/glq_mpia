@@ -1,0 +1,12 @@
+doc/*
+ext/*
+INSTALL
+opa/*
+sed/*
+simul/*
+source/*
+test/*
+tools/*
+vega/*
+._*
+lpwork/*
