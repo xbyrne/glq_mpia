@@ -74,7 +74,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
 
     wavs = wavs * u.AA * (1 + zgal)  # Redshifting
     flxs = (
-        flxs * (u.erg / u.s / (u.cm**2) / u.AA) * (wavs**2) / const.c
+        flxs * (u.erg / u.s / (u.cm ** 2) / u.AA) * (wavs ** 2) / const.c
     )  # Converting F_lambda to F_nu
     flxs = flxs.to(u.Jy).value  # Jy
     wavs = wavs.value  # AA
@@ -141,4 +141,28 @@ def spectrum_from_params(model):
         quasar_flxs = np.interp(wavs, quasar_wavs, quasar_flxs, left=0)
         flxs += quasar_flxs
 
-    return wavs, flxs*1e6 # to uJy
+    return wavs, flxs * 1e6  # to uJy
+
+
+def extract_lephare_spectra(coi):
+    """
+    Extracts the LePHARE spectra from the .spec files
+    The spectra are returned in the order Galaxy, Quasar, Star
+    """
+    coi = str(coi)[-9:]  # LePHARE not liking 10-digit IDs
+    all_spectra = np.loadtxt(
+        f"../lephare/lephare_dev/output_spectra/Id{coi}.spec", skiprows=193
+    ) * [1, u.ABmag]
+    all_spectra[:, 1] = [mag.to(u.Jy).value * 1e6 for mag in all_spectra[:, 1]]
+    sb1, sb2 = np.where(np.diff(all_spectra[:, 0]) < 0)[0] + 1
+    wavs = [
+        all_spectra[:sb1, 0],  # Galaxy
+        all_spectra[sb1:sb2, 0],  # Quasar
+        all_spectra[sb2:, 0],  # Star
+    ]
+    specs = [
+        all_spectra[:sb1, 1],  # Galaxy
+        all_spectra[sb1:sb2, 0],  # Quasar
+        all_spectra[sb2:, 0],  # Star
+    ]
+    return wavs, specs
