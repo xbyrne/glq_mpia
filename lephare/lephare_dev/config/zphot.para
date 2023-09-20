@@ -34,7 +34,7 @@ AGE_RANGE  0.,13.e9                                     # Age Min-Max in yr
 #   g   r   i   z   Y   J   K   W1  W2
 #   1   2   3   4   5   6   7   8   9
 #
-FILTER_LIST glq/CTIO_DECam.g.dat glq/CTIO_DECam.r.dat glq/CTIO_DECam.i.dat glq/CTIO_DECam.z.dat glq/CTIO_DECam.Y.dat glq/Paranal_VISTA.J.dat glq/Paranal_VIStA.Ks.dat glq/WISE_WISE.W1.dat glq/WISE_WISE.W2.dat
+FILTER_LIST glq/CTIO_DECam.g.dat,glq/CTIO_DECam.r.dat,glq/CTIO_DECam.i.dat,glq/CTIO_DECam.z.dat,glq/CTIO_DECam.Y.dat,glq/Paranal_VISTA.J.dat,glq/Paranal_VISTA.Ks.dat,glq/WISE_WISE.W1.dat,glq/WISE_WISE.W2.dat
 					# (in $LEPHAREDIR/filt/*)
 TRANS_TYPE	0			# TRANSMISSION TYPE
                                         # 0[-def]: Energy, 1: Nb of photons
@@ -107,7 +107,7 @@ GLB_CONTEXT  -1		          # Overwrite Context (Sum 2^n; n=0->nbd-1,
                                   # -1[-def]: used context per object 
 # FORB_CONTEXT -1                   # context for forbitten bands 
 # ERR_SCALE  0.03,0.02,0.02,0.02,0.04,0.04,0.04  # errors per band added in quadrature
-ERR_FACTOR  1.0                    # error scaling factor 1.0 [-def] 
+ERR_FACTOR  1.0                   # error scaling factor 1.0 [-def] 
 #
 #-------    Theoretical libraries  
 ZPHOTLIB    CWW_HDF,STAR_HDF,QSO_HDF    # Library used for Chi2 (max:3)

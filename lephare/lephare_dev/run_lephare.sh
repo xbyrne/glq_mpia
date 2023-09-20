@@ -1,5 +1,3 @@
-export LEPHAREDIR=$(pwd)
-
 source/sedtolib -t S -c ./config/zphot.para
 source/sedtolib -t Q -c ./config/zphot.para
 source/sedtolib -t G -c ./config/zphot.para
