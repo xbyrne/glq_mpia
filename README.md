@@ -35,19 +35,19 @@ Said file is 109MB which is too large for Git and I can't be bothered to figure 
 
 ### Perform cuts in WISE data
 
-Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 6566 objects.
+Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 1996 objects.
 
-The table `data/external/known_hzqs.csv` contains data on 11 objects in this table which are known to be high-redshift quasars.
+The table `data/external/known_hzqs.csv` contains data on 11 objects in the DES footprint which are known to be high-redshift quasars.
 
 ## Downloading Data
 ### Grab URLs
 Run the program `fetch_urls.py`, which uses the coordinates in `/data/processed/cut_crossmatched_objects.csv` to find download URLs from the SIA service at [https://datalab.noirlab.edu/sia/des_dr2].
 If all 5 bands are all there and there are no other problems with an object (e.g. on the boundary between tiles), the URLs are saved in `./data/external/img_url_list.txt`.
-URLs for 6171 objects are here; looks like about 6% had some problem.
+URLs for 1880 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6168x28x28x5 array, (3 objects failed to completely download so it's 6168 not 6171).
-The cache may get quite large for this, and this program takes about a day to run.
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 18__x28x28x5 array, (_ objects failed to completely download so it's 18__ not 1880).
+The cache may get quite large for this, and this program takes several hours to run.
 The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
 [Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
 These are best compiled into one npz file, using the short program `combine_img_files.py`.
