@@ -26,7 +26,7 @@ def AB_to_uJy(mag_AB):
     """
     Converts an AB magnitude to a flux in uJy.
     """
-    return 10 ** (29 - (48.60 / 2.5)) * 10 ** (-mag_AB / 2.5)
+    return 10 ** (6 + (8.9 / 2.5)) * 10 ** (-mag_AB / 2.5)
 
 
 ## Downloading and Processing Images
