@@ -46,7 +46,7 @@ If all 5 bands are all there and there are no other problems with an object (e.g
 URLs for 1880 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 18__x28x28x5 array, (_ objects failed to completely download so it's 18__ not 1880).
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 1880x28x28x5 array.
 The cache may get quite large for this, and this program takes several hours to run.
 The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
 [Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
