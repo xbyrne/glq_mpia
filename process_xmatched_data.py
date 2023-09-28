@@ -122,7 +122,7 @@ vhs_m_3s = {key: m_5s - 2.5 * np.log10(3 / 5) for key, m_5s in vhs_m_5s.items()}
 vhs_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in vhs_m_3s.items()}
 # WISE gives 5sigma flux sensitivities in the abstract of:
 #  https://ui.adsabs.harvard.edu/abs/2010AJ....140.1868W/abstract
-wise_F_5s = {"W1": 0.08e-3, "W2": 0.11e-3}
+wise_F_5s = {"W1": 0.08e3, "W2": 0.11e3}
 wise_F_3s = {key: (3 / 5) * F_5s for key, F_5s in wise_F_5s.items()}
 F_3s = {**des_F_3s, **vhs_F_3s, **wise_F_3s}
 
