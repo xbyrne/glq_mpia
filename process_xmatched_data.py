@@ -30,10 +30,10 @@ old_names = [  # All the fields which are useful for selection processing
     "e_Jpmag",
     "Kspmag",
     "e_Kspmag",
-    "FW1lbs",
-    "e_FW1lbs",
-    "FW2lbs",
-    "e_FW2lbs",
+    "W1mag",
+    "e_W1mag",
+    "W2mag",
+    "e_W2mag",
 ]
 interim_df = original_df[old_names]
 
@@ -55,29 +55,13 @@ new_names = [  # Neatening up column names
     "J_magerr",
     "K_mag_vg",
     "K_magerr",
-    "W1_flux_vg_nMgy",
-    "W1_fluxerr_vg_nMgy",
-    "W2_flux_vg_nMgy",
-    "W2_fluxerr_vg_nMgy",
+    "W1_mag_vg",
+    "W1_magerr",
+    "W2_mag_vg",
+    "W2_magerr",
 ]
 interim_df.rename(columns=dict(zip(old_names, new_names)), inplace=True)
 
-# Converting unWISE fluxes to vega mags; calculating errors
-# See https://catalog.unwise.me/catalogs.html
-for wise_band in ["W1", "W2"]:
-    # Converting Vega nanomaggies to vega mag
-    interim_df[f"{wise_band}_mag_vg"] = 22.5 - 2.5 * np.log10(
-        interim_df[f"{wise_band}_flux_vg_nMgy"]
-    )
-    # Calculating magnitude errors
-    # Using m = -2.5 log(f/f0) => |dm| = 2.5 log(e) df / f
-    # nMgy ~ Jy, so the units cancel
-    interim_df[f"{wise_band}_magerr"] = (
-        2.5
-        * np.log10(np.e)
-        * interim_df[f"{wise_band}_fluxerr_vg_nMgy"]
-        / interim_df[f"{wise_band}_flux_vg_nMgy"]
-    )
 
 # Converting Vega magnitudes to AB
 for band in ["J", "K", "W1", "W2"]:
@@ -85,7 +69,7 @@ for band in ["J", "K", "W1", "W2"]:
 
 # Converting AB magnitudes to fluxes
 # Flux errors calculated using m = -2.5 log(f/f0) => |dm| = 2.5 log(e) df / f
-for band in ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]:
+for band in bands:
     interim_df[f"{band}_flux"] = myutils.AB_to_uJy(interim_df[f"{band}_mag"])
     interim_df[f"{band}_fluxerr"] = (
         interim_df[f"{band}_magerr"]
@@ -95,18 +79,21 @@ for band in ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]:
 
 # Slicing again to select useful columns
 interim_df = interim_df[
-    ['ra_des', 'dec_des'] +\
-    np.array(
+    ["ra_des", "dec_des"]
+    + np.array(
         [
             [f"{band}_{param}" for param in ["mag", "magerr", "flux", "fluxerr"]]
             for band in bands
         ]
-    ).ravel().tolist()
+    )
+    .ravel()
+    .tolist()
 ]  # ['g_mag','g_magerr','g_flux','g_fluxerr','r_mag'...]
 
 ## Flooring objects below 3sigma detection
 # If an object is detected below a 3sigma level, magnitude and error
 #  are set to 99.; flux to 0; flux error set to the 3sigma sensitivity
+
 # DES, VHS, and WISE all give their sensitivities in different ways.
 # DES gives the 10sigma magnitude depths, in the abstract of:
 #  https://ui.adsabs.harvard.edu/abs/2021ApJS..255...20A/abstract
@@ -120,15 +107,17 @@ des_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in des_m_3s.items()}
 vhs_m_5s = {"J": 20.8, "K": 20.0}
 vhs_m_3s = {key: m_5s - 2.5 * np.log10(3 / 5) for key, m_5s in vhs_m_5s.items()}
 vhs_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in vhs_m_3s.items()}
-# WISE gives 5sigma flux sensitivities in the abstract of:
-#  https://ui.adsabs.harvard.edu/abs/2010AJ....140.1868W/abstract
-wise_F_5s = {"W1": 0.08e3, "W2": 0.11e3}
+# WISE gives 5sigma flux sensitivities here:
+#  https://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_3a.html#tbl1
+wise_F_5s = {"W1": 54, "W2": 71}
 wise_F_3s = {key: (3 / 5) * F_5s for key, F_5s in wise_F_5s.items()}
 F_3s = {**des_F_3s, **vhs_F_3s, **wise_F_3s}
 
-# We now floor objects which are below 3sigma
+# We now floor objects which are below {S_N}sigma
+S_N = 3
 for band in bands:
-    to_floor = interim_df[f"{band}_flux"] < F_3s[band]
+    # to_floor = interim_df[f"{band}_flux"] < F_3s[band]
+    to_floor = interim_df[f"{band}_flux"] < S_N * interim_df[f"{band}_fluxerr"]
     # The below might throw some SettingWithCopyWarnings but it seems to work fine
     interim_df.loc[
         to_floor, [f"{band}_mag", f"{band}_magerr", f"{band}_flux", f"{band}_fluxerr"]
