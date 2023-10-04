@@ -34,19 +34,21 @@ This table is `/data/interim/des_wise_vhs_objects.csv`.
 
 ### Perform cuts in WISE data
 
-Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 1996 objects.
+Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 6923 objects.
 
-The table `data/external/known_hzqs.csv` contains data on 11 objects in the DES footprint which are known to be high-redshift quasars.
+The table `/data/external/all_hzqs.csv` contains data on 406 known high-redshift quasars.
+Cross-matching to the `cut_crossmatched_objects.csv` file just created yields `/data/external/processed/known_hzqs.csv`, which contains 10 objects which are thus in the DES footprint.
 
 ## Downloading Data
 ### Grab URLs
 Run the program `fetch_urls.py`, which uses the coordinates in `/data/processed/cut_crossmatched_objects.csv` to find download URLs from the SIA service at [https://datalab.noirlab.edu/sia/des_dr2].
 If all 5 bands are all there and there are no other problems with an object (e.g. on the boundary between tiles), the URLs are saved in `./data/external/img_url_list.txt`.
-URLs for 1880 objects are here; looks like about 6% had some problem.
+This will probably take a couple of hours.
+URLs for 6538 objects are here; looks like about 6% had some problem.
 
 ### Download Images
 Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 1880x28x28x5 array.
-The cache may get quite large for this, and this program takes several hours to run.
+The cache may get quite large for this, and this program takes a day or so to run.
 The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
 [Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
 These are best compiled into one npz file, using the short program `combine_img_files.py`.
