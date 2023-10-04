@@ -17,21 +17,20 @@ The result is a ~32MB .csv file, containing data on 218 241 objects; this file i
 Install and open [TOPCAT](https://www.star.bris.ac.uk/~mbt/topcat/), and upload the above .csv file.
 
 The CDS X-match service is accessed by pressing an X-shaped button on the main taskbar.
-For the Remote Table, in the "VizieR Table ID/Alias" dropdown, select UnWISE.
+For the Remote Table, in the "VizieR Table ID/Alias" text box, select AllWISE.
 For the Local Table, select the csv file just uploaded.
 The RA and DEC columns should be automatically identified.
 Under Match Parameters, choose Radius: 1.0 arcsec; Find mode: Best; Rename columns: Duplicates, Suffix: _x; Block size: 50000.
 Hit Go.
-A new table, for me called "1xUnWISE", is created after about a minute, with 190 049 entries.
+A new table, for me called "1xAllWISE", is created after about a minute, with 145 567 entries.
 
 We then crossmatch *this* table to VHS.
 Again, open the CDS X-match service; select VHS DR5 as the Remote Table.
-Select the result of the UnWISE crossmatch as the Local Table, and choose RA and DEC as the RA and Dec columns; the default choice may be different now.
+Select the result of the AllWISE crossmatch as the Local Table, and choose RA and DEC as the RA and Dec columns; the default choice may be different now.
 Use the same Match Parameters as for the first X-match.
 Hit Go.
-A third table, for me called "2xVHS DR5", is created after another minute, containing 151 629 entries.
+A third table, for me called "2xVHS DR5", is created after another minute, containing 116 499 entries.
 This table is `/data/interim/des_wise_vhs_objects.csv`.
-Said file is 109MB which is too large for Git and I can't be bothered to figure out LFS so it's stored compressed as a `.csv.gz` file.
 
 ### Perform cuts in WISE data
 
