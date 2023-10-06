@@ -49,9 +49,7 @@ URLs for 6538 objects are here; looks like about 6% had some problem.
 ### Download Images
 Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 1880x28x28x5 array.
 The cache may get quite large for this, and this program takes a day or so to run.
-The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images_{1,2}.npz`.
-[Together the file would be 104MB, which as it is bigger than 100MB would require Git LFS which I can't be bothered to work out]
-These are best compiled into one npz file, using the short program `combine_img_files.py`.
+The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images.npz`.
 
 ## Clustering Images using Contrastive Learning
 
