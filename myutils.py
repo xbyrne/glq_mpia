@@ -250,3 +250,36 @@ def spectrum_from_params(model):
         flxs += quasar_flxs
 
     return wavs, flxs * 1e6  # to uJy
+
+
+# Handling LePHARE output
+def unpack_lephare_spectra(filename):
+    """
+    Extracts the useful information from a LePHARE .spec output file
+    This includes:
+        Best-fitting galaxy spectrum
+        Best-fitting quasar spectrum
+        Best-fitting stellar spectrum
+    """
+    spectra_array = np.loadtxt(filename, skiprows=193).T
+    sep1, sep2 = (
+        np.argwhere(np.diff(spectra_array[0, :] < 0)).reshape(2) + 1
+    )  # Separating the different spectra
+
+    galaxy_wavs = spectra_array[0, :sep1]  # wavs, in AA (?)
+    galaxy_spectrum = AB_to_uJy(
+        spectra_array[1, :sep1]
+    )  # spectrum, from AB (? Not Vega?)
+    quasar_wavs = spectra_array[0, sep1:sep2]
+    quasar_spectrum = AB_to_uJy(spectra_array[1, sep1:sep2])
+    stellar_wavs = spectra_array[0, sep2:]
+    stellar_spectrum = AB_to_uJy(spectra_array[1, sep2:])
+
+    return (
+        galaxy_wavs,
+        galaxy_spectrum,
+        quasar_wavs,
+        quasar_spectrum,
+        stellar_wavs,
+        stellar_spectrum,
+    )
