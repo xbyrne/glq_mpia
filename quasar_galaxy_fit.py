@@ -8,7 +8,6 @@ import os
 import numpy as np
 import pandas as pd
 from astropy import units as u, constants as const
-from pyphot import unit, Filter
 import bagpipes as pipes
 import emcee
 import myutils
@@ -80,47 +79,6 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
     flxs = flxs.to(u.Jy).value  # Jy
     wavs = wavs.value  # AA
     return wavs, flxs
-
-
-### Quasar Modelling
-
-model_qso = np.loadtxt(
-    "./data/sed_fitting/vandenberk2001_z=0_fnu_noscale.txt", skiprows=1
-)
-filter_m_1450_file = np.loadtxt("./data/sed_fitting/filters/filter_1450.txt")
-
-
-def get_1450_filter(z_QSO):
-    """
-    Retrieves a pyphot filter which is a tophat function around 1450AA
-    """
-    wave = filter_m_1450_file[:, 0] * unit["AA"] * (1 + z_QSO)
-    transmit = filter_m_1450_file[:, 1]
-    filter_m_1450 = Filter(
-        wave, transmit, name="1450_tophat", dtype="photon", unit="Angstrom"
-    )
-    return filter_m_1450
-
-
-def quasar_spectroscopy(M_QSO, z_QSO):
-    """
-    Generates a quasar spectrum from a 1450A magnitude and a redshift.
-    This will be based on the model chosen (default: vdb)
-    Outputs are in AA, Jy
-    """
-    filter_m_1450 = get_1450_filter(z_QSO)
-    # load quasar model, truncate Lyman-alpha forest
-    spec_qso = model_qso[:, 1]
-    spec_qso[model_qso[:, 0] * 1e4 < 1215.16] = 0.0
-    flux_qso = spec_qso * 1e-3 * unit["Jy"]  # Models are apparently given in mJy...
-    wavelength = (
-        model_qso[:, 0] * 1e4 * (1 + z_QSO) * unit["AA"]
-    )  # ...and wavelengths in microns
-
-    # rescale to desired apparent magnitude 1450 AA
-    mag_1450 = -2.5 * np.log10(filter_m_1450.get_flux(wavelength, flux_qso) / 3631)
-    flux_qso *= 10 ** ((M_QSO - mag_1450) / -2.5)
-    return wavelength.value, flux_qso.value  # in Jy
 
 
 ### MCMC fitting
@@ -198,7 +156,7 @@ def log_likelihood(theta, y, yerr, obj_type):
         fluxes_model += fluxes_model_galaxy
 
     if "Q" in obj_type:
-        wavs, flxs = quasar_spectroscopy(M_QSO, z_QSO)
+        wavs, flxs = myutils.quasar_spectroscopy(M_QSO, z_QSO)
         fluxes_model_quasar = myutils.spectrum_to_photometry(wavs, flxs)
         fluxes_model += fluxes_model_quasar
 
@@ -295,6 +253,7 @@ all_log_probs = [np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in ran
 
 
 def fit_sed_id(quasar_id):
+    """Fits the SED of a given coadd id to G, Q, and GQ models"""
     photometry = load_grizYJKW12(quasar_id)
     flxs = photometry[:, 0]
     flxerrs = photometry[:, 1]
