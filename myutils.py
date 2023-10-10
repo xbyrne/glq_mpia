@@ -263,7 +263,7 @@ def unpack_lephare_spectra(filename):
     """
     spectra_array = np.loadtxt(filename, skiprows=193).T
     sep1, sep2 = (
-        np.argwhere(np.diff(spectra_array[0, :] < 0)).reshape(2) + 1
+        np.argwhere(np.diff(spectra_array[0, :]) < 0).reshape(2) + 1
     )  # Separating the different spectra
 
     galaxy_wavs = spectra_array[0, :sep1]  # wavs, in AA (?)
