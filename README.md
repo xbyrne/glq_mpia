@@ -47,19 +47,20 @@ This will probably take a couple of hours.
 URLs for 6538 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 1880x28x28x5 array.
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6536x28x28x5 array.
 The cache may get quite large for this, and this program takes a day or so to run.
 The successful coadd object ids, and the corresponding images, are stored in `data/processed/ids_images.npz`.
 
 ## Clustering Images using Contrastive Learning
 
 The notebook `contrastive_learning.ipynb` uses an unsupervised machine learning technique called contrastive learning to separate the objects into groups based on their imaging.
-Machine learning is easiest with GPUs, and as I don't have one, I leveraged the cloud-based GPUs available for free on Google Colab.
-This notebook should therefore be uploaded to Google Drive in a folder called `glq_mpia`, along with the following files:
+Machine learning is easiest with GPUs, and if you don't have one then the cloud-based GPUs available for free on Google Colab.
+If not using Colab, the notebook can be run as-is.
+If using Colab, this notebook should therefore be uploaded to Google Drive in a folder called `glq_mpia`, along with the following files:
 - `glq_mpia/contrastive_utils.py` (ML nuts and bolts)
 - `glq_mpia/data/processed/ids_images.npz` (Image files)
 Running the notebook then trains a neural network to separate out the images in a 1024D space.
-Each of the 6168 objects is assigned a point in this space, saved as a 6128x1024 array in `data/processed/encoded_imgs.npz`
+Each of the 6536 objects is assigned a point in this space, saved as a 6536 array in `data/processed/encoded_imgs.npz`
 
 Clustering and visualisation are both much easier in 2D than in 1024D.
 We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 1024D points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
@@ -70,4 +71,4 @@ The final two objects turned out to be J0603--3923 and J0109--5424.
 
 ## SED fitting
 
-The program `quasar_galaxy_fit.py` fits models of quasars, galaxies, and lensed quasars to the spectra of the 
+The program `quasar_galaxy_fit.py` fits models of quasars, galaxies, and lensed quasars to the photometry of the objects in the group identified by the neural network
