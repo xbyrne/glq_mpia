@@ -47,7 +47,7 @@ This will probably take a couple of hours.
 URLs for 6538 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6536x28x28x5 array.
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6536x28x28x5 array (two objects seem to have had their images unavailable somehow).
 The cache may get quite large for this, and this program takes a day or so to run.
 The successful coadd object ids are stored in `data/processed/ids.npz`, and the corresponding images are stored in `data/processed/imgs{1,2}.npz`.
 The images are stored across two files so that I can upload them to github (which has a 100MB/file limit);
