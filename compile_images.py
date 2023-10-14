@@ -52,7 +52,8 @@ for i, object_url_string in tqdm(
             break
 
 success_coadd_ids = coadd_ids[~failed_mask]
+np.savez_compressed('./data/processed/ids.npz', ids=success_coadd_ids)
 success_imgs_array = imgs[~failed_mask]
 np.savez_compressed(
-    "./data/processed/ids_images.npz", ids=success_coadd_ids, imgs=success_imgs_array
+    "./data/processed/imgs.npz", imgs=success_imgs_array
 )
