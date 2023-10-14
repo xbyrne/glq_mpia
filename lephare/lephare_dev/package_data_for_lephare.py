@@ -13,7 +13,30 @@ df = pd.read_csv("../../data/processed/cut_crossmatched_objects.csv", index_col=
 ]
 
 bands = ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]
+
+
+def AB_to_uJy(mag_AB):
+    """
+    Converts an AB magnitude to a flux in uJy.
+    """
+    return 10 ** (29 - (48.60 / 2.5)) * 10 ** (-mag_AB / 2.5)
+
+
+upper_limit_3sigmas = [
+    AB_to_uJy(mag)
+    for mag in [
+        24.7 - 2.5 * np.log10(3 / 10),
+        24.4 - 2.5 * np.log10(3 / 10),
+        23.8 - 2.5 * np.log10(3 / 10),
+        23.1 - 2.5 * np.log10(3 / 10),
+        21.7 - 2.5 * np.log10(3 / 10),
+        20.8 - 2.5 * np.log10(3 / 5),
+        20.0 - 2.5 * np.log10(3 / 5),
+    ]
+] + [0.08e-3 * 3 / 5, 0.11e-3 * 3 / 5]
+
 input_filetext = ""
+
 for coi in quasar_ids:
     input_filetext += f"{str(coi)[-9:]} "
     mag_data = df.loc[coi]
