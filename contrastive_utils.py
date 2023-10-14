@@ -56,11 +56,11 @@ def load_encoder(n_filters_1=256, n_filters_2=512, n_filters_3=1024):
     the cropped 24x24x5 size to a 1024-dimensional vector.
     """
     augmented_images = Input(shape=(24, 24, 5), name="augmented_input")
-    x = Conv2D(n_filters_1, 5, activation="relu", name="Conv2D_0")(augmented_images)
+    x = Conv2D(n_filters_1, 5, activation="elu", name="Conv2D_0")(augmented_images)
     x = MP(pool_size=2)(x)
-    x = Conv2D(n_filters_2, 3, activation="relu", name="Conv2D_1")(x)
+    x = Conv2D(n_filters_2, 3, activation="elu", name="Conv2D_1")(x)
     x = MP(pool_size=2)(x)
-    x = Conv2D(n_filters_3, 3, activation="relu", name="Conv2D_2")(x)
+    x = Conv2D(n_filters_3, 3, activation="elu", name="Conv2D_2")(x)
     x = MP(pool_size=2)(x)
     features = Reshape((n_filters_3,), name="Reshape")(x)
     encoder = Model(augmented_images, features, name="encoder")
@@ -74,9 +74,9 @@ def load_projector(input_size=1024, n_nodes_1=512, n_nodes_2=128, n_nodes_3=64):
     Simply a few dense layers, converting 1024D vectors to 64D
     """
     features = Input(shape=(input_size,), name="features")
-    x = Dense(n_nodes_1, activation="relu", name="Dense_0")(features)
-    x = Dense(n_nodes_2, activation="relu", name="Dense_1")(x)
-    projection = Dense(n_nodes_3, name="Dense_2")(x)
+    x = Dense(n_nodes_1, activation="elu", name="Dense_0")(features)
+    x = Dense(n_nodes_2, activation="elu", name="Dense_1")(x)
+    projection = Dense(n_nodes_3, activation="elu", name="Dense_2")(x)
     projector = Model(features, projection, name="projector")
     return projector
 
