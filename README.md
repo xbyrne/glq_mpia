@@ -32,12 +32,12 @@ Hit Go.
 A third table, for me called "2xVHS DR5", is created after another minute, containing 116 499 entries.
 This table is `/data/interim/des_wise_vhs_objects.csv`.
 
+The table `/data/external/all_hzqs.csv` contains data on 406 known high-redshift quasars.
+Cross-matching to the `/data/interim/des_wise_vhs_objects.csv` file just created yields `/data/external/processed/known_hzqs.csv`, which contains 12 objects which are thus in the DESxVHSxWISE footprint.
+
 ### Perform cuts in WISE data
 
 Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 6923 objects.
-
-The table `/data/external/all_hzqs.csv` contains data on 406 known high-redshift quasars.
-Cross-matching to the `cut_crossmatched_objects.csv` file just created yields `/data/external/processed/known_hzqs.csv`, which contains 10 objects which are thus in the DES footprint.
 
 ## Downloading Data
 ### Grab URLs
