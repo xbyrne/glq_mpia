@@ -92,26 +92,7 @@ interim_df = interim_df[
 
 ## Flooring objects below 3sigma detection
 # If an object is detected below a 3sigma level, magnitude and error
-#  are set to 99.; flux to 0; flux error set to the 3sigma sensitivity
-
-# DES, VHS, and WISE all give their sensitivities in different ways.
-# DES gives the 10sigma magnitude depths, in the abstract of:
-#  https://ui.adsabs.harvard.edu/abs/2021ApJS..255...20A/abstract
-des_m_10s = {"g": 24.7, "r": 24.4, "i": 23.8, "z": 23.1, "Y": 21.7}
-# The relationship between magnitudes at different significance levels is
-# m_asigma - m_bsigma = -2.5 log(F_asigma / F_bsigma) = -2.5 log(a/b)
-des_m_3s = {key: m_10s - 2.5 * np.log10(3 / 10) for key, m_10s in des_m_10s.items()}
-des_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in des_m_3s.items()}
-# VHS gives its 5sigma depths here:
-#  http://www.eso.org/rm/api/v1/public/releaseDescriptions/144
-vhs_m_5s = {"J": 20.8, "K": 20.0}
-vhs_m_3s = {key: m_5s - 2.5 * np.log10(3 / 5) for key, m_5s in vhs_m_5s.items()}
-vhs_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in vhs_m_3s.items()}
-# WISE gives 5sigma flux sensitivities here:
-#  https://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_3a.html#tbl1
-wise_F_5s = {"W1": 54, "W2": 71}
-wise_F_3s = {key: (3 / 5) * F_5s for key, F_5s in wise_F_5s.items()}
-F_3s = {**des_F_3s, **vhs_F_3s, **wise_F_3s}
+#  are set to 99.; the flux is set to 0
 
 # We now floor objects which are below {S_N}sigma
 S_N = 3
@@ -119,9 +100,11 @@ for band in bands:
     # to_floor = interim_df[f"{band}_flux"] < F_3s[band]
     to_floor = interim_df[f"{band}_flux"] < S_N * interim_df[f"{band}_fluxerr"]
     # The below might throw some SettingWithCopyWarnings but it seems to work fine
-    interim_df.loc[
-        to_floor, [f"{band}_mag", f"{band}_magerr", f"{band}_flux", f"{band}_fluxerr"]
-    ] = [99.0, 99.0, 0.0, F_3s[band]]
+    interim_df.loc[to_floor, [f"{band}_mag", f"{band}_magerr", f"{band}_flux"]] = [
+        99.0,
+        99.0,
+        0.0,
+    ]
 
 
 ## We now make some more cuts, to ensure
@@ -131,14 +114,14 @@ for band in bands:
 # (J, K) != NaN.              [ensuring detected in VHS]
 
 cut = (
-    (interim_df["W1_mag"] != 99.0)
-    & (interim_df["W2_mag"] != 99.0)
-    & (interim_df["W1_magerr"] < 2.5 * np.log10(np.e) / 3)
-    & (interim_df["W2_magerr"] < 2.5 * np.log10(np.e) / 3)
-    & (interim_df["W1_mag"] - interim_df["W2_mag"] > 0.5 + 2.699 - 3.339)
-    & ~(interim_df["J_mag"].isna())
-    & ~(interim_df["K_mag"].isna())
+    (interim_df["W1_mag"] != 99.0)  # 116473
+    & (interim_df["W2_mag"] != 99.0)  # 106509
+    & (interim_df["W1_magerr"] < 2.5 * np.log10(np.e) / 3)  # 106486
+    & (interim_df["W2_magerr"] < 2.5 * np.log10(np.e) / 3)  # 92954
+    & (interim_df["W1_mag"] - interim_df["W2_mag"] > 0.5 + 2.699 - 3.339)  # 7038
+    & ~(interim_df["J_mag"].isna())  # 7020
+    & ~(interim_df["K_mag"].isna())  # 6923
 )
 
 processed_df = interim_df[cut]
-processed_df.to_csv("./data/processed/cut_crossmatched_objects.csv")
+# processed_df.to_csv("./data/processed/cut_crossmatched_objects.csv")

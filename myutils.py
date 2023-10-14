@@ -169,6 +169,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
     Outputs are in AA, Jy
     """
     import bagpipes as pipes
+
     model_components = package_model_components(
         t0, t1, mass, metallicity, dust_av, zgal
     )
