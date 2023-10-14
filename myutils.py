@@ -3,7 +3,6 @@ Some utilities for the project
 """
 import re
 import numpy as np
-import bagpipes as pipes
 from astropy import units as u, constants as const
 from astropy.io import fits
 from pyvo.dal import sia
@@ -158,36 +157,39 @@ def spectrum_to_photometry(wavelengths, fluxes):
     return band_flxs * 1e6  # muJy
 
 
+filters_list = np.loadtxt(
+    "./data/sed_fitting/filters/filters_list_grizYJKW12.txt", dtype="str"
+)
+
+
 def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
     """
     Generates a galaxy spectrum, based on a range of parameters.
     This assumes a constant star formation rate. Require t1<t0
     Outputs are in AA, Jy
     """
+    import bagpipes as pipes
     model_components = package_model_components(
         t0, t1, mass, metallicity, dust_av, zgal
     )
+    model_components = package_model_components(1, 0.5, 10, 0.2, 0.2, 0.5)
+
+    bagpipes_galaxy_model = pipes.model_galaxy(
+        model_components, filt_list=filters_list, spec_wavs=np.arange(4e3, 6e4, 5.0)
+    )
+
     bagpipes_galaxy_model.update(model_components)
     wavs = bagpipes_galaxy_model.wavelengths  # Rest frame
     flxs = bagpipes_galaxy_model.spectrum_full  # ergscma
 
     wavs = wavs * u.AA * (1 + zgal)  # Redshifting
     flxs = (
-        flxs * (u.erg / u.s / (u.cm**2) / u.AA) * (wavs**2) / const.c
+        flxs * (u.erg / u.s / (u.cm ** 2) / u.AA) * (wavs ** 2) / const.c
     )  # Converting F_lambda to F_nu
     flxs = flxs.to(u.Jy).value  # Jy
     wavs = wavs.value  # AA
     return wavs, flxs
 
-
-filters_list = np.loadtxt(
-    "./data/sed_fitting/filters/filters_list_grizYJKW12.txt", dtype="str"
-)
-
-model_components = package_model_components(1, 0.5, 10, 0.2, 0.2, 0.5)
-bagpipes_galaxy_model = pipes.model_galaxy(
-    model_components, filt_list=filters_list, spec_wavs=np.arange(4e3, 6e4, 5.0)
-)
 
 model_qso = np.loadtxt(
     "./data/sed_fitting/vandenberk2001_z=0_fnu_noscale.txt", skiprows=1
