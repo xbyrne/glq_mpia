@@ -231,6 +231,18 @@ def quasar_spectroscopy(M_QSO, z_QSO):
     return wavelength.value, flux_qso.value  # in Jy
 
 
+def find_best_model(coi, model_type):
+    """
+    Finds the model of type `model_type` with the highest logprob
+    """
+    assert model_type in ["G", "Q", "GQ"]
+    mcmc_fl = np.load(f"./data/sed_fitting/mcmc_results/{model_type}/{coi}.npz")
+    best_model_index = np.argmax(mcmc_fl["logprobs"])
+    samples = mcmc_fl["samples"]
+    flat_samples = samples.reshape((np.prod(samples.shape[:2]), samples.shape[-1]))
+    return flat_samples[best_model_index]
+
+
 def spectrum_from_params(model):
     """
     Generates a spectrum from a parameter list
