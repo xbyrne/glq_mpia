@@ -256,7 +256,7 @@ def spectrum_from_params(model):
 
 
 # Handling LePHARE output
-def unpack_lephare_spectra(filename):
+def unpack_lephare_spectra(coi):
     """
     Extracts the useful information from a LePHARE .spec output file
     This includes:
@@ -264,6 +264,7 @@ def unpack_lephare_spectra(filename):
         Best-fitting quasar spectrum
         Best-fitting stellar spectrum
     """
+    filename = f"./lephare/lephare_dev/output_spectra/Id{str(coi)[-9:]}.spec"
     spectra_array = np.loadtxt(filename, skiprows=193).T
     sep1, sep2 = (
         np.argwhere(np.diff(spectra_array[0, :]) < 0).reshape(2) + 1
