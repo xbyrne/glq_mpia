@@ -26,8 +26,21 @@ def vega_to_AB(vega_mag, band):
 def AB_to_uJy(mag_AB):
     """
     Converts an AB magnitude to a flux in uJy.
+    Where mag=99., returns 0.
     """
-    return 10 ** (6 + (8.9 / 2.5)) * 10 ** (-mag_AB / 2.5)
+
+    def uJy(mag):
+        """Calculates a single flux"""
+        return 10 ** (6 + (8.9 / 2.5)) * 10 ** (-mag / 2.5)
+
+    if np.isscalar(mag_AB):
+        if mag_AB==99.:
+            return 0.
+        return uJy(mag_AB)
+
+    fluxes = uJy(mag_AB)
+    fluxes[mag_AB == 99.0] = 0.0  # Flooring mag=99
+    return fluxes
 
 
 ## Downloading and Processing Images
@@ -185,7 +198,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
 
     wavs = wavs * u.AA * (1 + zgal)  # Redshifting
     flxs = (
-        flxs * (u.erg / u.s / (u.cm ** 2) / u.AA) * (wavs ** 2) / const.c
+        flxs * (u.erg / u.s / (u.cm**2) / u.AA) * (wavs**2) / const.c
     )  # Converting F_lambda to F_nu
     flxs = flxs.to(u.Jy).value  # Jy
     wavs = wavs.value  # AA
