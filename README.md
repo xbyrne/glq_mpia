@@ -60,15 +60,16 @@ Machine learning is easiest with GPUs, and if you don't have one then the cloud-
 If not using Colab, the notebook can be run as-is.
 If using Colab, this notebook should therefore be uploaded to Google Drive in a folder called `glq_mpia`, along with the following files:
 - `glq_mpia/contrastive_utils.py` (ML nuts and bolts)
-- `glq_mpia/data/processed/ids_images.npz` (Image files)
-Running the notebook then trains a neural network to separate out the images in a 1024D space.
-Each of the 6536 objects is assigned a point in this space, saved as a 6536 array in `data/processed/encoded_imgs.npz`
+- `glq_mpia/data/processed/{ids, imgs}.npz` (Image files with corresponding IDs)
+Running the notebook then trains a neural network to separate out the images in a 512 space.
+Each of the 6536 objects is assigned a point in this space, saved as a 6536x512 array in `data/processed/encoded_imgs.npz`
 
-Clustering and visualisation are both much easier in 2D than in 1024D.
-We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 1024D points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
-The short program `embed_objects.py` implements this embedding using `sklearn.manifold.TSNE`, saving the embedding to the file `data/processed/embedding.npz`.
-There is a small but distinct cluster of 12 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 10 known high-redshift quasars.
-The final two objects turned out to be J0603--3923 and J0109--5424.
+Clustering and visualisation are both much easier in 2D than in 512.
+We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 512 points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
+The end of the notebook `contrastive_learning.ipynb` carries out this embedding, saving the result to the file `data/processed/embedding.npz`.
+There is a small but distinct cluster of 12 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 
+#10 known high-redshift quasars.
+#The final two objects turned out to be J0603--3923 and J0109--5424.
 
 
 ## SED fitting
