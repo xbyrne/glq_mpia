@@ -132,7 +132,7 @@ wise_F_3s = {key: (3 / 5) * F_5s for key, F_5s in wise_F_5s.items()}
 F_3s = {**des_F_3s, **vhs_F_3s, **wise_F_3s}
 
 # We now floor objects which are below {S_N}sigma
-S_N = 3
+S_N = 2
 for band in bands:
     to_floor = (
         interim_df[f"{band}_flux"] <= S_N * interim_df[f"{band}_fluxerr"]
@@ -142,14 +142,14 @@ for band in bands:
     ] = [99.0, 99.0, 0.0, F_3s[band]]
 
 
-## We now remove objects that were not detected (at 3sigma) in JKW12
+## We now remove objects that were not detected (at 2sigma) in JKW12
 # HZQs should be detected in these bands!
 
 processed_df = interim_df[  # 7527
-    (interim_df["J_flux"] != 0.0)  # 7501
-    & (interim_df["K_flux"] != 0.0)  # 6965
-    & (interim_df["W1_flux"] != 0)  # 6962
-    & (interim_df["W2_flux"] != 0)  # 6464
+    (interim_df["J_flux"] != 0.0)  # 7521
+    & (interim_df["K_flux"] != 0.0)  # 7438
+    & (interim_df["W1_flux"] != 0)  # 7438
+    & (interim_df["W2_flux"] != 0)  # 7438
 ]
 
 processed_df.to_csv("./data/processed/cut_crossmatched_objects.csv")

@@ -37,7 +37,7 @@ Cross-matching to the `/data/interim/des_wise_vhs_objects.csv` file just created
 
 ### Perform cuts in WISE data
 
-Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 6923 objects.
+Run the program `processed_xmatched_data.py`, which calculates important data fields (e.g. flux, flux errors) and performs cuts to the data (particularly in WISE), removing non-detections ($2\sigma$) and many contaminating dwarf stars. This will generate a .csv file (`/data/processed/cut_crossmatched_objects.csv`) containing 7438 objects.
 
 ## Downloading Data
 ### Grab URLs
