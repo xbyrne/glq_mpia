@@ -47,7 +47,7 @@ This will probably take a couple of hours.
 URLs for 7018 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 7016x28x28x5 array (two objects seem to have had their images unavailable somehow).
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 7016x28x28x5 array (two objects seem to have had their images unavailable for some reason).
 The cache may get quite large for this, and this program takes a day or so to run.
 The successful coadd object ids are stored in `data/processed/ids.npz`, and the corresponding images are stored in `data/processed/imgs.npz`.
 This file is 117MB, which is too large for Github so they can be split across two files using the `/data/processed/split_imgs.py` into the two files `data/processed/imgs{1,2}.npz`.
@@ -61,13 +61,13 @@ If not using Colab, the notebook can be run as-is.
 If using Colab, this notebook should therefore be uploaded to Google Drive in a folder called `glq_mpia`, along with the following files:
 - `glq_mpia/contrastive_utils.py` (ML nuts and bolts)
 - `glq_mpia/data/processed/{ids, imgs}.npz` (Image files with corresponding IDs)
-Running the notebook then trains a neural network to separate out the images in a 512 space.
-Each of the 6536 objects is assigned a point in this space, saved as a 6536x512 array in `data/processed/encoded_imgs.npz`
+Running the notebook then trains a neural network to separate out the images in a 512D space.
+Each of the 7016 objects is assigned a point in this space, saved as a 7016x512 array in `data/processed/encoded_imgs.npz`
 
-Clustering and visualisation are both much easier in 2D than in 512.
-We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 512 points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
+Clustering and visualisation are both much easier in 2D than in 512D.
+We use t-distributed Stochastic Neighbor Embedding (t-SNE) to embed the 512D points into a 2D space while preserving as well as possible the distances between all of the points - and hence the groupings identified by the neural network.
 The end of the notebook `contrastive_learning.ipynb` carries out this embedding, saving the result to the file `data/processed/embedding.npz`.
-There is a small but distinct cluster of 12 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 
+There is a small but distinct cluster of 11 objects -- stored in `data/processed/quasar_ids.npz` -- which contains 
 #10 known high-redshift quasars.
 #The final two objects turned out to be J0603--3923 and J0109--5424.
 
