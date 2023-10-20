@@ -34,8 +34,8 @@ def AB_to_uJy(mag_AB):
         return 10 ** (6 + (8.9 / 2.5)) * 10 ** (-mag / 2.5)
 
     if np.isscalar(mag_AB):
-        if mag_AB==99.:
-            return 0.
+        if mag_AB == 99.0:
+            return 0.0
         return uJy(mag_AB)
 
     fluxes = uJy(mag_AB)
@@ -73,8 +73,7 @@ def fetch_object_urls(ra, dec, sia_service=SIA_SERVICE):
 
 def fetch_image(filename):
     """Fetches image from URL without printing to stdout"""
-    img = fits.open(filename, cache=False)[0].data
-    return img
+    return fits.open(filename, cache=False)[0].data
 
 
 def crop_image(raw_img, px=28):
