@@ -33,6 +33,9 @@ for i, object_url_string in tqdm(
         band = myutils.band_from_url(url)  # g/r/i/z/Y
 
         os.system(
+            f"> {DOWNLOADED_FILENAME}"
+        )  # Clears file for the next one, might speed it up
+        os.system(
             f"wget -q -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
         )  # Downloads file
         try:
@@ -52,8 +55,6 @@ for i, object_url_string in tqdm(
             break
 
 success_coadd_ids = coadd_ids[~failed_mask]
-np.savez_compressed('./data/processed/ids.npz', ids=success_coadd_ids)
+np.savez_compressed("./data/processed/ids.npz", ids=success_coadd_ids)
 success_imgs_array = imgs[~failed_mask]
-np.savez_compressed(
-    "./data/processed/imgs.npz", imgs=success_imgs_array
-)
+np.savez_compressed("./data/processed/imgs.npz", imgs=success_imgs_array)

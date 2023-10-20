@@ -47,11 +47,11 @@ This will probably take a couple of hours.
 URLs for 7018 objects are here; looks like about 6% had some problem.
 
 ### Download Images
-Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 6536x28x28x5 array (two objects seem to have had their images unavailable somehow).
+Run the script `compile_images.py`, which reads from the `img_url_list.txt` file, uses a wget command to download the fits files for each object, extracts the image data from them, and then saves the resulting data in a big 7016x28x28x5 array (two objects seem to have had their images unavailable somehow).
 The cache may get quite large for this, and this program takes a day or so to run.
-The successful coadd object ids are stored in `data/processed/ids.npz`, and the corresponding images are stored in `data/processed/imgs{1,2}.npz`.
-The images are stored across two files so that I can upload them to github (which has a 100MB/file limit);
-the `.npz` files can be combined with `data/processed/assemble_imgs.py`.
+The successful coadd object ids are stored in `data/processed/ids.npz`, and the corresponding images are stored in `data/processed/imgs.npz`.
+This file is 117MB, which is too large for Github so they can be split across two files using the `/data/processed/split_imgs.py` into the two files `data/processed/imgs{1,2}.npz`.
+The `.npz` files can be combined with `data/processed/assemble_imgs.py`.
 
 ## Clustering Images using Contrastive Learning
 
