@@ -27,7 +27,7 @@ eff_wavs = [
     46028,
 ]
 
-quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"]
+quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"].astype(int)
 df = pd.read_csv("./data/processed/cut_crossmatched_objects.csv", index_col=0).loc[
     quasar_ids
 ]
