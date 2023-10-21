@@ -103,7 +103,7 @@ for band in bands:
 ## Flooring objects below 3sigma detection
 # If an object is detected below a 3sigma level,
 #  magnitude and error are set to 99;
-#  flux set to 0; fluxerr set to 3sigma signifying an upper bound
+#  flux set to 0; fluxerr set to 3sigma / 3
 # NB nondetections are at this stage at flux=fluxerr=0
 
 # DES, VHS, and WISE all give their sensitivities in different ways
@@ -139,7 +139,7 @@ for band in bands:
     )  # `>=`` accounts for flux=fluxerr=0
     interim_df.loc[
         to_floor, [f"{band}_mag", f"{band}_magerr", f"{band}_flux", f"{band}_fluxerr"]
-    ] = [99.0, 99.0, 0.0, F_3s[band]]
+    ] = [99.0, 99.0, 0.0, F_3s[band] / 3]
 
 
 ## We now remove objects that were not detected (at 2sigma) in JKW12
