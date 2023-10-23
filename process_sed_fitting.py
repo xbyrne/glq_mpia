@@ -68,4 +68,4 @@ fit_scores_df['BAGPIPES_BIC_G'] = BIC_g
 fit_scores_df['BAGPIPES_BIC_Q'] = BIC_q
 fit_scores_df['BAGPIPES_BIC_GQ'] = BIC_gq
 
-fit_scores_df.to_csv('./data/processed/sed_fitting_scores.csv')
+fit_scores_df.to_csv('./data/sed_fitting/sed_fitting_scores.csv')
