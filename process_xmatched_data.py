@@ -12,7 +12,9 @@ import myutils
 
 bands = ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]
 
-original_df = pd.read_csv("./data/interim/des_wise_vhs_objects.csv", index_col=0)
+original_df = pd.read_csv(
+    "./data/interim/des_wise_vhs_objects.csv", index_col=0
+)  # 116499 entries
 old_names = [  # All the fields which are useful for selection processing
     "RA",
     "DEC",
@@ -30,12 +32,12 @@ old_names = [  # All the fields which are useful for selection processing
     "e_Jpmag",
     "Kspmag",
     "e_Kspmag",
-    "FW1lbs",
-    "e_FW1lbs",
-    "FW2lbs",
-    "e_FW2lbs",
+    "W1mag",
+    "e_W1mag",
+    "W2mag",
+    "e_W2mag",
 ]
-interim_df = original_df[old_names]
+interim_df = original_df.loc[:, old_names]
 
 new_names = [  # Neatening up column names
     # Unless otherwise specified, magnitudes are in AB system and fluxes are in uJy
@@ -55,101 +57,99 @@ new_names = [  # Neatening up column names
     "J_magerr",
     "K_mag_vg",
     "K_magerr",
-    "W1_flux_vg_nMgy",
-    "W1_fluxerr_vg_nMgy",
-    "W2_flux_vg_nMgy",
-    "W2_fluxerr_vg_nMgy",
+    "W1_mag_vg",
+    "W1_magerr",
+    "W2_mag_vg",
+    "W2_magerr",
 ]
 interim_df.rename(columns=dict(zip(old_names, new_names)), inplace=True)
 
-# Converting unWISE fluxes to vega mags; calculating errors
-# See https://catalog.unwise.me/catalogs.html
-for wise_band in ["W1", "W2"]:
-    # Converting Vega nanomaggies to vega mag
-    interim_df[f"{wise_band}_mag_vg"] = 22.5 - 2.5 * np.log10(
-        interim_df[f"{wise_band}_flux_vg_nMgy"]
-    )
-    # Calculating magnitude errors
-    # Using m = -2.5 log(f/f0) => |dm| = 2.5 log(e) df / f
-    # nMgy ~ Jy, so the units cancel
-    interim_df[f"{wise_band}_magerr"] = (
-        2.5
-        * np.log10(np.e)
-        * interim_df[f"{wise_band}_fluxerr_vg_nMgy"]
-        / interim_df[f"{wise_band}_flux_vg_nMgy"]
-    )
+# Initial cuts: making W1-W2 cut and removing bad detections
+interim_df = interim_df[  # 116499
+    (interim_df["W1_mag_vg"] - interim_df["W2_mag_vg"] > 0.5)  # 12168
+    & ~(interim_df["W1_magerr"].isna())  # 12167
+    & ~(interim_df["W2_magerr"].isna())  # 7659
+    & ~(interim_df["J_mag_vg"].isna())  # 7641
+    & ~(interim_df["K_mag_vg"].isna())  # 7527
+]
+
 
 # Converting Vega magnitudes to AB
 for band in ["J", "K", "W1", "W2"]:
     interim_df[f"{band}_mag"] = myutils.vega_to_AB(interim_df[f"{band}_mag_vg"], band)
 
+# Discarding Vega mags
+interim_df = interim_df[
+    ["ra_des", "dec_des"]
+    + np.array([[f"{band}_{param}" for param in ["mag", "magerr"]] for band in bands])
+    .ravel()
+    .tolist()
+]  # ['g_mag','g_magerr','g_flux','g_fluxerr','r_mag'...]
+
+
 # Converting AB magnitudes to fluxes
 # Flux errors calculated using m = -2.5 log(f/f0) => |dm| = 2.5 log(e) df / f
-for band in ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]:
-    interim_df[f"{band}_flux"] = myutils.AB_to_uJy(interim_df[f"{band}_mag"])
+for band in bands:
+    mags = interim_df[f"{band}_mag"]
+    interim_df.loc[:, f"{band}_flux"] = myutils.AB_to_uJy(mags)
+
     interim_df[f"{band}_fluxerr"] = (
         interim_df[f"{band}_magerr"]
         * interim_df[f"{band}_flux"]
         / (2.5 * np.log10(np.e))
     )
 
-# Slicing again to select useful columns
-interim_df = interim_df[
-    ['ra_des', 'dec_des'] +\
-    np.array(
-        [
-            [f"{band}_{param}" for param in ["mag", "magerr", "flux", "fluxerr"]]
-            for band in bands
-        ]
-    ).ravel().tolist()
-]  # ['g_mag','g_magerr','g_flux','g_fluxerr','r_mag'...]
 
 ## Flooring objects below 3sigma detection
-# If an object is detected below a 3sigma level, magnitude and error
-#  are set to 99.; flux to 0; flux error set to the 3sigma sensitivity
-# DES, VHS, and WISE all give their sensitivities in different ways.
-# DES gives the 10sigma magnitude depths, in the abstract of:
+# If an object is detected below a 3sigma level,
+#  magnitude and error are set to 99;
+#  flux set to 0; fluxerr set to 3sigma / 3
+# NB nondetections are at this stage at flux=fluxerr=0
+
+# DES, VHS, and WISE all give their sensitivities in different ways
+
+# DES gives 10sigma magnitude depths n the abstract of:
 #  https://ui.adsabs.harvard.edu/abs/2021ApJS..255...20A/abstract
 des_m_10s = {"g": 24.7, "r": 24.4, "i": 23.8, "z": 23.1, "Y": 21.7}
 # The relationship between magnitudes at different significance levels is
 # m_asigma - m_bsigma = -2.5 log(F_asigma / F_bsigma) = -2.5 log(a/b)
 des_m_3s = {key: m_10s - 2.5 * np.log10(3 / 10) for key, m_10s in des_m_10s.items()}
 des_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in des_m_3s.items()}
+
 # VHS gives its 5sigma depths here:
 #  http://www.eso.org/rm/api/v1/public/releaseDescriptions/144
 vhs_m_5s = {"J": 20.8, "K": 20.0}
 vhs_m_3s = {key: m_5s - 2.5 * np.log10(3 / 5) for key, m_5s in vhs_m_5s.items()}
 vhs_F_3s = {key: myutils.AB_to_uJy(m_3s) for key, m_3s in vhs_m_3s.items()}
+
 # WISE gives 5sigma flux sensitivities in the abstract of:
 #  https://ui.adsabs.harvard.edu/abs/2010AJ....140.1868W/abstract
-wise_F_5s = {"W1": 0.08e-3, "W2": 0.11e-3}
+wise_F_5s = {"W1": 0.08e3, "W2": 0.11e3}
+# WISE gives 5sigma flux sensitivities here:
+#  https://wise2.ipac.caltech.edu/docs/release/allwise/expsup/sec2_3a.html#tbl1
+wise_F_5s = {"W1": 54, "W2": 71}
 wise_F_3s = {key: (3 / 5) * F_5s for key, F_5s in wise_F_5s.items()}
 F_3s = {**des_F_3s, **vhs_F_3s, **wise_F_3s}
 
-# We now floor objects which are below 3sigma
+# We now floor objects which are below {S_N}sigma
+S_N = 2
 for band in bands:
-    to_floor = interim_df[f"{band}_flux"] < F_3s[band]
-    # The below might throw some SettingWithCopyWarnings but it seems to work fine
+    to_floor = (
+        interim_df[f"{band}_flux"] <= S_N * interim_df[f"{band}_fluxerr"]
+    )  # `>=`` accounts for flux=fluxerr=0
     interim_df.loc[
         to_floor, [f"{band}_mag", f"{band}_magerr", f"{band}_flux", f"{band}_fluxerr"]
-    ] = [99.0, 99.0, 0.0, F_3s[band]]
+    ] = [99.0, 99.0, 0.0, F_3s[band] / 3]
 
 
-## We now make some more cuts, to ensure
-# (W1, W2) != 99.             [ensuring detected in WISE]
-# (dW1, dW2) < 2.5 log(e) / 3 [ensuring S/N>3]
-# W1 - W2 > 0.5 [Vega]        [Removes many dwarf stars]
-# (J, K) != NaN.              [ensuring detected in VHS]
+## We now remove objects that were not detected (at 2sigma) in JKW12
+# HZQs should be detected in these bands!
 
-cut = (
-    (interim_df["W1_mag"] != 99.0)
-    & (interim_df["W2_mag"] != 99.0)
-    & (interim_df["W1_magerr"] < 2.5 * np.log10(np.e) / 3)
-    & (interim_df["W2_magerr"] < 2.5 * np.log10(np.e) / 3)
-    & (interim_df["W1_mag"] - interim_df["W2_mag"] > 0.5 + 2.699 - 3.339)
-    & ~(interim_df["J_mag"].isna())
-    & ~(interim_df["K_mag"].isna())
-)
+processed_df = interim_df[  # 7527
+    (interim_df["J_flux"] != 0.0)  # 7521
+    & (interim_df["K_flux"] != 0.0)  # 7438
+    & (interim_df["W1_flux"] != 0)  # 7438
+    & (interim_df["W2_flux"] != 0)  # 7438
+]
 
-processed_df = interim_df[cut]
 processed_df.to_csv("./data/processed/cut_crossmatched_objects.csv")

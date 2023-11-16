@@ -33,12 +33,15 @@ for i, object_url_string in tqdm(
         band = myutils.band_from_url(url)  # g/r/i/z/Y
 
         os.system(
+            f"> {DOWNLOADED_FILENAME}"
+        )  # Clears file for the next one, might speed it up
+        os.system(
             f"wget -q -O {DOWNLOADED_FILENAME} '{url}' > /dev/null"
-        )  # Downloads file TODO: Could go wrong?
+        )  # Downloads file
         try:
             raw_img = myutils.fetch_image(
                 DOWNLOADED_FILENAME
-            )  # Extracts image from fits file TODO: Could go wrong?
+            )  # Extracts image from fits file
             processed_img = myutils.crop_image(raw_img)  # Crops image to 28x28
             if processed_img is None:
                 FAILED_OBJECT_FLAG = True
@@ -52,7 +55,6 @@ for i, object_url_string in tqdm(
             break
 
 success_coadd_ids = coadd_ids[~failed_mask]
+np.savez_compressed("./data/processed/ids.npz", ids=success_coadd_ids)
 success_imgs_array = imgs[~failed_mask]
-np.savez_compressed(
-    "./data/processed/ids_images.npz", ids=success_coadd_ids, imgs=success_imgs_array
-)
+np.savez_compressed("./data/processed/imgs.npz", imgs=success_imgs_array)

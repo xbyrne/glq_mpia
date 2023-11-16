@@ -49,34 +49,34 @@ def load_augmentor():
     return augmentor
 
 
-def load_encoder():
+def load_encoder(n_filters_1=256, n_filters_2=512, n_filters_3=1024):
     """
     Loads the encoder of the contrastive learning network.
     Essentially a classic ConvNet, converting an image from
     the cropped 24x24x5 size to a 1024-dimensional vector.
     """
     augmented_images = Input(shape=(24, 24, 5), name="augmented_input")
-    x = Conv2D(256, 5, activation="relu", name="Conv2D_0")(augmented_images)
+    x = Conv2D(n_filters_1, 5, activation="elu", name="Conv2D_0")(augmented_images)
     x = MP(pool_size=2)(x)
-    x = Conv2D(512, 3, activation="relu", name="Conv2D_1")(x)
+    x = Conv2D(n_filters_2, 3, activation="elu", name="Conv2D_1")(x)
     x = MP(pool_size=2)(x)
-    x = Conv2D(1024, 3, activation="relu", name="Conv2D_2")(x)
+    x = Conv2D(n_filters_3, 3, activation="elu", name="Conv2D_2")(x)
     x = MP(pool_size=2)(x)
-    features = Reshape((1024,), name="Reshape")(x)
+    features = Reshape((n_filters_3,), name="Reshape")(x)
     encoder = Model(augmented_images, features, name="encoder")
     return encoder
 
 
-def load_projector():
+def load_projector(input_size=1024, n_nodes_1=512, n_nodes_2=128, n_nodes_3=64):
     """
     Loads the projector for the contrastive learning network.
     This gets thrown away after training because for some reason that makes it work better.
     Simply a few dense layers, converting 1024D vectors to 64D
     """
-    features = Input(shape=(1024,), name="features")
-    x = Dense(512, activation="relu", name="Dense_0")(features)
-    x = Dense(128, activation="relu", name="Dense_1")(x)
-    projection = Dense(64, name="Dense_2")(x)
+    features = Input(shape=(input_size,), name="features")
+    x = Dense(n_nodes_1, activation="elu", name="Dense_0")(features)
+    x = Dense(n_nodes_2, activation="elu", name="Dense_1")(x)
+    projection = Dense(n_nodes_3, activation="elu", name="Dense_2")(x)
     projector = Model(features, projection, name="projector")
     return projector
 

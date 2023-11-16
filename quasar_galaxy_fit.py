@@ -10,7 +10,6 @@ import os
 import numpy as np
 import pandas as pd
 from astropy import units as u, constants as const
-from pyphot import unit, Filter
 import bagpipes as pipes
 import emcee
 import myutils
@@ -35,7 +34,7 @@ eff_wavs = [
     46028,
 ]
 
-quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"]
+quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"].astype(int)
 df = pd.read_csv("./data/processed/cut_crossmatched_objects.csv", index_col=0).loc[
     quasar_ids
 ]
@@ -89,6 +88,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
     return wavs, flxs
 
 
+<<<<<<< HEAD
 ### Quasar Modelling
 
 model_qso = np.loadtxt(
@@ -159,6 +159,8 @@ def quasar_spectroscopy(M_QSO, z_QSO,ebv=0, vandenberk_template=False):
     flux_qso *= 10 ** ((M_QSO - mag_1450) / -2.5)
     return wavelength.value, flux_qso.value  #in AA, Jy
 
+=======
+>>>>>>> refs/remotes/origin/main
 ### MCMC fitting
 
 def log_prior(theta, obj_type):
@@ -233,7 +235,11 @@ def log_likelihood(theta, y, yerr, obj_type, z_QSO):
         fluxes_model += fluxes_model_galaxy
 
     if "Q" in obj_type:
+<<<<<<< HEAD
         wavs, flxs = quasar_spectroscopy(M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False)
+=======
+        wavs, flxs = myutils.quasar_spectroscopy(M_QSO, z_QSO)
+>>>>>>> refs/remotes/origin/main
         fluxes_model_quasar = myutils.spectrum_to_photometry(wavs, flxs)
         fluxes_model += fluxes_model_quasar
 
@@ -307,7 +313,28 @@ def fit_sed(
 
     return samples, log_prob
 
+<<<<<<< HEAD
 def fit_sed_id(quasar_id, z_QSO):
+=======
+
+### Running SED fitting ###
+
+nwalkers = 32
+n = 10000  # nsteps
+d = 4000  # discard
+t = 2  # thin
+num_samples = int((n - d) / t)
+
+all_samples = [
+    np.zeros((len(quasar_ids), num_samples, nwalkers, nparams))
+    for nparams in [6, 2, 8]  # G, Q, GQ respectively
+]
+all_log_probs = [np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in range(3)]
+
+
+def fit_sed_id(quasar_id):
+    """Fits the SED of a given coadd id to G, Q, and GQ models"""
+>>>>>>> refs/remotes/origin/main
     photometry = load_grizYJKW12(quasar_id)
     flxs = photometry[:, 0]
     flxerrs = photometry[:, 1]

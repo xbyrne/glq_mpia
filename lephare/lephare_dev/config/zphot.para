@@ -34,7 +34,7 @@ AGE_RANGE  0.,13.e9                                     # Age Min-Max in yr
 #   g   r   i   z   Y   J   K   W1  W2
 #   1   2   3   4   5   6   7   8   9
 #
-FILTER_LIST glq/CTIO_DECam.g.dat glq/CTIO_DECam.r.dat glq/CTIO_DECam.i.dat glq/CTIO_DECam.z.dat glq/CTIO_DECam.Y.dat glq/Paranal_VISTA.J.dat glq/Paranal_VIStA.Ks.dat glq/WISE_WISE.W1.dat glq/WISE_WISE.W2.dat
+FILTER_LIST glq/CTIO_DECam.g.dat,glq/CTIO_DECam.r.dat,glq/CTIO_DECam.i.dat,glq/CTIO_DECam.z.dat,glq/CTIO_DECam.Y.dat,glq/Paranal_VISTA.J.dat,glq/Paranal_VISTA.Ks.dat,glq/WISE_WISE.W1.dat,glq/WISE_WISE.W2.dat
 					# (in $LEPHAREDIR/filt/*)
 TRANS_TYPE	0			# TRANSMISSION TYPE
                                         # 0[-def]: Energy, 1: Nb of photons
@@ -91,7 +91,7 @@ LIB_ASCII       NO		     # Writes output in ASCII
 #
 #-------    Input Catalog Informations   
 CAT_IN       $LEPHAREDIR/glq_quasar_data.in  # Input catalog  (full path) 
-INP_TYPE     M		          # Input type      (F:Flux or M:MAG)
+INP_TYPE     F		          # Input type      (F:Flux or M:MAG)
 CAT_MAG      AB                   # Input Magnitude (AB or VEGA)
 CAT_FMT      MEME  		  # MEME: (Mag,Err)i  
   		                  # MMEE: (Mag)i,(Err)i  
@@ -107,7 +107,7 @@ GLB_CONTEXT  -1		          # Overwrite Context (Sum 2^n; n=0->nbd-1,
                                   # -1[-def]: used context per object 
 # FORB_CONTEXT -1                   # context for forbitten bands 
 # ERR_SCALE  0.03,0.02,0.02,0.02,0.04,0.04,0.04  # errors per band added in quadrature
-ERR_FACTOR  1.0                    # error scaling factor 1.0 [-def] 
+ERR_FACTOR  1.0                   # error scaling factor 1.0 [-def] 
 #
 #-------    Theoretical libraries  
 ZPHOTLIB    CWW_HDF,STAR_HDF,QSO_HDF    # Library used for Chi2 (max:3)
@@ -168,7 +168,7 @@ MABS_ZBIN       0,0.5,1,1.5,2,3,3.5,4 # Redshift bins (even number)
 #########   OUTPUT SPECTRA                     ###########
 #
 SPEC_OUT	YES	 	 # spectrum for each object?  [YES,NO-def]
-CHI2_OUT        YES               # output file with all values : z,mod,chi2,E(B-V),... 
+CHI2_OUT        NO               # output file with all values : z,mod,chi2,E(B-V),... 
                                  # BE CAREFUL can take a lot of space !!              
 #########  OUTPUT PDZ ANALYSIS  
 PDZ_OUT         NONE             # pdz output file name [def-NONE]
