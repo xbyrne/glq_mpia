@@ -5,7 +5,7 @@ SED fitting to galaxy, quasar, and galaxy+quasar templates
 
 import sys
 
-from multiprocessing import Pool
+from multiprocessing import Pool, cpu_count
 import os
 import numpy as np
 import pandas as pd
@@ -13,12 +13,13 @@ from astropy import units as u, constants as const
 from pyphot import unit, Filter
 import bagpipes as pipes
 import emcee
-import myutils
-#### your path for QSOGEN code, Temple+2021 DOI: 10.1093/mnras/stab2586
-sys.path.append('/Users/rameyer/Astro/Code/qsogen/')
 from qsosed import Quasar_sed
+import myutils
+
+#### your path for QSOGEN code, Temple+2021 DOI: 10.1093/mnras/stab2586
+sys.path.append("/Users/rameyer/Astro/Code/qsogen/")
+
 os.environ["OMP_NUM_THREADS"] = "1"
-from multiprocessing import cpu_count
 
 print(cpu_count())
 
@@ -108,9 +109,11 @@ def get_1450_filter(z_QSO):
     )
     return filter_m_1450
 
+
 def tau_eff(z):
     """
-    Computes the effective opacity to Lyman-alpha in the IGM following Bosman+2022 parametrization at 4.8<z<6.0.
+    Computes the effective opacity to Lyman-alpha in the IGM
+    following Bosman+2022 parametrization at 4.8<z<6.0.
     The effective opacity is clipped between (0,1).
     :param z:
     :return: tau_eff
@@ -124,7 +127,9 @@ def tau_eff(z):
     tau_eff = tau_0 * ((1 + z) / (1 + z0)) ** beta + C
 
     return tau_eff
-def quasar_spectroscopy(M_QSO, z_QSO,ebv=0, vandenberk_template=False):
+
+
+def quasar_spectroscopy(M_QSO, z_QSO, ebv=0, vandenberk_template=False):
     """
     Generates a quasar spectrum from a 1450A magnitude and a redshift.
     This will be based on the model chosen (default: vdb)
@@ -136,30 +141,44 @@ def quasar_spectroscopy(M_QSO, z_QSO,ebv=0, vandenberk_template=False):
         spec_qso = np.copy(model_qso[:, 1])
         # apply IGM attenuation, Lya, LyB, LyG
         # NOTE: The attenuation of the forest at z<4.8 is overestimated
-        ind_LyA = np.where( (model_qso[:, 0] * 1e4 < 1215.16 ) )[0]
-        ind_LyB = np.where( (model_qso[:, 0] * 1e4 < 1025.72 )  )[0]
-        ind_LyGplus = np.where( (model_qso[:, 0] * 1e4 < 972.53 ) )[0]
-        ind_LymanLim = np.where( (model_qso[:, 0] * 1e4 < 911.7) )[0]
-        spec_qso[ind_LyA] *= np.exp(-tau_eff(model_qso[ind_LyA, 0]*1e4*(1 + z_QSO) / 1215.67 -1))
-        spec_qso[ind_LyB] *= np.exp(-0.16*tau_eff(model_qso[ind_LyB, 0]*1e4*(1 + z_QSO) / 1025.72 -1))
-        spec_qso[ind_LyGplus] *= np.exp(-0.056*tau_eff(model_qso[ind_LyGplus, 0]*1e4*(1 + z_QSO) / 972.53 - 1))
+        ind_LyA = np.where((model_qso[:, 0] * 1e4 < 1215.16))[0]
+        ind_LyB = np.where((model_qso[:, 0] * 1e4 < 1025.72))[0]
+        ind_LyGplus = np.where((model_qso[:, 0] * 1e4 < 972.53))[0]
+        ind_LymanLim = np.where((model_qso[:, 0] * 1e4 < 911.7))[0]
+        spec_qso[ind_LyA] *= np.exp(
+            -tau_eff(model_qso[ind_LyA, 0] * 1e4 * (1 + z_QSO) / 1215.67 - 1)
+        )
+        spec_qso[ind_LyB] *= np.exp(
+            -0.16 * tau_eff(model_qso[ind_LyB, 0] * 1e4 * (1 + z_QSO) / 1025.72 - 1)
+        )
+        spec_qso[ind_LyGplus] *= np.exp(
+            -0.056 * tau_eff(model_qso[ind_LyGplus, 0] * 1e4 * (1 + z_QSO) / 972.53 - 1)
+        )
         spec_qso[ind_LymanLim] = 0
         flux_qso = spec_qso * 1e-3 * unit["Jy"]  # Template spectrum is in mJy..
-        wavelength = np.copy(model_qso[:, 0]) * 1e4 * (1 + z_QSO) * unit["AA"]  # ...and wavelengths in microns
+        wavelength = (
+            np.copy(model_qso[:, 0]) * 1e4 * (1 + z_QSO) * unit["AA"]
+        )  # ...and wavelengths in microns
     else:
-        sed = Quasar_sed(z=z_QSO, ebv=ebv,wavlen=np.logspace(2.5, 4, num=20001, endpoint=True) )
+        sed = Quasar_sed(
+            z=z_QSO, ebv=ebv, wavlen=np.logspace(2.5, 4, num=20001, endpoint=True)
+        )
         wavelength = sed.wavred * unit["AA"]
         # doing the conversion with astropy units and then
-        flux_qso_flambda = sed.flux * (u.erg / u.s /u.cm**2 /u.AA) * (1+z_QSO)
-        flux_qso = (flux_qso_flambda * (sed.wavred*u.AA)**2 / const.c).to(u.Jy).value * unit["Jy"]
+        flux_qso_flambda = sed.flux * (u.erg / u.s / u.cm**2 / u.AA) * (1 + z_QSO)
+        flux_qso = (flux_qso_flambda * (sed.wavred * u.AA) ** 2 / const.c).to(
+            u.Jy
+        ).value * unit["Jy"]
 
     # rescale to desired apparent magnitude 1450 AA
     # flux_qso expected in Jy
     mag_1450 = -2.5 * np.log10(filter_m_1450.get_flux(wavelength, flux_qso) / 3631)
     flux_qso *= 10 ** ((M_QSO - mag_1450) / -2.5)
-    return wavelength.value, flux_qso.value  #in AA, Jy
+    return wavelength.value, flux_qso.value  # in AA, Jy
+
 
 ### MCMC fitting
+
 
 def log_prior(theta, obj_type):
     """
@@ -207,7 +226,7 @@ def log_prior(theta, obj_type):
 
 def log_likelihood(theta, y, yerr, obj_type, z_QSO):
     "Log likelihood for a given model"
-    fluxes_model = np.zeros(y.shape)  #9d vector
+    fluxes_model = np.zeros(y.shape)  # 9d vector
 
     if obj_type == "GQ":
         t0, t1, mass, metallicity, dust_av, zgal, M_QSO, ebv = theta
@@ -233,7 +252,9 @@ def log_likelihood(theta, y, yerr, obj_type, z_QSO):
         fluxes_model += fluxes_model_galaxy
 
     if "Q" in obj_type:
-        wavs, flxs = quasar_spectroscopy(M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False)
+        wavs, flxs = quasar_spectroscopy(
+            M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False
+        )
         fluxes_model_quasar = myutils.spectrum_to_photometry(wavs, flxs)
         fluxes_model += fluxes_model_quasar
 
@@ -266,7 +287,7 @@ def suggest_init(obj_type):
     return mean_init_row + np.random.uniform(low=-0.1, high=0.1, size=ndim)
 
 
-def initialise_chains(nwalkers, flux, err_flux, obj_type,z_QSO):
+def initialise_chains(nwalkers, flux, err_flux, obj_type, z_QSO):
     """
     Returns a set of initial vectors in parameter space, all of which within the prior.
     This is a np array of shape (nwalkers, nparams)
@@ -279,7 +300,7 @@ def initialise_chains(nwalkers, flux, err_flux, obj_type,z_QSO):
 
         # Ensure that suggested initial point is actually in the prior
         if (log_prior(new_row, obj_type) != -np.inf) & (
-            log_likelihood(new_row, flux, err_flux, obj_type,z_QSO=z_QSO) != -np.inf
+            log_likelihood(new_row, flux, err_flux, obj_type, z_QSO=z_QSO) != -np.inf
         ):
             pos[i, :] = new_row
             i += 1
@@ -287,7 +308,15 @@ def initialise_chains(nwalkers, flux, err_flux, obj_type,z_QSO):
 
 
 def fit_sed(
-    flux, err_flux, obj_type, nsteps=5000, discard=1000, thin=10, nwalkers=32,z_QSO=6, **kwargs
+    flux,
+    err_flux,
+    obj_type,
+    nsteps=5000,
+    discard=1000,
+    thin=10,
+    nwalkers=32,
+    z_QSO=6,
+    **kwargs,
 ):  # kwargs to be passed to EnsembleSampler
     """
     Do the MCMC sampling process to SED-fit the fluxes (and their errors) to a G, Q, or GQ model
@@ -298,8 +327,14 @@ def fit_sed(
     nwalkers, ndim = init.shape
 
     with Pool() as pool:
-        sampler = emcee.EnsembleSampler(nwalkers,ndim, log_probability,args=(flux,err_flux,obj_type, z_QSO),
-                                        pool=pool,  **kwargs)
+        sampler = emcee.EnsembleSampler(
+            nwalkers,
+            ndim,
+            log_probability,
+            args=(flux, err_flux, obj_type, z_QSO),
+            pool=pool,
+            **kwargs,
+        )
         sampler.run_mcmc(init, nsteps, progress=True)
 
     samples = sampler.get_chain(flat=False, thin=thin, discard=discard)
@@ -307,11 +342,12 @@ def fit_sed(
 
     return samples, log_prob
 
+
 def fit_sed_id(quasar_id, z_QSO):
     photometry = load_grizYJKW12(quasar_id)
     flxs = photometry[:, 0]
     flxerrs = photometry[:, 1]
-    for ot in [ "GQ", "Q","G"]:
+    for ot in ["GQ", "Q", "G"]:
         samples, log_prob = fit_sed(
             flux=flxs,
             err_flux=flxerrs,
@@ -329,6 +365,7 @@ def fit_sed_id(quasar_id, z_QSO):
             logprobs=log_prob,
         )
 
+
 if __name__ == "__main__":
     ### Running SED fitting ###
 
@@ -342,8 +379,10 @@ if __name__ == "__main__":
         np.zeros((len(quasar_ids), num_samples, nwalkers, nparams))
         for nparams in [8, 2, 6]  # GQ, Q, G respectively
     ]
-    all_log_probs = [np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in range(3)]
+    all_log_probs = [
+        np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in range(3)
+    ]
 
-    fit_sed_id(quasar_id=1599741416, z_QSO=5.941) #J0109
-    fit_sed_id(quasar_id=1143273115, z_QSO=6.074) #J0603
-    fit_sed_id(quasar_id=1695974542, z_QSO=5.986) #J0122
+    fit_sed_id(quasar_id=1599741416, z_QSO=5.941)  # J0109
+    fit_sed_id(quasar_id=1143273115, z_QSO=6.074)  # J0603
+    fit_sed_id(quasar_id=1695974542, z_QSO=5.986)  # J0122
