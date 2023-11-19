@@ -4,7 +4,6 @@ SED fitting to galaxy, quasar, and galaxy+quasar templates
 """
 
 import sys
-
 from multiprocessing import Pool, cpu_count
 import os
 import numpy as np
@@ -13,11 +12,11 @@ from astropy import units as u, constants as const
 from pyphot import unit, Filter
 import bagpipes as pipes
 import emcee
-from qsosed import Quasar_sed
 import myutils
 
 #### your path for QSOGEN code, Temple+2021 DOI: 10.1093/mnras/stab2586
-sys.path.append("/Users/rameyer/Astro/Code/qsogen/")
+sys.path.append("./qsogen/")
+from qsosed import Quasar_sed
 
 os.environ["OMP_NUM_THREADS"] = "1"
 
@@ -36,7 +35,7 @@ eff_wavs = [
     46028,
 ]
 
-quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"]
+quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"].astype(int)
 df = pd.read_csv("./data/processed/cut_crossmatched_objects.csv", index_col=0).loc[
     quasar_ids
 ]
