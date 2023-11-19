@@ -321,7 +321,7 @@ def suggest_init(obj_type):
     """
     Generates an initial set of parameters, randomly distributed around mean_init_row
     """
-    mean_init_row = np.array([1, 0.5, 10, 0.2, 0.2, 0.5, 20, 0.1])
+    mean_init_row = np.array([1, 0.5, 10, 0.2, 0.2, 0.5, 20, 0.2])
     if obj_type == "G":
         mean_init_row = mean_init_row[:6]
     elif obj_type == "Q":
