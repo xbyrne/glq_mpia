@@ -3,10 +3,8 @@ Some utilities for the project
 """
 import re
 import numpy as np
-from astropy import units as u, constants as const
 from astropy.io import fits
 from pyvo.dal import sia
-from pyphot import unit, Filter
 
 ## Converting Magnitudes and Fluxes
 
@@ -102,147 +100,6 @@ def band_from_url(url):
 ## SED fitting utils
 
 
-def package_model_components(t0, t1, mass, metallicity, dust_av, zgal):
-    """
-    Converts a series of galactic parameters into a model_components dictionary
-    with a constant star formation rate
-    """
-    constant = {}  # Star formation - tophat function
-    constant["age_max"] = t0  # Time since SF switched on: Gyr
-    constant["age_min"] = t1  # Time since SF switched off: Gyr; t1<t0
-    constant["massformed"] = mass  # vary log_10(M*/M_solar) between 1 and 15
-    constant["metallicity"] = metallicity  # vary Z between 0 and 2.5 Z_oldsolar
-
-    dust = {}  # Dust component
-    dust["type"] = "Calzetti"  # Define the shape of the attenuation curve
-    dust["Av"] = dust_av  # magnitudes
-
-    nebular = {}  # Nebular emission component
-    nebular["logU"] = -3
-
-    model_components = {}  # The model components dictionary
-    model_components["redshift"] = zgal  # Observed redshift
-    model_components["constant"] = constant
-    model_components["dust"] = dust
-    model_components["nebular"] = nebular
-
-    return model_components
-
-
-filters_pyphot = {}  # For deducing photometry from spectra
-for band_name, file_name in zip(
-    band_names,
-    [
-        "CTIO_DECam.g",
-        "CTIO_DECam.r",
-        "CTIO_DECam.i",
-        "CTIO_DECam.z",
-        "CTIO_DECam.Y",
-        "Paranal_VISTA.J",
-        "Paranal_VISTA.Ks",
-        "WISE_WISE.W1",
-        "WISE_WISE.W2",
-    ],
-):
-    file = np.loadtxt(f"./data/sed_fitting/filters/{file_name}.dat")
-
-    wave = file[:, 0] * unit["AA"]
-    transmit = file[:, 1]
-    filters_pyphot[band_name] = Filter(
-        wave, transmit, name=band_name, dtype="photon", unit="Angstrom"
-    )
-
-
-def spectrum_to_photometry(wavelengths, fluxes):
-    """
-    Converts a spectrum to a photometry in grizYJKW12, using pyphot.
-    Requires wavelengths to be in angstrom and fluxes to be in jansky
-    Returns a 9d vector of the magnitudes in each band, in muJy
-    """
-    wavelengths *= unit["AA"]
-    fluxes *= unit["Jy"]
-
-    band_flxs = np.zeros(len(filters_pyphot))
-    for i, band_name in enumerate(band_names):
-        band_flxs[i] = filters_pyphot[band_name].get_flux(wavelengths, fluxes)  # Jy
-
-    return band_flxs * 1e6  # muJy
-
-
-filters_list = np.loadtxt(
-    "./data/sed_fitting/filters/filters_list_grizYJKW12.txt", dtype="str"
-)
-
-
-def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
-    """
-    Generates a galaxy spectrum, based on a range of parameters.
-    This assumes a constant star formation rate. Require t1<t0
-    Outputs are in AA, Jy
-    """
-    import bagpipes as pipes
-
-    model_components = package_model_components(
-        t0, t1, mass, metallicity, dust_av, zgal
-    )
-    model_components = package_model_components(1, 0.5, 10, 0.2, 0.2, 0.5)
-
-    bagpipes_galaxy_model = pipes.model_galaxy(
-        model_components, filt_list=filters_list, spec_wavs=np.arange(4e3, 6e4, 5.0)
-    )
-
-    bagpipes_galaxy_model.update(model_components)
-    wavs = bagpipes_galaxy_model.wavelengths  # Rest frame
-    flxs = bagpipes_galaxy_model.spectrum_full  # ergscma
-
-    wavs = wavs * u.AA * (1 + zgal)  # Redshifting
-    flxs = (
-        flxs * (u.erg / u.s / (u.cm**2) / u.AA) * (wavs**2) / const.c
-    )  # Converting F_lambda to F_nu
-    flxs = flxs.to(u.Jy).value  # Jy
-    wavs = wavs.value  # AA
-    return wavs, flxs
-
-
-model_qso = np.loadtxt(
-    "./data/sed_fitting/vandenberk2001_z=0_fnu_noscale.txt", skiprows=1
-)
-filter_m_1450_file = np.loadtxt("data/sed_fitting/filters/filter_1450.txt")
-
-
-def get_1450_filter(z_QSO):
-    """
-    Retrieves a pyphot filter which is a tophat function around 1450AA
-    """
-    wave = filter_m_1450_file[:, 0] * unit["AA"] * (1 + z_QSO)
-    transmit = filter_m_1450_file[:, 1]
-    filter_m_1450 = Filter(
-        wave, transmit, name="1450_tophat", dtype="photon", unit="Angstrom"
-    )
-    return filter_m_1450
-
-
-def quasar_spectroscopy(M_QSO, z_QSO):
-    """
-    Generates a quasar spectrum from a 1450A magnitude and a redshift.
-    This will be based on the model chosen (default: vdb)
-    Outputs are in AA, Jy
-    """
-    filter_m_1450 = get_1450_filter(z_QSO)
-    # load quasar model, truncate Lyman-alpha forest
-    spec_qso = model_qso[:, 1]
-    spec_qso[model_qso[:, 0] * 1e4 < 1215.16] = 0.0
-    flux_qso = spec_qso * 1e-3 * unit["Jy"]  # Models are apparently given in mJy...
-    wavelength = (
-        model_qso[:, 0] * 1e4 * (1 + z_QSO) * unit["AA"]
-    )  # ...and wavelengths in microns
-
-    # rescale to desired apparent magnitude 1450 AA
-    mag_1450 = -2.5 * np.log10(filter_m_1450.get_flux(wavelength, flux_qso) / 3631)
-    flux_qso *= 10 ** ((M_QSO - mag_1450) / -2.5)
-    return wavelength.value, flux_qso.value  # in Jy
-
-
 def find_best_model(coi, model_type):
     """
     Finds the model of type `model_type` with the highest logprob
@@ -253,30 +110,6 @@ def find_best_model(coi, model_type):
     samples = mcmc_fl["samples"]
     flat_samples = samples.reshape((np.prod(samples.shape[:2]), samples.shape[-1]))
     return flat_samples[best_model_index]
-
-
-def spectrum_from_params(model):
-    """
-    Generates a spectrum from a parameter list
-    """
-    if len(model) == 2:
-        M_QSO, z_QSO = model
-        wavs, flxs = quasar_spectroscopy(M_QSO, z_QSO)
-    elif len(model) == 6:
-        t0, t1, mass, metallicity, dust_av, zgal = model
-        wavs, flxs = galaxy_BAGPIPES_spectroscopy(
-            t0, t1, mass, metallicity, dust_av, zgal
-        )
-    elif len(model) == 8:
-        t0, t1, mass, metallicity, dust_av, zgal, M_QSO, z_QSO = model
-        wavs, flxs = galaxy_BAGPIPES_spectroscopy(
-            t0, t1, mass, metallicity, dust_av, zgal
-        )
-        quasar_wavs, quasar_flxs = quasar_spectroscopy(M_QSO, z_QSO)
-        quasar_flxs = np.interp(wavs, quasar_wavs, quasar_flxs, left=0)
-        flxs += quasar_flxs
-
-    return wavs, flxs * 1e6  # to uJy
 
 
 # Handling LePHARE output

@@ -12,39 +12,24 @@ from astropy import units as u, constants as const
 from pyphot import unit, Filter
 import bagpipes as pipes
 import emcee
-import myutils
 
 #### your path for QSOGEN code, Temple+2021 DOI: 10.1093/mnras/stab2586
 sys.path.append("./qsogen/")
 from qsosed import Quasar_sed
 
 os.environ["OMP_NUM_THREADS"] = "1"
-
 print(cpu_count())
-
-band_names = ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]
-eff_wavs = [
-    4862.24,
-    6460.63,
-    7850.77,
-    9199.28,
-    9906.83,
-    12681.01,
-    21588.53,
-    33526,
-    46028,
-]
 
 quasar_ids = np.load("./data/processed/quasar_ids.npz")["ids"].astype(int)
 df = pd.read_csv("./data/processed/cut_crossmatched_objects.csv", index_col=0).loc[
     quasar_ids
 ]
+
+band_names = ["g", "r", "i", "z", "Y", "J", "K", "W1", "W2"]
 mag_df = df[[f"{band}_mag" for band in band_names]]
 magerr_df = df[[f"{band}_magerr" for band in band_names]]
 flux_df = df[[f"{band}_flux" for band in band_names]]
 fluxerr_df = df[[f"{band}_fluxerr" for band in band_names]]
-
-### BAGPIPES Galaxy Modelling ###
 
 
 def load_grizYJKW12(ID):
@@ -56,12 +41,66 @@ def load_grizYJKW12(ID):
 
 filters_list = np.loadtxt(
     "./data/sed_fitting/filters/filters_list_grizYJKW12.txt", dtype="str"
-)  # For bagpipes
+)
+
+filters_pyphot = {}
+for band_name, file_name in zip(band_names, filters_list):
+    file = np.loadtxt(f"./data/sed_fitting/{file_name}")
+
+    wave = file[:, 0] * unit["AA"]
+    transmit = file[:, 1]
+    filters_pyphot[band_name] = Filter(
+        wave, transmit, name=band_name, dtype="photon", unit="Angstrom"
+    )
 
 
-model_components = myutils.package_model_components(
-    1, 0.5, 10, 0.2, 0.2, 0.5
-)  # Require t1<t0
+def spectrum_to_photometry(wavelengths, fluxes):
+    """
+    Converts a spectrum to a photometry in grizYJKW12, using pyphot.
+    Requires wavelengths to be in angstrom and fluxes to be in jansky
+    Returns a 9d vector of the magnitudes in each band, in muJy
+    """
+    wavelengths *= unit["AA"]
+    fluxes *= unit["Jy"]
+
+    band_flxs = np.zeros(len(filters_pyphot))
+    for i, band_name in enumerate(band_names):
+        band_flxs[i] = filters_pyphot[band_name].get_flux(wavelengths, fluxes)  # Jy
+
+    return band_flxs * 1e6  # muJy
+
+
+### BAGPIPES Galaxy Modelling ###
+
+
+def package_model_components(t0, t1, mass, metallicity, dust_av, zgal):
+    """
+    Converts a series of galactic parameters into a model_components dictionary
+    with a constant star formation rate
+    """
+    constant = {}  # Star formation - tophat function
+    constant["age_max"] = t0  # Time since SF switched on: Gyr
+    constant["age_min"] = t1  # Time since SF switched off: Gyr; t1<t0
+    constant["massformed"] = mass  # vary log_10(M*/M_solar) between 1 and 15
+    constant["metallicity"] = metallicity  # vary Z between 0 and 2.5 Z_oldsolar
+
+    dust = {}  # Dust component
+    dust["type"] = "Calzetti"  # Define the shape of the attenuation curve
+    dust["Av"] = dust_av  # magnitudes
+
+    nebular = {}  # Nebular emission component
+    nebular["logU"] = -3
+
+    model_components = {}  # The model components dictionary
+    model_components["redshift"] = zgal  # Observed redshift
+    model_components["constant"] = constant
+    model_components["dust"] = dust
+    model_components["nebular"] = nebular
+
+    return model_components
+
+
+model_components = package_model_components(1, 0.5, 10, 0.2, 0.2, 0.5)  # Require t1<t0
 bagpipes_galaxy_model = pipes.model_galaxy(
     model_components, filt_list=filters_list, spec_wavs=np.arange(4000.0, 60000.0, 5.0)
 )
@@ -73,7 +112,7 @@ def galaxy_BAGPIPES_spectroscopy(t0, t1, mass, metallicity, dust_av, zgal):
     This assumes a constant star formation rate. Require t1<t0
     Outputs are in AA, Jy
     """
-    model_components = myutils.package_model_components(
+    model_components = package_model_components(
         t0, t1, mass, metallicity, dust_av, zgal
     )
     bagpipes_galaxy_model.update(model_components)
@@ -176,6 +215,37 @@ def quasar_spectroscopy(M_QSO, z_QSO, ebv=0, vandenberk_template=False):
     return wavelength.value, flux_qso.value  # in AA, Jy
 
 
+### Generating spectra from model parameters
+
+
+def spectrum_from_params(theta, z_QSO=6):
+    """
+    Generates a spectrum from a parameter list
+    """
+    if len(theta) == 2:
+        M_QSO, ebv = theta
+        wavs, flxs = quasar_spectroscopy(
+            M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False
+        )
+    elif len(theta) == 6:
+        t0, t1, mass, metallicity, dust_av, zgal = theta
+        wavs, flxs = galaxy_BAGPIPES_spectroscopy(
+            t0, t1, mass, metallicity, dust_av, zgal
+        )
+    elif len(theta) == 8:
+        t0, t1, mass, metallicity, dust_av, zgal, M_QSO, ebv = theta
+        wavs, flxs = galaxy_BAGPIPES_spectroscopy(
+            t0, t1, mass, metallicity, dust_av, zgal
+        )
+        quasar_wavs, quasar_flxs = quasar_spectroscopy(
+            M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False
+        )
+        quasar_flxs = np.interp(wavs, quasar_wavs, quasar_flxs, left=0)
+        flxs += quasar_flxs
+
+    return wavs, flxs * 1e6  # to uJy
+
+
 ### MCMC fitting
 
 
@@ -223,39 +293,17 @@ def log_prior(theta, obj_type):
     return -np.inf
 
 
-def log_likelihood(theta, y, yerr, obj_type, z_QSO):
+def log_likelihood(theta, y, yerr, z_QSO):
     "Log likelihood for a given model"
     fluxes_model = np.zeros(y.shape)  # 9d vector
 
-    if obj_type == "GQ":
-        t0, t1, mass, metallicity, dust_av, zgal, M_QSO, ebv = theta
-    elif obj_type == "Q":
-        M_QSO, ebv = theta
-    elif obj_type == "G":
-        t0, t1, mass, metallicity, dust_av, zgal = theta
-    else:
-        raise ValueError(
-            f"Invalid obj_type: {obj_type}. Must be either `G`, `Q`, or `GQ`."
-        )
+    wavs, flxs = spectrum_from_params(theta, z_QSO=z_QSO)
+    fluxes_model = spectrum_to_photometry(wavs, flxs)
 
-    if "G" in obj_type:
-        wavs, flxs = galaxy_BAGPIPES_spectroscopy(
-            t0, t1, mass, metallicity, dust_av, zgal
-        )
-        fluxes_model_galaxy = myutils.spectrum_to_photometry(wavs, flxs)
-        if (
-            np.sum(fluxes_model_galaxy) == 0.0
-        ):  # Invalid galaxy params => BAGPIPES gives a blank spectrum
-            return -np.inf
-
-        fluxes_model += fluxes_model_galaxy
-
-    if "Q" in obj_type:
-        wavs, flxs = quasar_spectroscopy(
-            M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False
-        )
-        fluxes_model_quasar = myutils.spectrum_to_photometry(wavs, flxs)
-        fluxes_model += fluxes_model_quasar
+    if np.sum(fluxes_model) == 0.0:
+        # Invalid galaxy params => BAGPIPES gives a blank spectrum
+        # Could this happen with GQ?
+        return -np.inf
 
     sigma2 = yerr**2
     return -0.5 * np.sum((y - fluxes_model) ** 2 / sigma2 + np.log(sigma2))
@@ -266,7 +314,7 @@ def log_probability(theta, y, yerr, obj_type, z_QSO):
     lp = log_prior(theta, obj_type)
     if not np.isfinite(lp):
         return -np.inf
-    return lp + log_likelihood(theta, y, yerr, obj_type, z_QSO)
+    return lp + log_likelihood(theta, y, yerr, z_QSO)
 
 
 def suggest_init(obj_type):
@@ -299,7 +347,7 @@ def initialise_chains(nwalkers, flux, err_flux, obj_type, z_QSO):
 
         # Ensure that suggested initial point is actually in the prior
         if (log_prior(new_row, obj_type) != -np.inf) & (
-            log_likelihood(new_row, flux, err_flux, obj_type, z_QSO=z_QSO) != -np.inf
+            log_likelihood(new_row, flux, err_flux, z_QSO) != -np.inf
         ):
             pos[i, :] = new_row
             i += 1

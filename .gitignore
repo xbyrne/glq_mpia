@@ -4,3 +4,4 @@ __pycache__/*
 wget-log
 trash/*
 notebooks/__pycache__/*
+qsogen/__pycache__/*
