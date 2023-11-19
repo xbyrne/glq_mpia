@@ -249,7 +249,7 @@ def find_best_model(coi, model_type):
     """
     assert model_type in ["G", "Q", "GQ"]
     mcmc_fl = np.load(f"./data/sed_fitting/mcmc_results/{model_type}/{coi}.npz")
-    best_model_index = np.argmin(mcmc_fl["logprobs"])
+    best_model_index = np.argmax(mcmc_fl["logprobs"])
     samples = mcmc_fl["samples"]
     flat_samples = samples.reshape((np.prod(samples.shape[:2]), samples.shape[-1]))
     return flat_samples[best_model_index]
