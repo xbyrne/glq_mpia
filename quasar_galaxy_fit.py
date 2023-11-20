@@ -35,7 +35,7 @@ fluxerr_df = df[[f"{band}_fluxerr" for band in band_names]]
 def load_grizYJKW12(ID):
     "Loads the photometry for a particular coadd id"
     ID = int(ID)
-    photometry = np.vstack((flux_df.loc[ID], fluxerr_df.loc[ID])).T
+    photometry = np.vstack((flux_df.loc[ID], fluxerr_df.loc[ID])).T / 1e6  # uJy -> Jy
     return photometry
 
 
@@ -58,7 +58,7 @@ def spectrum_to_photometry(wavelengths, fluxes):
     """
     Converts a spectrum to a photometry in grizYJKW12, using pyphot.
     Requires wavelengths to be in angstrom and fluxes to be in jansky
-    Returns a 9d vector of the magnitudes in each band, in muJy
+    Returns a 9d vector of the magnitudes in each band, in Jy
     """
     wavelengths *= unit["AA"]
     fluxes *= unit["Jy"]
@@ -67,7 +67,7 @@ def spectrum_to_photometry(wavelengths, fluxes):
     for i, band_name in enumerate(band_names):
         band_flxs[i] = filters_pyphot[band_name].get_flux(wavelengths, fluxes)  # Jy
 
-    return band_flxs * 1e6  # muJy
+    return band_flxs # Jy
 
 
 ### BAGPIPES Galaxy Modelling ###
@@ -100,7 +100,7 @@ def package_model_components(t0, t1, mass, metallicity, dust_av, zgal):
     return model_components
 
 
-model_components = package_model_components(1, 0.5, 10, 0.2, 0.2, 0.5)  # Require t1<t0
+model_components = package_model_components(2, 0.5, 10, 0.2, 0.2, 0.5)  # Require t1<t0
 bagpipes_galaxy_model = pipes.model_galaxy(
     model_components, filt_list=filters_list, spec_wavs=np.arange(4000.0, 60000.0, 5.0)
 )
@@ -220,7 +220,8 @@ def quasar_spectroscopy(M_QSO, z_QSO, ebv=0, vandenberk_template=False):
 
 def spectrum_from_params(theta, z_QSO=6):
     """
-    Generates a spectrum from a parameter list
+    Generates a spectrum from a parameter list.
+    Outputs are in AA, Jy
     """
     if len(theta) == 2:
         M_QSO, ebv = theta
@@ -232,18 +233,24 @@ def spectrum_from_params(theta, z_QSO=6):
         wavs, flxs = galaxy_BAGPIPES_spectroscopy(
             t0, t1, mass, metallicity, dust_av, zgal
         )
+        if np.sum(flxs) == 0.0:
+            # Invalid galaxy params => BAGPIPES gives a blank spectrum
+            raise ValueError('Invalid galaxy params')
     elif len(theta) == 8:
         t0, t1, mass, metallicity, dust_av, zgal, M_QSO, ebv = theta
         wavs, flxs = galaxy_BAGPIPES_spectroscopy(
             t0, t1, mass, metallicity, dust_av, zgal
         )
+        if np.sum(flxs) == 0.0:
+            # Invalid galaxy params => BAGPIPES gives a blank spectrum
+            raise ValueError('Invalid galaxy params')
         quasar_wavs, quasar_flxs = quasar_spectroscopy(
             M_QSO=M_QSO, z_QSO=z_QSO, ebv=ebv, vandenberk_template=False
         )
         quasar_flxs = np.interp(wavs, quasar_wavs, quasar_flxs, left=0)
         flxs += quasar_flxs
 
-    return wavs, flxs * 1e6  # to uJy
+    return wavs, flxs # AA, Jy
 
 
 ### MCMC fitting
@@ -295,15 +302,13 @@ def log_prior(theta, obj_type):
 
 def log_likelihood(theta, y, yerr, z_QSO):
     "Log likelihood for a given model"
-    fluxes_model = np.zeros(y.shape)  # 9d vector
 
-    wavs, flxs = spectrum_from_params(theta, z_QSO=z_QSO)
-    fluxes_model = spectrum_to_photometry(wavs, flxs)
-
-    if np.sum(fluxes_model) == 0.0:
-        # Invalid galaxy params => BAGPIPES gives a blank spectrum
-        # Could this happen with GQ?
+    try:
+        wavs, flxs = spectrum_from_params(theta, z_QSO=z_QSO)
+    except ValueError:
         return -np.inf
+    
+    fluxes_model = spectrum_to_photometry(wavs, flxs)
 
     sigma2 = yerr**2
     return -0.5 * np.sum((y - fluxes_model) ** 2 / sigma2 + np.log(sigma2))
@@ -321,7 +326,7 @@ def suggest_init(obj_type):
     """
     Generates an initial set of parameters, randomly distributed around mean_init_row
     """
-    mean_init_row = np.array([1, 0.5, 10, 0.2, 0.2, 0.5, 20, 0.2])
+    mean_init_row = np.array([2, 0.5, 10, 0.2, 0.2, 0.5, 20, 0.2])
     if obj_type == "G":
         mean_init_row = mean_init_row[:6]
     elif obj_type == "Q":
