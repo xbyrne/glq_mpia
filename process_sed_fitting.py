@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 # COADD IDs of objects isolated by ML
-quasar_ids = np.load('./data/processed/quasar_ids.npz')['ids']
+quasar_ids = [1143273115, 1599741416, 1695974542]
 
 ## LePHARE gives chi^2 for galaxy, quasar, and star models
 
