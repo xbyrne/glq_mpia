@@ -435,6 +435,6 @@ if __name__ == "__main__":
         np.zeros((len(quasar_ids), num_samples, nwalkers)) for i in range(3)
     ]
 
-    fit_sed_id(quasar_id=1599741416, z_QSO=5.941)  # J0109
-    fit_sed_id(quasar_id=1143273115, z_QSO=6.074)  # J0603
+    fit_sed_id(quasar_id=1143273115, z_QSO=6.074)  # J0109
+    fit_sed_id(quasar_id=1599741416, z_QSO=5.941)  # J0603
     fit_sed_id(quasar_id=1695974542, z_QSO=5.986)  # J0122
