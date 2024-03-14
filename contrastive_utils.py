@@ -49,7 +49,7 @@ def load_augmentor():
     return augmentor
 
 
-def load_encoder(n_filters_1=256, n_filters_2=512, n_filters_3=1024):
+def load_encoder(n_filters_1=128, n_filters_2=256, n_filters_3=512):
     """
     Loads the encoder of the contrastive learning network.
     Essentially a classic ConvNet, converting an image from
@@ -67,7 +67,7 @@ def load_encoder(n_filters_1=256, n_filters_2=512, n_filters_3=1024):
     return encoder
 
 
-def load_projector(input_size=1024, n_nodes_1=512, n_nodes_2=128, n_nodes_3=64):
+def load_projector(input_size=512, n_nodes_1=256, n_nodes_2=128, n_nodes_3=128):
     """
     Loads the projector for the contrastive learning network.
     This gets thrown away after training because for some reason that makes it work better.
