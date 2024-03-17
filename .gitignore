@@ -5,3 +5,5 @@ wget-log
 trash/*
 notebooks/__pycache__/*
 qsogen/__pycache__/*
+review/*
+scratch.ipynb
